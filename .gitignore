@@ -15,4 +15,4 @@ build
 npm-debug.log
 **/*.scss
 **/*.css.map
-./.sass-cache
+.sass-cache
