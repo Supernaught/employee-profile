@@ -6,17 +6,17 @@
 
 	**You need to run this Sass command in your termial before you can edit the stylesheets**
 
-	1. Open terminal
-	2. Go to the project file directory 
+1. Open terminal
+2. Go to the project file directory 
 
-		```
-		cd employee-profile
-		```
-	3. Watch all your .scss files for changes
+	```
+	cd employee-profile
+	```
+3. Watch all your .scss files for changes
 
-		```
-		sass --watch .:.
-		```
+	```
+	sass --watch .:.
+	```
 
 
 ##Component Types
