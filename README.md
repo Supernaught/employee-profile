@@ -1,6 +1,6 @@
 # Employee Profile
 
-####Component Types
+##Component Types
 *There are 2 types of components which are 'presentational' and 'containers'*
 
 1. presentational components
