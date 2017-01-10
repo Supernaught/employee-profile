@@ -1,5 +1,24 @@
 # Employee Profile
 
+##Styling
+* This project uses [Sass](http://sass-lang.com/) as a CSS preprocessesor.
+* [BEM](http://getbem.com/) methodology is used as the standard naming convention
+
+**You need to run this Sass command in your termial before you can edit the stylesheets**
+
+1. Open termial
+2. Go to the project file directory 
+
+	```
+	cd employee-profile
+	```
+3. Watch all your .scss files for changes
+
+	```
+	sass --watch .:.
+	```
+
+
 ##Component Types
 *There are 2 types of components which are 'presentational' and 'containers'*
 
@@ -22,5 +41,3 @@
 	* Are usually generated using higher order components such as connect() from React Redux, createContainer() from Relay, or Container.create() from Flux Utils, rather than written by hand.
 
 Source is from ['Presentational and Container Components'](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.3j6kjwvgv), an article in Medium by Dan Abramov.
-
-
