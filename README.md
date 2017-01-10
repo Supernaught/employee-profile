@@ -4,7 +4,7 @@
 * This project uses [Sass](http://sass-lang.com/) as a CSS preprocessesor.
 * [BEM](http://getbem.com/) methodology is used as the standard naming convention
 
-_How to run Sass_**
+**_How to run Sass_**
 
 1. Open terminal
 2. Go to the project file directory 
