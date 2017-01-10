@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "foreman": "^2.0.0",
+    "nodemon": "^1.11.0",
     "react-scripts": "0.8.4"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "classnames": "^2.2.5",
+    "cors": "^2.8.1",
     "express": "^4.14.0",
+    "mern-cli": "^3.0.1",
+    "mongoose": "^4.7.6",
     "morgan": "^1.7.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
@@ -15,7 +21,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start:server": "react-scripts build && node server",
+    "dev": "nodemon server",
+    "start:server": "react-scripts build && nodemon server",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
