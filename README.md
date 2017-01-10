@@ -3,7 +3,7 @@
 ##Component Types
 *There are 2 types of components which are 'presentational' and 'containers'*
 
-1. presentational components
+1. **presentational components**
 	* Are concerned with how things look.
 	* May contain both presentational and container components** inside, and usually have some DOM markup and styles of their own.
 	* Often allow containment via this.props.children.
@@ -13,7 +13,7 @@
 	* Rarely have their own state (when they do, it’s UI state rather than data).
 	* Are written as functional components unless they need state, lifecycle hooks, or performance optimizations.
 
-2. containers components
+2. **containers components**
 	* Are concerned with how things work.
 	* May contain both presentational and container components** inside but usually don’t have any DOM markup of their own except for some wrapping divs, and never have any styles.
 	* Provide the data and behavior to presentational or other container components.
