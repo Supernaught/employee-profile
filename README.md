@@ -4,7 +4,7 @@
 * This project uses [Sass](http://sass-lang.com/) as a CSS preprocessesor.
 * [BEM](http://getbem.com/) methodology is used as the standard naming convention
 
-	**You need to run this Sass command in your termial before you can edit the stylesheets**
+**You need to run this Sass command in your termial before you can edit the stylesheets**
 
 1. Open terminal
 2. Go to the project file directory 
