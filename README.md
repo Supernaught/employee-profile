@@ -3,7 +3,11 @@
 ##Installation
 
 ```bash
+# Install dependencies
 $ yarn
+
+# Run mongodb server (as a background process)
+$ sudo mongod --fork --logpath /var/log/mongod.log
 
 # For client-side dev
 $ npm start
