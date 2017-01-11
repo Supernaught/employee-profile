@@ -1,5 +1,30 @@
 # Employee Profile
 
+##Installation
+
+```bash
+$ yarn
+
+# For client-side dev
+$ npm start
+
+# For server-side dev
+$ npm run dev
+
+# For testing client and server-side
+$ npm start:server
+```
+
+### Seeding users
+
+After running the Node server, run a GET `localhost:9000/api/users/seed`.
+
+The user seed data is in `/server/seeds/users_seed.js`
+
+### API Documentation
+
+See [wiki](https://github.com/Supernaught/employee-profile/wiki/API-Doc).
+
 ##Styling
 * This project uses [Sass](http://sass-lang.com/) as a CSS preprocessesor.
 * [BEM](http://getbem.com/) methodology is used as the standard naming convention
