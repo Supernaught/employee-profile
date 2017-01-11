@@ -3,11 +3,11 @@ import classnames from 'classnames';
 
 export default class UserLeaves extends Component {
 
-  render() {
-    return (
-      <div>
-        ---User Leaves
-      </div>
-    )
-  }
+	render() {
+		return (
+			<div>
+			---User Leaves
+			</div>
+			)
+	}
 }

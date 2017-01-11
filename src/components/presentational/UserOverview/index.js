@@ -3,11 +3,11 @@ import classnames from 'classnames';
 
 export default class UserOverview extends Component {
 
-  render() {
-    return (
-      <div>
-        ---User Overview (Default Route)
-      </div>
-    )
-  }
+	render() {
+		return (
+			<div>
+			---User Overview (Default Route)
+			</div>
+			)
+	}
 }

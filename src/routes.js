@@ -14,21 +14,21 @@ import UserInfo from './components/presentational/UserInfo';
 import NotFound from './components/presentational/NotFound';
 
 const Routes = (props) => (
-  <Router {...props}>
-    <Route path="/" component={App}>
-    	<IndexRoute component={Home} />
-	    <Route path="/employees" component={UsersContainer}>
-	    	<IndexRoute component={UserList} />
-	    	<Route path=":id" component={UserPage}>
-	    		<IndexRoute component={UserAttendanceContainer} />
-	    		<Route path="info" component={UserInfo} />
-	    		<Route path="leaves" component={UserLeaves} />
-	    	</Route>
-	    </Route>
-	    <Route path="/about" component={About} />
-	    <Route path="*" component={NotFound} />
-	</Route>
-  </Router>
+	<Router {...props}>
+	    <Route path="/" component={App}>
+	    	<IndexRoute component={Home} />
+		    <Route path="/employees" component={UsersContainer}>
+		    	<IndexRoute component={UserList} />
+		    	<Route path=":id" component={UserPage}>
+		    		<IndexRoute component={UserAttendanceContainer} />
+		    		<Route path="info" component={UserInfo} />
+		    		<Route path="leaves" component={UserLeaves} />
+		    	</Route>
+		    </Route>
+		    <Route path="/about" component={About} />
+		    <Route path="*" component={NotFound} />
+		</Route>
+	</Router>
 );
 
 export default Routes;

@@ -16,6 +16,6 @@ export default class NotFound extends Component {
           404 <small>Not Found</small>
         </h1>
       </div>
-    );
+      );
   }
 }

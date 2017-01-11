@@ -3,11 +3,11 @@ import classnames from 'classnames';
 
 export default class UserInfo extends Component {
 
-  render() {
-    return (
-      <div>
-        ---User Info
-      </div>
-    )
-  }
+	render() {
+		return (
+			<div>
+			---User Info
+			</div>
+			)
+	}
 }
