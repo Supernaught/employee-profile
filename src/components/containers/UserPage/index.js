@@ -2,13 +2,13 @@ import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames';
 
 export default class UserPage extends Component {
-
-  render() {
-    return (
-      <div>
-        --Employee Profile
-        {this.props.children}
-      </div>
-    )
-  }
+	render() {
+		const userId = this.props.params.id;
+		return (
+			<div>
+				--{userId} Profile
+				{this.props.children}
+			</div>
+			)
+	}
 }
