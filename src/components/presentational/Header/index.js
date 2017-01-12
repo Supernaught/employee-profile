@@ -10,7 +10,7 @@ export default class Header extends Component {
     return (
       <header className="header">
         <div className="header__container">
-        	<div className="main-header__section">
+        	<div className="header__section">
         		<img src={logo} className="header__logo" alt="logo" />
         	</div>
         	<div className="header__section">
