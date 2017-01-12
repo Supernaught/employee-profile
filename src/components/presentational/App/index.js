@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames';
 
-import MainHeader from '../MainHeader';
+import Header from '../Header';
 import logo from './logo.svg';
 import './style.css';
 
@@ -14,12 +14,11 @@ class App extends Component {
   render() {
     const { className, ...props } = this.props;
     return (
-      <div className={classnames('App', className)} {...props}>
-        <MainHeader />
-        <div className="App-header">
-          <h2>Welcome to React</h2>
-        </div>
-        {this.props.children}
+      <div className={classnames('app', className)} {...props}>
+          <Header />
+          <div className="app-header">
+            {this.props.children}
+          </div>
       </div>
     );
   }

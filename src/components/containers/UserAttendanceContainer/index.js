@@ -9,15 +9,15 @@ export default class UserAttendanceContainer extends Component {
 	handleSelectTab() {
 		switch(this.props.location.query.tab){
 			case 'lates':
-			return <UserLates/>;
+			return <UserLates />;
 			break;
 
 			case 'absences':
-			return <UserAbsences/>;
+			return <UserAbsences />;
 			break;
 
 			default:
-			return <UserAttendance/>;
+			return <UserAttendance />;
 			break;
 		}
 	}
