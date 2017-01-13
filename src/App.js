@@ -3,6 +3,7 @@ import classnames from 'classnames';
 
 import Header from './components/presentational/Header';
 import logo from './logo.svg';
+import Cart from './components/containers/Cart';
 
 class App extends Component {
   // static propTypes = {}
@@ -17,6 +18,7 @@ class App extends Component {
           <Header user='davyb' />
           <div className="app-header">
             {this.props.children}
+            <Cart />
           </div>
       </div>
     );
