@@ -16,31 +16,7 @@ userRoutes.get('/', (req, res) => {
 	});
 });
 
-userRoutes.get('/:id', (req, res) => {
-	User.findOne({_id: req.params.id})
-	.exec()
-	.then((user) => {
-		res.json(user);
-	})
-	.catch((err) => {
-		res.send('Error retriving user with id ' + req.params.id);
-	})
-});
-
-// Create user
-userRoutes.post('/', (req, res) => {
-	User.create(req.body, (err, user) => {
-		res.send(user);
-	});
-});
-
-// Helper functions for testing only
-userRoutes.get('/clear', (req, res) => {
-	clearUsers((err, result) => {
-		res.send(result);
-	});
-});
-
+// Seed -- helper function only, not for production
 userRoutes.get('/seed', (req, res) => {
 	var usersSeed = require('../seeds/users_seed');
 
@@ -51,10 +27,78 @@ userRoutes.get('/seed', (req, res) => {
 	})
 });
 
+// Get single user
+userRoutes.get('/:username', (req, res) => {
+	User.findOne({username: req.params.username})
+	.exec()
+	.then((user) => {
+		if(user){
+			res.json(user);
+		} else{
+			res.status(400).json({error: 'No user found.'});
+		}
+	})
+	.catch((err) => {
+		res.send('Error retriving user with username ' + req.params.username);
+	})
+});
+
+// Create user
+userRoutes.post('/', (req, res) => {
+	User.create(req.body)
+	.then((user) => {
+		res.send(user);
+	})
+	.catch((err) => {
+		res.status(400).json(err);
+	});
+});
+
+// Edit user
+userRoutes.put('/:username', (req, res) => {
+	User.findOneAndUpdate(
+		{username: req.params.username},
+		req.body,
+		{ 
+			new: true // return the new updated user instead of unaltered user
+		}
+	)
+	.exec()
+	.then((newUser) => {
+		res.send(newUser);
+	})
+	.catch((err) => {
+		res.status(400).json(err);
+	});
+});
+
+// Delete user
+userRoutes.delete('/:username', (req, res) => {
+	User.findOneAndRemove(
+		{username: req.params.username},
+		{}
+	)
+	.exec()
+	.then((deletedUser) => {
+		res.send(deletedUser);
+	})
+	.catch((err) => {
+		res.status(400).json(err);
+	});
+});
+
+// Clear users -- helper function only, not for production
+userRoutes.get('/clear', (req, res) => {
+	clearUsers((err, result) => {
+		res.send(result);
+	});
+});
+
+// Attendance
+userRoutes.use('/:username/attendance', require('./attendance.js'));
+
 const clearUsers = function(callback){
 	User.remove({}, callback);
 }
-
-// helper functions end
 
 module.exports = userRoutes;
