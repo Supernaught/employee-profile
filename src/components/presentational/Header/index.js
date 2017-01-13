@@ -14,6 +14,7 @@ export default class Header extends Component {
         		<img src={logo} className="header__logo" alt="logo" />
         	</div>
         	<div className="header__section">
+            {this.props.user}
         		Logout
         	</div>
         </div>
