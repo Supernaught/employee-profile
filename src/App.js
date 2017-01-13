@@ -1,9 +1,8 @@
 import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames';
 
-import Header from '../../presentational/Header';
+import Header from './components/presentational/Header';
 import logo from './logo.svg';
-import './style.css';
 
 class App extends Component {
   // static propTypes = {}
