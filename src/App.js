@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import classnames from 'classnames';
 
-import Header from './components/presentational/Header';
+import Header from './components/containers/Header';
 import logo from './logo.svg';
 import Cart from './components/containers/Cart';
 

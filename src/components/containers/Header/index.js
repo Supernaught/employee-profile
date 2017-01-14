@@ -1,6 +1,8 @@
 import React, {Component } from 'react';
 import classnames from 'classnames';
 
+import SearchBox from '../../presentational/SearchBox'
+
 import './index.css';
 import logo from './app-logo.svg';
 
@@ -11,7 +13,11 @@ export default class Header extends Component {
       <header className="header">
         <div className="header__container">
         	<div className="header__section">
-        		<img src={logo} className="header__logo" alt="logo" />
+        		<img 
+              className="header__logo" 
+              src={logo} 
+              alt="logo" />
+            <SearchBox />
         	</div>
         	<div className="header__section">
             {this.props.user}
