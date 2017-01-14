@@ -8,7 +8,21 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	},
 	{
 		"first_name": "Davy",
@@ -19,7 +33,21 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	},
 	{
 		"first_name": "Richard",
@@ -30,7 +58,21 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	},
 	{
 		"first_name": "Junry",
@@ -41,7 +83,21 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	},
 	{
 		"first_name": "AJ",
@@ -52,7 +108,21 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	},
 	{
 		"first_name": "Eunice",
@@ -63,7 +133,21 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	},
 	{
 		"first_name": "Geraldine",
@@ -74,7 +158,21 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	},
 	{
 		"first_name": "Joann",
@@ -85,7 +183,21 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	},
 	{
 		"first_name": "Howard",
@@ -96,7 +208,21 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	},
 	{
 		"first_name": "Drae",
@@ -107,7 +233,21 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	},
 	{
 		"first_name": "Jade",
@@ -118,6 +258,20 @@ module.exports = [
 		"position": "Dev",
 		"date_started": "2016-12-30",
 		"date_end": null,
-		"birthdate": "2016-01-30"
+		"birthdate": "2016-01-30",
+		"attendance": [
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+			{
+				"clock_in": "2016-01-30T00:00:00.000Z",
+				"clock_out": "2016-01-30T00:00:00.000Z",
+			},
+		]
 	}
 ];
