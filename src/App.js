@@ -6,16 +6,29 @@ import logo from './logo.svg';
 import Cart from './components/containers/Cart';
 
 class App extends Component {
-  // static propTypes = {}
-  // static defaultProps = {}
-  // state = {}
-  // <img src={logo} className="App-logo" alt="logo" />
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      'user':'davyjonesbolivar',
+      'searchFilter':''
+    };
+  }
+
+  handleSearchFilter(searchFilter) {
+    this.setState({
+      searchFilter: searchFilter
+    });
+  }
   
   render() {
     const { className, ...props } = this.props;
     return (
       <div className={classnames('app', className)} {...props}>
-          <Header user='davyb' />
+          <Header 
+            user={this.state.user} 
+            searchFilter={this.state.searchFilter}
+            onUserInput={this.handleSearchFilter.bind(this)} />
           <div className="app-header">
             {this.props.children}
             <Cart />

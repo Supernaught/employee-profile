@@ -17,7 +17,7 @@ export default class Header extends Component {
               className="header__logo" 
               src={logo} 
               alt="logo" />
-            <SearchBox />
+            <SearchBox {...this.props} />
         	</div>
         	<div className="header__section">
             {this.props.user}
