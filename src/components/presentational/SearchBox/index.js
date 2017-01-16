@@ -2,6 +2,7 @@ import React, {Component } from 'react';
 import classnames from 'classnames';
 
 import './index.css';
+import * as userApi from '../../../api/user-api';
 
 export default class SearchBox extends Component {
 
