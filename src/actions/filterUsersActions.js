@@ -14,3 +14,10 @@ export function setFilter(name) {
 		payload: name
 	}
 }
+
+export function setFilterResult(list) {
+	return {
+		type: "SET_FILTER_RESULT",
+		payload: list
+	}
+}

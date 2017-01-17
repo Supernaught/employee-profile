@@ -1,6 +1,7 @@
 import React, {Component } from 'react';
 import classnames from 'classnames';
 import { Link } from 'react-router';
+import shortid from 'shortid';
 
 import './index.css';
 
@@ -10,7 +11,7 @@ export default class SearchBox extends Component {
     super(props);
 
     this.state = {
-      activeDropDown: false,
+      activeDropDown: true,
     };
   }
 
@@ -25,6 +26,16 @@ export default class SearchBox extends Component {
   }
 
   render() {
+    const SearchResult = this.props.resultList.map((res) => {
+      return <li key={shortid.generate()} className="searchbox__result">
+                <Link
+                  className="searchbox__result__item"
+                  to={"/employees/"+res.username}>
+                  <span className="searchbox__result__item__name">{res.name}</span>
+                  <span className="searchbox__result__item__label">{res.position}</span>
+                </Link>
+              </li>
+    });
     return (
       <div className="searchbox">
         <input 
@@ -42,24 +53,7 @@ export default class SearchBox extends Component {
               "searchbox__dropdown-list", 
               {'searchbox__dropdown-list--hidden' : !this.state.activeDropDown}
             )}>
-          <li className="searchbox__result">
-            <Link
-              className="searchbox__result__item"
-              to="/employees/davyb" 
-              onClick={()=>this.handleClickLink()}>
-              <span className="searchbox__result__item__name">Davy Jones</span>
-              <span className="searchbox__result__item__label">Developer</span>
-            </Link>
-          </li>
-          <li className="searchbox__result">
-            <Link
-              className="searchbox__result__item"
-              to="/employees/alfonz" 
-              onClick={()=>this.handleClickLink()}>
-              <span className="searchbox__result__item__name">Alfonz Montelibano</span>
-              <span className="searchbox__result__item__label">Developer</span>
-            </Link>
-          </li>
+            {SearchResult}
         </ul>
       </div>
       )

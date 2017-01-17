@@ -3,9 +3,9 @@ import store from '../store';
 import { getUsersSucess } from '../actions/userActions';
 
 /**
- * Get all users
- */
- export function getUsers() {
+* Search users
+*/ 
+export function searchUser(name) {
   return axios.get('/api/users')
     .then(response => {
       return response.data;

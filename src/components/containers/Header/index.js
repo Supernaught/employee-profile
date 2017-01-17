@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 import SearchBox from '../../presentational/SearchBox';
 import * as SearchAction from '../../../actions/filterUsersActions';
+// import { searchUser } from '../../../api/search-api';
 
 import './index.css';
 import logo from './app-logo.svg';
@@ -31,6 +32,7 @@ class Header extends Component {
               src={logo} 
               alt="logo" />
             <SearchBox 
+              resultList={this.props.filterResult}
               onUserInput={this.handleSearchFilter.bind(this)} />
         	</div>
         	<div className="header__section">
@@ -45,7 +47,8 @@ class Header extends Component {
 function mapStateToProps(state, props) {
   return { 
     user: state.user,
-    filter: state.filter.filter
+    filter: state.filter.filter,
+    filterResult: state.filter.result
   };
 }
 

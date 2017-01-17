@@ -1,5 +1,10 @@
 export default function reducer(state={
     filter: null,
+    result: [
+      {name:'Davy Jones Bolivar', position:'Developer', username:'davyb'},
+      {name:'Alfonz Montelibano', position:'Developer', username:'alfonzm'},
+      {name:'Junry Roma', position:'Developer', username:'junryr'},
+      {name:'April John Maraat', position:'Developer', username:'aprilm'}],
     fetching: false,
     fetched: false,
     error: null,
@@ -25,6 +30,9 @@ export default function reducer(state={
       }
       case "SET_USER_FILTER": {
         return {...state, filter: action.payload}
+      }
+      case "SET_FILTER_RESULT": {
+        return {...state, result: action.payload}
       }
       default: {
         break;
