@@ -8,7 +8,6 @@ import UsersContainer from './components/containers/UsersContainer';
 import UserList from './components/containers/UserList';
 import UserPage from './components/containers/UserPage';
 import UserAttendanceContainer from './components/containers/UserAttendanceContainer';
-import UserOverview from './components/presentational/UserOverview';
 import UserLeaves from './components/presentational/UserLeaves';
 import UserInfo from './components/presentational/UserInfo';
 import NotFound from './components/presentational/NotFound';

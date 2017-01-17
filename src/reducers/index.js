@@ -1,9 +1,13 @@
  import { combineReducers } from 'redux';
 
- import cart from './cart.js';
+ import user from './userReducer.js';
+ import tweet from './tweetsReducer.js';
+ import filter from './filterUsersReducer.js';
 
  const rootReducer = combineReducers({
- 	cart
+ 	user,
+ 	tweet,
+ 	filter
  });
 
  export default rootReducer;

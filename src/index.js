@@ -8,10 +8,8 @@ import Store from './store';
 
 import './index.css';
 
-const StoreInstance = Store();
-
 ReactDOM.render(
-	<Provider store={StoreInstance}>
+	<Provider store={Store}>
 		<Routes history={browserHistory} />
 	</Provider>,
 	document.getElementById('root')

@@ -1,7 +1,6 @@
-import React, { PropTypes, Component } from 'react';
-import classnames from 'classnames';
+import React, { Component } from 'react';
 
-export default class UserInfo extends Component {
+export default class Home extends Component {
 
 	render() {
 		return (

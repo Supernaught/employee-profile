@@ -1,5 +1,4 @@
-import React, { PropTypes, Component } from 'react';
-import classnames from 'classnames';
+import React, { Component } from 'react';
 
 import UserAttendance from '../../presentational/UserAttendance';
 import UserLates from '../../presentational/UserLates';
@@ -9,16 +8,11 @@ export default class UserAttendanceContainer extends Component {
 	handleSelectTab() {
 		switch(this.props.location.query.tab){
 			case 'lates':
-			return <UserLates />;
-			break;
-
+				return <UserLates />;
 			case 'absences':
-			return <UserAbsences />;
-			break;
-
+				return <UserAbsences />;
 			default:
-			return <UserAttendance />;
-			break;
+				return <UserAttendance />;
 		}
 	}
 

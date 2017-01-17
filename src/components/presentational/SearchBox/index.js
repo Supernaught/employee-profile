@@ -1,8 +1,8 @@
 import React, {Component } from 'react';
 import classnames from 'classnames';
+import { Link } from 'react-router';
 
 import './index.css';
-import * as userApi from '../../../api/user-api';
 
 export default class SearchBox extends Component {
 
@@ -18,10 +18,14 @@ export default class SearchBox extends Component {
     this.setState({activeDropDown: bool});
   }
 
-  handleUserInput(){
+  handleUserInput() {
     this.props.onUserInput(
       this.searchFilterInput.value
     );
+  }
+
+  handleClickLink() {
+    console.log("fhi")
   }
 
   render() {
@@ -31,20 +35,23 @@ export default class SearchBox extends Component {
         className="searchbox__input"
         type="text" 
         name="search-employee"
-        value={this.props.searchFilter}
         ref={(input) => this.searchFilterInput = input}
         placeholder="Search Employee"
+        onChange={this.handleUserInput.bind(this)}
         onFocus={()=>this.handleToggleDropdown(true)}
-        onBlur={()=>this.handleToggleDropdown(false)}
-        onChange={this.handleUserInput.bind(this)} />
+        onBlur={()=>this.handleToggleDropdown(false)} />
 
         <ul className={
             classnames(
               "searchbox__dropdown-list", 
               {'searchbox__dropdown-list--hidden' : !this.state.activeDropDown}
             )}>
-          <li className="searchbox__result">Davy Jones Bolivar</li>
-          <li className="searchbox__result">Alfonz Montelibano</li>
+          <li className="searchbox__result">
+            <Link to="/employees/davyb" onClick={()=>this.handleClickLink()}>Davy Jones</Link>
+          </li>
+          <li className="searchbox__result">
+            haldjf
+          </li>
         </ul>
       </div>
       )
