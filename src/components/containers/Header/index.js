@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import SearchBox from '../../presentational/SearchBox';
 import * as SearchAction from '../../../actions/filterUsersActions';
-// import { searchUser } from '../../../api/search-api';
+import { searchUser } from '../../../api/search-api';
 
 import './index.css';
 import logo from './app-logo.svg';
@@ -20,6 +20,7 @@ class Header extends Component {
 
   handleSearchFilter(searchFilter) {
     this.props.actions.setFilter(searchFilter);
+    this.props.actions.setFilterResult(searchUser(this.props.actions.setFilter));
   }
 
   render() {

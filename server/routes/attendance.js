@@ -72,8 +72,8 @@ attendanceRoutes.delete('/:attendanceid', (req, res) => {
 	.then((user) => {
 		user.attendance.id(req.params.attendanceid).remove();
 		user.save()
-		.then((attendance) => {
-			res.send(attendance);
+		.then((user) => {
+			res.send(user);
 		})
 		.catch((err) => {
 			res.status(400).json(err);

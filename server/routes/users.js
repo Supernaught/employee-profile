@@ -6,6 +6,16 @@ var User = require('../models/user');
 
 // List all users
 userRoutes.get('/', (req, res) => {
+	if(req.query['s']) {
+		User.find({
+			$text: { $search: req.query['s'] }
+		})
+		.exec()
+		.then((searchUsersResult) => {
+			res.json(users);
+		})
+	}
+
 	User.find({})
 	.exec()
 	.then((users) => {
