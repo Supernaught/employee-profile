@@ -22,19 +22,31 @@
     .searchbox__dropdown-list:empty {
       display: none; }
   .searchbox__result {
-    padding: 0 8px;
-    height: 35px;
-    font-size: 14px;
-    box-sizing: border-box;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    position: relative; }
     .searchbox__result:hover {
-      background: lightgray; }
-
-/*# sourceMappingURL=index.css.map */
+      background: #F0F0F0; }
+    .searchbox__result__item {
+      padding: 8px;
+      width: 100%;
+      height: 100%;
+      color: #222;
+      box-sizing: border-box;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      text-decoration: none;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: left;
+      -webkit-align-items: left;
+      -ms-flex-align: left;
+      align-items: left; }
+      .searchbox__result__item__name {
+        font-size: 14px; }
+      .searchbox__result__item__label {
+        color: gray;
+        font-size: 12px; }

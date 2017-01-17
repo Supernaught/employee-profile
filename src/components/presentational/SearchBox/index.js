@@ -14,7 +14,7 @@ export default class SearchBox extends Component {
     };
   }
 
-  handleToggleDropdown(bool) {
+  handleToggleDropdown(bool, e) {
     this.setState({activeDropDown: bool});
   }
 
@@ -24,22 +24,18 @@ export default class SearchBox extends Component {
     );
   }
 
-  handleClickLink() {
-    console.log("fhi")
-  }
-
   render() {
     return (
       <div className="searchbox">
         <input 
         className="searchbox__input"
-        type="text" 
+        type="text"
         name="search-employee"
         ref={(input) => this.searchFilterInput = input}
         placeholder="Search Employee"
         onChange={this.handleUserInput.bind(this)}
-        onFocus={()=>this.handleToggleDropdown(true)}
-        onBlur={()=>this.handleToggleDropdown(false)} />
+        onFocus={this.handleToggleDropdown.bind(this, true)}
+        onBlur={this.handleToggleDropdown.bind(this, false)} />
 
         <ul className={
             classnames(
@@ -47,10 +43,22 @@ export default class SearchBox extends Component {
               {'searchbox__dropdown-list--hidden' : !this.state.activeDropDown}
             )}>
           <li className="searchbox__result">
-            <Link to="/employees/davyb" onClick={()=>this.handleClickLink()}>Davy Jones</Link>
+            <Link
+              className="searchbox__result__item"
+              to="/employees/davyb" 
+              onClick={()=>this.handleClickLink()}>
+              <span className="searchbox__result__item__name">Davy Jones</span>
+              <span className="searchbox__result__item__label">Developer</span>
+            </Link>
           </li>
           <li className="searchbox__result">
-            haldjf
+            <Link
+              className="searchbox__result__item"
+              to="/employees/alfonz" 
+              onClick={()=>this.handleClickLink()}>
+              <span className="searchbox__result__item__name">Alfonz Montelibano</span>
+              <span className="searchbox__result__item__label">Developer</span>
+            </Link>
           </li>
         </ul>
       </div>
