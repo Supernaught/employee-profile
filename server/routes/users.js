@@ -7,23 +7,33 @@ var User = require('../models/user');
 // List all users
 userRoutes.get('/', (req, res) => {
 	if(req.query['s']) {
+		const searchUserRegex = {
+				'$regex': req.query['s'],
+				'$options': 'i'
+		}
+
 		User.find({
-			$text: { $search: req.query['s'] }
+			$or: [
+				{ 'username': searchUserRegex },
+				{ 'first_name': searchUserRegex },
+				{ 'last_name': searchUserRegex },
+			]
 		})
 		.exec()
 		.then((searchUsersResult) => {
+			res.json(searchUsersResult);
+		})
+	} else{
+		User.find({})
+		.exec()
+		.then((users) => {
 			res.json(users);
 		})
+		.catch((err) => {
+			res.send('Error displaying list of users.');
+		});
 	}
 
-	User.find({})
-	.exec()
-	.then((users) => {
-		res.json(users);
-	})
-	.catch((err) => {
-		res.send('Error displaying list of users.');
-	});
 });
 
 // Seed -- helper function only, not for production
