@@ -9,7 +9,6 @@ export default class UserList extends Component {
 			<div>
 				--Employees List (Default Route)
 				<div>Search {search}</div>
-				{this.props.children}
 				<div>Page {page}</div>
 			</div>
 			)
