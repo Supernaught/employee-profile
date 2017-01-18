@@ -32,7 +32,9 @@ export default class SearchBox extends Component {
                 <Link
                   className="searchbox__result__item"
                   to={"/employees/"+res.username}>
-                  <span className="searchbox__result__item__name">{res.first_name +' '+res.last_name}</span>
+                  <span className="searchbox__result__item__name">
+                  <strong>{res.first_name +' '+res.last_name}</strong>
+                  </span>
                   <span className="searchbox__result__item__label">{res.position}</span>
                 </Link>
               </li>
