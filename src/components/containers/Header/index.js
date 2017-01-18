@@ -20,7 +20,7 @@ class Header extends Component {
 
   handleSearchFilter(searchFilter) {
     this.props.actions.setFilter(searchFilter);
-    this.props.actions.setFilterResult(searchUser(this.props.actions.setFilter));
+    this.props.actions.fetchFilterResult(searchUser(this.props.actions.setFilter));
   }
 
   render() {

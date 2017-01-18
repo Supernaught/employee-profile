@@ -15,8 +15,9 @@ export default class SearchBox extends Component {
     };
   }
 
-  handleToggleDropdown(bool, e) {
-    this.setState({activeDropDown: bool});
+  handleToggleDropdown(bool) {
+    // this.setState({activeDropDown: bool});
+    this.setState({activeDropDown: true});
   }
 
   handleUserInput() {
@@ -31,7 +32,7 @@ export default class SearchBox extends Component {
                 <Link
                   className="searchbox__result__item"
                   to={"/employees/"+res.username}>
-                  <span className="searchbox__result__item__name">{res.name}</span>
+                  <span className="searchbox__result__item__name">{res.first_name +' '+res.last_name}</span>
                   <span className="searchbox__result__item__label">{res.position}</span>
                 </Link>
               </li>
@@ -45,8 +46,8 @@ export default class SearchBox extends Component {
         ref={(input) => this.searchFilterInput = input}
         placeholder="Search Employee"
         onChange={this.handleUserInput.bind(this)}
-        onFocus={this.handleToggleDropdown.bind(this, true)}
-        onBlur={this.handleToggleDropdown.bind(this, false)} />
+        onFocus={this.handleToggleDropdown.bind(this)}
+        onBlur={this.handleToggleDropdown.bind(this)} />
 
         <ul className={
             classnames(

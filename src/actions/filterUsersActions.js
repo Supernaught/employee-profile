@@ -15,9 +15,9 @@ export function setFilter(name) {
 	}
 }
 
-export function setFilterResult(list) {
+export function fetchFilterResult(list) {
 	return {
-		type: "SET_FILTER_RESULT",
+		type: "FETCH_FILTER_RESULT",
 		payload: list
 	}
 }
