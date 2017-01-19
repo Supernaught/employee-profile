@@ -1,8 +1,8 @@
 import React, {Component } from 'react';
 import ReactDOM from 'react-dom';
 import classnames from 'classnames';
-import { Link } from 'react-router';
-import shortid from 'shortid';
+
+import SearchResult from '../SearchResult';
 
 import './index.css';
 
@@ -41,18 +41,6 @@ export default class SearchBox extends Component {
   }
 
   render() {
-    const SearchResult = this.props.resultList.map((res) => {
-      return <li key={shortid.generate()} className="searchbox__result">
-                <Link
-                  className="searchbox__result__item"
-                  to={"/employees/"+res.username}>
-                  <span className="searchbox__result__item__name">
-                  <strong>{res.first_name +' '+res.last_name}</strong>
-                  </span>
-                  <span className="searchbox__result__item__label">{res.position}</span>
-                </Link>
-              </li>
-    });
     return (
       <div className="searchbox">
         <input 
@@ -67,14 +55,9 @@ export default class SearchBox extends Component {
         placeholder="Search Employee"
         onChange={this.handleUserInput.bind(this)}
         onFocus={this.handleToggleDropdown.bind(this)} />
-
-        <ul className={
-            classnames(
-              "searchbox__dropdown-list", 
-              {'searchbox__dropdown-list--active' : this.state.activeDropDown}
-            )}>
-            {SearchResult}
-        </ul>
+        
+        <SearchResult activeDropDown={this.state.activeDropDown} data={this.props.resultList} />
+        
       </div>
       )
     }

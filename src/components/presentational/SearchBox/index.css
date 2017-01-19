@@ -6,53 +6,5 @@
     .searchbox__input--active {
       border-color: #83C2FF;
       box-shadow: 0px 0px 5px 0px #83C2FF; }
-  .searchbox__dropdown-list {
-    min-height: 35px;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    background: white;
-    border-radius: 2px;
-    position: absolute;
-    left: 0;
-    top: -webkit-calc(100% + 3px);
-    top: calc(100% + 3px);
-    list-style: none;
-    box-shadow: 0px 0px 5px 0px #D9D9D9;
-    overflow: hidden;
-    display: none; }
-    .searchbox__dropdown-list--active {
-      display: block; }
-    .searchbox__dropdown-list:empty {
-      display: none; }
-  .searchbox__result {
-    position: relative; }
-    .searchbox__result:hover {
-      background: #F0F0F0; }
-    .searchbox__result__item {
-      padding: 8px;
-      width: 100%;
-      height: 100%;
-      color: #222;
-      box-sizing: border-box;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      text-decoration: none;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: left;
-      -webkit-align-items: left;
-      -ms-flex-align: left;
-      align-items: left; }
-      .searchbox__result__item__name {
-        font-size: 14px; }
-      .searchbox__result__item__label {
-        color: gray;
-        font-size: 12px; }
 
 /*# sourceMappingURL=index.css.map */
