@@ -7,6 +7,11 @@ $theme-color: #1781E0;
 	
 	&__input{
 		width: 350px;
+
+		&--active{
+			border-color: #83C2FF;
+			box-shadow: 0px 0px 5px 0px #83C2FF;	
+		}
 	}
 
 	&__dropdown-list{
@@ -23,9 +28,10 @@ $theme-color: #1781E0;
 		list-style: none;
 		box-shadow: 0px 0px 5px 0px #D9D9D9;
 		overflow: hidden;
+		display: none;
 
-		&--hidden{
-			display: none;
+		&--active{
+			display: block;
 		}
 
 		&:empty{

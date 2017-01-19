@@ -1,17 +1,8 @@
 .header {
-  padding: 0 15px;
-  width: 100%;
   background: white;
-  box-sizing: border-box;
   border-bottom: solid 1px #e1e8ed;
-  position: fixed;
-  top: 0;
-  left: 0; }
-  .header + * {
-    margin-top: 50px; }
+  z-index: 1; }
   .header__container {
-    margin: 0 auto;
-    max-width: 1090px;
     height: 50px;
     display: -webkit-box;
     display: -webkit-flex;

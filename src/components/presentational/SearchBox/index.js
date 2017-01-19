@@ -1,4 +1,5 @@
 import React, {Component } from 'react';
+import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import { Link } from 'react-router';
 import shortid from 'shortid';
@@ -11,19 +12,32 @@ export default class SearchBox extends Component {
     super(props);
 
     this.state = {
-      activeDropDown: true,
+      activeDropDown: false,
     };
   }
 
+  componentWillMount() {
+    document.addEventListener('click', this.handleClick, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.handleClick, false);
+  }
+
   handleToggleDropdown(bool) {
-    // this.setState({activeDropDown: bool});
-    this.setState({activeDropDown: true});
+    this.setState({activeDropDown: bool});
   }
 
   handleUserInput() {
     this.props.onUserInput(
       this.searchFilterInput.value
     );
+  }
+
+  handleClick = e => {
+    if(!ReactDOM.findDOMNode(this).contains(e.target)) {
+      this.setState({'activeDropDown':false});
+    }
   }
 
   render() {
@@ -42,19 +56,22 @@ export default class SearchBox extends Component {
     return (
       <div className="searchbox">
         <input 
-        className="searchbox__input"
+        className={
+          classnames(
+            "searchbox__input",
+            {'searchbox__input--active' : this.state.activeDropDown}
+        )}
         type="text"
         name="search-employee"
         ref={(input) => this.searchFilterInput = input}
         placeholder="Search Employee"
         onChange={this.handleUserInput.bind(this)}
-        onFocus={this.handleToggleDropdown.bind(this)}
-        onBlur={this.handleToggleDropdown.bind(this)} />
+        onFocus={this.handleToggleDropdown.bind(this)} />
 
         <ul className={
             classnames(
               "searchbox__dropdown-list", 
-              {'searchbox__dropdown-list--hidden' : !this.state.activeDropDown}
+              {'searchbox__dropdown-list--active' : this.state.activeDropDown}
             )}>
             {SearchResult}
         </ul>

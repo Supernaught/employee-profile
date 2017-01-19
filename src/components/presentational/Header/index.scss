@@ -2,22 +2,11 @@ $content-width: 1090px;
 $theme-color: #1781E0;
 
 .header{
-	padding: 0 15px;
-	width: 100%;
 	background: white;
-	box-sizing: border-box;
 	border-bottom: solid 1px #e1e8ed;
-	position: fixed;
-	top: 0;
-	left: 0;
-
-	& + *{
-		margin-top: 50px;
-	}
+	z-index: 1;
 
 	&__container{
-		margin: 0 auto;
-		max-width: $content-width;
 		height: 50px;
 		display: -webkit-box;
 		display: -webkit-flex;

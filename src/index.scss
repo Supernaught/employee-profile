@@ -2,15 +2,22 @@ $placeholder-color: lightgray;
 $input-color: black;
 $shadow-color: #83C2FF;
 $theme-color: #1781E0;
+$content-width: 1090px;
 
 body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	background: #FAFAFA; 
+	/*background: #FAFAFA; */
+	background: #F5F8FA;
 }
 
-input{
+hr{
+	border: 0;
+	border-top: solid 1px lightgray;
+}
+
+input[type="text"]{
 	padding: 0 8px;
 	height: 30px;
 	color: $input-color;
@@ -42,4 +49,32 @@ input:-ms-input-placeholder{
 
 input::placeholder{
 	color: $placeholder-color;
+}
+
+.page{
+	margin-top: 1px;
+}
+
+.content{
+	width: 100%;
+	box-sizing: border-box;
+	
+	&__wrapper{
+		padding: 0 10px;
+		margin: 0 auto;
+		max-width: $content-width;
+	}
+}
+
+.content-head{
+	margin-bottom: 20px;
+	border: 0;
+	border-bottom: solid 1px #e1e8ed;
+
+	&__title{
+		margin: 25px 0;
+		color: #484848;
+		font-size: 20px;
+		font-weight: normal;
+	}
 }

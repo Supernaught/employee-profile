@@ -1,0 +1,56 @@
+.filter-box {
+  width: 300px;
+  position: relative;
+  font-size: 14px;
+  overflow-y: scroll; }
+  .filter-box--left {
+    margin-right: 10px; }
+  .filter-box__sticky {
+    padding: 10px 0; }
+  .filter-box__container {
+    width: 100%;
+    background: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    border: solid 1px #e1e8ed;
+    border-radius: 3px;
+    box-sizing: border-box;
+    overflow: hidden; }
+  .filter-box__group-name {
+    padding: 10px;
+    color: gray;
+    font-weight: bold; }
+  .filter-box__input-container {
+    padding: 10px;
+    color: gray;
+    background: #F8F8F8;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer; }
+    .filter-box__input-container:hover {
+      color: gray;
+      background: #e1e8ed; }
+  .filter-box__input-name {
+    margin-left: 10px; }
+
+.filter-box__checkbox:checked + .filter-box__input-name {
+  color: #222; }
+
+/*# sourceMappingURL=index.css.map */

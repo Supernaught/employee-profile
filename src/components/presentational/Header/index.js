@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { Sticky } from 'react-sticky';
 
 import SearchBox from '../../presentational/SearchBox';
 import { searchUser } from '../../../api/search-api';
@@ -16,8 +17,8 @@ export default class Header extends Component {
 
   render() {
     return (
-      <header className="header">
-        <div className="header__container">
+      <Sticky className="header content">
+        <div className="header__container content__wrapper">
         	<div className="header__section">
             <Link className="header__nav header__nav--container" to={"/"}>
           		<img 
@@ -36,7 +37,7 @@ export default class Header extends Component {
         		Logout
         	</div>
         </div>
-      </header>
+      </Sticky>
     )
   }
 }

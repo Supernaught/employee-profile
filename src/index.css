@@ -2,9 +2,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #FAFAFA; }
+  /*background: #FAFAFA; */
+  background: #F5F8FA; }
 
-input {
+hr {
+  border: 0;
+  border-top: solid 1px lightgray; }
+
+input[type="text"] {
   padding: 0 8px;
   height: 30px;
   color: black;
@@ -14,7 +19,7 @@ input {
   border: 1px solid lightgray;
   border-radius: 2px;
   box-shadow: inset 0px 0px 2px 0px #D9D9D9; }
-  input:focus {
+  input[type="text"]:focus {
     border-color: #83C2FF;
     box-shadow: 0px 0px 5px 0px #83C2FF; }
 
@@ -29,5 +34,26 @@ input:-ms-input-placeholder {
 
 input::placeholder {
   color: lightgray; }
+
+.page {
+  margin-top: 1px; }
+
+.content {
+  width: 100%;
+  box-sizing: border-box; }
+  .content__wrapper {
+    padding: 0 10px;
+    margin: 0 auto;
+    max-width: 1090px; }
+
+.content-head {
+  margin-bottom: 20px;
+  border: 0;
+  border-bottom: solid 1px #e1e8ed; }
+  .content-head__title {
+    margin: 25px 0;
+    color: #484848;
+    font-size: 20px;
+    font-weight: normal; }
 
 /*# sourceMappingURL=index.css.map */

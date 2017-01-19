@@ -4,8 +4,10 @@ export default class Home extends Component {
 
 	render() {
 		return (
-			<div>
-			*Home
+			<div className="content page">
+				<div className="content__wrapper">
+					*Home
+				</div>
 			</div>
 			)
 	}
