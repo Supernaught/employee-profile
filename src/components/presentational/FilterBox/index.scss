@@ -1,3 +1,5 @@
+$theme-color: #1781E0;
+
 .filter-box {
 	width: 300px;
 	position: relative;
@@ -36,13 +38,18 @@
 
 	&__group-name{
 		padding: 10px;
-		color: gray;
+		color: #484848;
 		font-weight: bold;
+		border-bottom: solid 1px #e1e8ed;
+
+		&:not(:first-of-type){
+			border-top: solid 1px #e1e8ed;
+		}
 	}
 
 	&__input-container{
 		padding: 10px;
-		color: gray;
+		color: silver;
 		background: #F8F8F8;
 		display: -webkit-inline-box;
 		display: -webkit-inline-flex;
@@ -68,7 +75,8 @@
 .filter-box__checkbox{
 	&:checked{
 		& + .filter-box__input-name{
-			color: #222;
+			color: #5D6477;
+			font-weight: bold;
 		}
 	}
 }
