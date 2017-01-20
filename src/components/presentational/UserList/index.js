@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import shortid from 'shortid';
 
 import './index.css';
 
@@ -19,6 +20,10 @@ export default class UserList extends Component {
 	}
 
 	render() {
+		const userList = [{'name':'davy bolivar', 'position':'developer', 'birthdate':'october 21, 1992'},
+						  {'name':'alfonz montelibano', 'position':'developer', 'birthdate':'october 21, 1992'},
+						  {'name':'junry roma', 'position':'developer', 'birthdate':'october 21, 1992'},
+						  {'name':'howard meija', 'position':'3DCG', 'birthdate':'october 21, 1992'}];
 		return (
 			<div className="user-list">
 				<div className="user-list__header user-list__header--space-between">
@@ -42,7 +47,30 @@ export default class UserList extends Component {
 					    </div>
 					</div>
 				</div>
+
+				<ListView users={userList} listType={this.state.listView} />
+
 			</div>
 			)
+	}
+}
+
+class ListView extends Component {
+	render() {
+		const userCards = this.props.users.map((user) => {
+			return <li key={shortid.generate()} className='list-container__item'>
+						<img 
+							src="http://i.imgur.com/mGgdRPz.png" 
+							alt={user.name}
+							className="list-container__item-image"/>
+						<div className="list-container__item-name">{user.name}</div>
+					</li>
+		});
+
+		return (
+			<ul className={classnames('list-container', {'list-container--grid':!this.props.listType})}>
+				{userCards}
+			</ul>
+		)
 	}
 }

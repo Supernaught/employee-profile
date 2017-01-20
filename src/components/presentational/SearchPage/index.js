@@ -26,9 +26,9 @@ export default class SearchPage extends Component {
 						<h1 className="content-head__title">Find Employees</h1>
 					</div>
 				</div>
-				<div className="employee-page content__wrapper">
+				<div className="search-page content__wrapper">
 					<FilterBox />
-					<div className="employee-page__section">
+					<div className="search-page__section">
 						<UserList />
 					</div>
 				</div>

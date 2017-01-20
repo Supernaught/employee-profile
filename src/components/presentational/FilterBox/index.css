@@ -2,7 +2,10 @@
   width: 250px;
   position: relative;
   font-size: 14px;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
   .filter-box--left {
     margin-right: 10px; }
   .filter-box__sticky {
