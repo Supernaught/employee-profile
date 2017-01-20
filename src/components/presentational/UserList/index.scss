@@ -94,14 +94,10 @@ $theme-color: #1781E0;
 	-ms-flex-direction: column;
 	flex-direction: column;
 
-	&--grid{
+	&--grid-view{
 		-webkit-flex-flow: row;
 		-ms-flex-flow: row;
 		flex-flow: row;
-		-webkit-box-pack: center;
-		-webkit-justify-content: center;
-		-ms-flex-pack: center;
-		justify-content: center;
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
@@ -114,10 +110,15 @@ $theme-color: #1781E0;
 		display: -ms-flexbox;
 		display: flex;
 		border-bottom: solid 1px #e1e8ed;
+
+		&:last-of-type{
+			border-bottom: none;
+		}
 	}
 
-	&--grid &__item{
-		width: 200px;
+	&--grid-view &__item{
+		width: -webkit-calc(100% / 3);
+		width: calc(100% / 3);
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
 		-webkit-flex-direction: column;
@@ -128,6 +129,24 @@ $theme-color: #1781E0;
 		-ms-flex-align: center;
 		align-items: center;
 		border: none;
+		box-sizing: border-box;
+	}
+
+	&__detail-container{
+		margin-left: 20px;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 
 	&__item-image{
@@ -136,5 +155,15 @@ $theme-color: #1781E0;
 		background: white;
 		border-radius: 50%;
 		object-fit: contain;
+	}
+
+	&__item-name{
+		color: #484848;
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	&__item-position{
+		color: gray;
 	}
 }

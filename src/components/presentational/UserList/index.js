@@ -13,17 +13,39 @@ export default class UserList extends Component {
 		};
 	}
 
+	componentWillMount() {
+		const localListView = localStorage.getItem('listview');
+		
+		if(localListView === null){
+			localStorage.setItem('listview', this.state.listView);
+		} else {
+			const bool = (localListView === 'true')? true : false;
+			this.setState({
+				listView : bool
+			});
+		}
+	}
+
 	handleToggleView(bool) {
 		this.setState({
 			listView : bool
 		});
+
+		localStorage.setItem('listview', bool);
 	}
 
 	render() {
 		const userList = [{'name':'davy bolivar', 'position':'developer', 'birthdate':'october 21, 1992'},
 						  {'name':'alfonz montelibano', 'position':'developer', 'birthdate':'october 21, 1992'},
 						  {'name':'junry roma', 'position':'developer', 'birthdate':'october 21, 1992'},
-						  {'name':'howard meija', 'position':'3DCG', 'birthdate':'october 21, 1992'}];
+						  {'name':'howard meija', 'position':'3DCG', 'birthdate':'october 21, 1992'},
+						  {'name':'aj maraat', 'position':'3DCG', 'birthdate':'october 21, 1992'},
+						  {'name':'theodore something', 'position':'3DCG', 'birthdate':'october 21, 1992'},
+						  {'name':'jade something', 'position':'3DCG', 'birthdate':'october 21, 1992'},
+						  {'name':'joann gecale', 'position':'3DCG', 'birthdate':'october 21, 1992'},
+						  {'name':'richard vergis', 'position':'developer', 'birthdate':'october 21, 1992'},
+						  {'name':'mina kitajima', 'position':'manager', 'birthdate':'october 21, 1992'},
+						  {'name':'other guy', 'position':'audio editor', 'birthdate':'october 21, 1992'}];
 		return (
 			<div className="user-list">
 				<div className="user-list__header user-list__header--space-between">
@@ -63,12 +85,15 @@ class ListView extends Component {
 							src="http://i.imgur.com/mGgdRPz.png" 
 							alt={user.name}
 							className="list-container__item-image"/>
-						<div className="list-container__item-name">{user.name}</div>
+						<div className="list-container__detail-container">
+							<div className="list-container__item-name">{user.name}</div>
+							<div className="list-container__item-position">{user.position}</div>
+						</div>
 					</li>
 		});
 
 		return (
-			<ul className={classnames('list-container', {'list-container--grid':!this.props.listType})}>
+			<ul className={classnames('list-container', {'list-container--grid-view':!this.props.listType})}>
 				{userCards}
 			</ul>
 		)
