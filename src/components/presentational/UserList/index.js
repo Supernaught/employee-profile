@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import shortid from 'shortid';
 
-import ProfileAvatar from '../ProfileAvatar';
+import ListView from '../ListView';
 
 import './index.css';
 
@@ -37,17 +36,18 @@ export default class UserList extends Component {
 	}
 
 	render() {
-		const userList = [{'name':'davy bolivar', 'position':'developer', 'birthdate':'october 21, 1992', 'image':"http://i.imgur.com/mGgdRPz.png"},
-						  {'name':'alfonz montelibano', 'position':'developer', 'birthdate':'october 21, 1992', 'image':"https://scontent.fmnl4-5.fna.fbcdn.net/v/t31.0-8/15774858_10153877798185904_8442868469936076616_o.jpg?_nc_eui2=v1%3AAeHjYbHmFlzExzcD2SD0vHJhm-sT58gKQCQjUhFCwKXGi64a7rp-GlytGxaTlXAUNw2pHoy2-9O2Hx8E2XPuJ5sYsMfU80JbGCLpllI6WqXi6w&oh=4ff2972029c28a8cd201c63f1a94340b&oe=59111282"},
-						  {'name':'junry roma', 'position':'developer', 'birthdate':'october 21, 1992', 'image':'https://scontent.fmnl4-5.fna.fbcdn.net/v/t1.0-1/c0.0.320.320/p320x320/12729040_10205948806343380_955651828098085912_n.jpg?_nc_eui2=v1%3AAeEHwkH6yoQVs-QGzAKwIGY3LJIIMgusUjyw35TmvlHxaQuTtnZq8JWvrR80A-c1AS_uRkuFET_t_ED0OUUkK0U_1OeAbHsThTAmEj2PERYLRw&oh=ee66684271eba0244748b65129280bc2&oe=591E989B'},
-						  {'name':'howard meija', 'position':'3DCG', 'birthdate':'october 21, 1992', 'image':null},
-						  {'name':'aj maraat', 'position':'3DCG', 'birthdate':'october 21, 1992', 'image':null},
-						  {'name':'theodore something', 'position':'3DCG', 'birthdate':'october 21, 1992', 'image':null},
-						  {'name':'jade something', 'position':'3DCG', 'birthdate':'october 21, 1992', 'image':null},
-						  {'name':'joann gecale', 'position':'3DCG', 'birthdate':'october 21, 1992', 'image':null},
-						  {'name':'richard vergis', 'position':'developer', 'birthdate':'october 21, 1992', 'image':null},
-						  {'name':'mina kitajima', 'position':'manager', 'birthdate':'october 21, 1992'},
-						  {'name':'other guy', 'position':'audio editor', 'birthdate':'october 21, 1992', 'image':null}];
+		const userList = [{'inactive':true, 'name':'Davy Jones Bolivar', 'position':'Developer', 'birthdate':'october 21, 1992', 'image':"http://i.imgur.com/BgC2FVK.png"},
+						  {'inactive':false, 'name':'Alfonz Montelibano', 'position':'Developer', 'birthdate':'october 21, 1992', 'image':"https://scontent.fmnl4-5.fna.fbcdn.net/v/t31.0-8/15774858_10153877798185904_8442868469936076616_o.jpg?_nc_eui2=v1%3AAeHjYbHmFlzExzcD2SD0vHJhm-sT58gKQCQjUhFCwKXGi64a7rp-GlytGxaTlXAUNw2pHoy2-9O2Hx8E2XPuJ5sYsMfU80JbGCLpllI6WqXi6w&oh=4ff2972029c28a8cd201c63f1a94340b&oe=59111282"},
+						  {'inactive':false, 'name':'Junry Roma', 'position':'Developer', 'birthdate':'october 21, 1992', 'image':'https://scontent.fmnl4-5.fna.fbcdn.net/v/t1.0-1/c0.0.320.320/p320x320/12729040_10205948806343380_955651828098085912_n.jpg?_nc_eui2=v1%3AAeEHwkH6yoQVs-QGzAKwIGY3LJIIMgusUjyw35TmvlHxaQuTtnZq8JWvrR80A-c1AS_uRkuFET_t_ED0OUUkK0U_1OeAbHsThTAmEj2PERYLRw&oh=ee66684271eba0244748b65129280bc2&oe=591E989B'},
+						  {'inactive':false, 'name':'Geraldine Bacang', 'position':'Developer', 'birthdate':'october 21, 1992', 'image':null},
+						  {'inactive':false, 'name':'Howard Meija', 'position':'3DCG', 'birthdate':'october 21, 1992', 'image':null},
+						  {'inactive':false, 'name':'April John Maraat', 'position':'Developer', 'birthdate':'october 21, 1992', 'image':'http://i.imgur.com/9Mz35Bb.png'},
+						  {'inactive':false, 'name':'Theodore Toribio Rojas', 'position':'Audio Editor', 'birthdate':'october 21, 1992', 'image':null},
+						  {'inactive':false, 'name':'Jade Droppy', 'position':'Accountant', 'birthdate':'october 21, 1992', 'image':null},
+						  {'inactive':false, 'name':'Joann Gecale', 'position':'Developer', 'birthdate':'october 21, 1992', 'image':null},
+						  {'inactive':false, 'name':'Richard Vergis', 'position':'Developer', 'birthdate':'october 21, 1992', 'image':null},
+						  {'inactive':false, 'name':'Mina Kitajima', 'position':'Manager', 'birthdate':'october 21, 1992'},
+						  {'inactive':true, 'name':'other guy', 'position':'Audio Editor', 'birthdate':'october 21, 1992', 'image':null}];
 		return (
 			<div className="user-list">
 				<div className="user-list__header user-list__header--space-between">
@@ -76,28 +76,5 @@ export default class UserList extends Component {
 
 			</div>
 			)
-	}
-}
-
-class ListView extends Component {
-	render() {
-		const userCards = this.props.users.map((user) => {
-			return <li key={shortid.generate()} className='list-container__item'>
-						<ProfileAvatar 
-							className="list-container__item-image"
-							imageSrc={user.image}
-							imageAlt={user.name} />
-						<div className="list-container__detail-container">
-							<div className="list-container__item-name">{user.name}</div>
-							<div className="list-container__item-position">{user.position}</div>
-						</div>
-					</li>
-		});
-
-		return (
-			<ul className={classnames('list-container', {'list-container--grid-view':!this.props.listType})}>
-				{userCards}
-			</ul>
-		)
 	}
 }

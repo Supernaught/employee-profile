@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 
+
 import defaultavatar from './default_avatar.jpg';
 
 import './index.css';
