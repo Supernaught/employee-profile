@@ -5,7 +5,7 @@ import App from './App';
 import Home from './components/presentational/Home';
 import About from './components/presentational/About';
 import UsersContainer from './components/presentational/UsersContainer';
-import EmployeePage from './components/presentational/EmployeePage';
+import SearchPage from './components/containers/SearchPageContainer';
 import UserPage from './components/presentational/UserPage';
 import UserAttendanceContainer from './components/presentational/UserAttendanceContainer';
 import UserLeaves from './components/presentational/UserLeaves';
@@ -17,7 +17,7 @@ const Routes = (props) => (
 	    <Route path="/" component={App}>
 	    	<IndexRoute component={Home} />
 		    <Route path="/employees" component={UsersContainer}>
-		    	<IndexRoute component={EmployeePage} />
+		    	<IndexRoute component={SearchPage} />
 		    	<Route path=":id" component={UserPage}>
 		    		<IndexRoute component={UserAttendanceContainer} />
 		    		<Route path="info" component={UserInfo} />

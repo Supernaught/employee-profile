@@ -45,25 +45,34 @@ export default class FilterBox extends Component {
         				type="checkbox"/>
         			<div className="filter-box__input-name">Illustrator</div>
         		</div>
+                <div className="filter-box__input-container">
+                    <input 
+                        className="filter-box__checkbox" 
+                        type="checkbox"/>
+                    <div className="filter-box__input-name">Animator</div>
+                </div>                
         		<div className="filter-box__group-name">
-        			Employee Status
+        			Employment Status
         		</div>
         		<div className="filter-box__input-container">
         			<input 
-        				className="filter-box__checkbox" 
-        				type="radio"/>
+        				className="filter-box__checkbox"
+                        type="radio"
+                        name="employee-status"/>
         			<div className="filter-box__input-name">Active Employees</div>
         		</div>
         		<div className="filter-box__input-container">
         			<input 
-        				className="filter-box__checkbox" 
-        				type="radio"/>
+        				className="filter-box__checkbox"
+                        type="radio"
+                        name="employee-status"/>
         			<div className="filter-box__input-name">In-active Employees</div>
         		</div>
         		<div className="filter-box__input-container">
         			<input 
-        				className="filter-box__checkbox" 
-        				type="radio"/>
+        				className="filter-box__checkbox"
+                        type="radio"
+                        name="employee-status"/>
         			<div className="filter-box__input-name">Both</div>
         		</div>
         	</div>

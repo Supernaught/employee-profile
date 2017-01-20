@@ -1,0 +1,59 @@
+.user-list {
+  margin-top: 10px; }
+  .user-list__header {
+    padding: 8px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    box-sizing: border-box; }
+    .user-list__header--space-between {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .user-list__section {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .user-list__counter {
+    color: gray;
+    font-size: 14px; }
+  .user-list__icon-container {
+    color: lightgray;
+    fill: lightgray;
+    font-size: 14px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer; }
+    .user-list__icon-container:not(:first-of-type) {
+      margin-left: 5px; }
+    .user-list__icon-container:hover {
+      color: #1781E0;
+      fill: #1781E0; }
+    .user-list__icon-container--active {
+      color: #5D6477;
+      fill: #5D6477; }
+  .user-list__icon {
+    width: 22px;
+    height: 22px;
+    fill: inherit; }
+    .user-list__icon--space-right {
+      margin-right: 5px; }
+
+/*# sourceMappingURL=index.css.map */

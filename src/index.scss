@@ -8,30 +8,29 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	/*background: #FAFAFA; */
 	background: #F5F8FA;
 }
 
 hr{
+	margin: 10px 0px;
 	border: 0;
-	border-top: solid 1px lightgray;
+	border-bottom: solid 1px #e1e8ed;
 }
 
 input[type="text"]{
 	padding: 0 8px;
 	height: 30px;
 	color: $input-color;
+	background: #F8F8F8;
 	font-size: 13px;
 	outline: none;
 	box-sizing: border-box;
-	border: 1px solid lightgray;
+	border: 1px solid #e1e8ed;
 	border-radius: 2px;
-	
-	box-shadow: inset 0px 0px 2px 0px #D9D9D9;
 
 	&:focus{
 		border-color: $shadow-color;
-		box-shadow: 0px 0px 5px 0px $shadow-color;
+		box-shadow: 0px 0px 3px 0px $shadow-color;
 	}
 }
 
@@ -60,7 +59,7 @@ input::placeholder{
 	box-sizing: border-box;
 	
 	&__wrapper{
-		padding: 0 10px;
+		padding: 0 15px;
 		margin: 0 auto;
 		max-width: $content-width;
 	}

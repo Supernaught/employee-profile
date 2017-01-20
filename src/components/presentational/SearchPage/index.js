@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
 import { StickyContainer } from 'react-sticky';
+
 import FilterBox from '../FilterBox';
+import UserList from '../UserList';
 
 import './index.css';
 
-export default class EmployeePage extends Component {
+export default class SearchPage extends Component {
 
 	componentDidMount() {
+		console.log("QUERY ",this.props.location.query);
+		console.log("ROUTER ",this.props.location);
+		console.log("CONTAINER PROPS ",this.props)
 		window.scrollTo(0, 0);
 	}
 
@@ -23,8 +28,8 @@ export default class EmployeePage extends Component {
 				</div>
 				<div className="employee-page content__wrapper">
 					<FilterBox />
-					<div className="employee-page__section" style={{'background':'pink', 'height':'1000px'}}>
-						whot
+					<div className="employee-page__section">
+						<UserList />
 					</div>
 				</div>
 			</div>

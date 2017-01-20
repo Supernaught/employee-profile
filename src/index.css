@@ -2,26 +2,26 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /*background: #FAFAFA; */
   background: #F5F8FA; }
 
 hr {
+  margin: 10px 0px;
   border: 0;
-  border-top: solid 1px lightgray; }
+  border-bottom: solid 1px #e1e8ed; }
 
 input[type="text"] {
   padding: 0 8px;
   height: 30px;
   color: black;
+  background: #F8F8F8;
   font-size: 13px;
   outline: none;
   box-sizing: border-box;
-  border: 1px solid lightgray;
-  border-radius: 2px;
-  box-shadow: inset 0px 0px 2px 0px #D9D9D9; }
+  border: 1px solid #e1e8ed;
+  border-radius: 2px; }
   input[type="text"]:focus {
     border-color: #83C2FF;
-    box-shadow: 0px 0px 5px 0px #83C2FF; }
+    box-shadow: 0px 0px 3px 0px #83C2FF; }
 
 input::-webkit-input-placeholder {
   color: lightgray; }
@@ -42,7 +42,7 @@ input::placeholder {
   width: 100%;
   box-sizing: border-box; }
   .content__wrapper {
-    padding: 0 10px;
+    padding: 0 15px;
     margin: 0 auto;
     max-width: 1090px; }
 
