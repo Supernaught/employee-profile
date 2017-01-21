@@ -17,7 +17,9 @@ export default class ListView extends Component {
 						key={shortid.generate()} 
 						className={
 							classnames(
-								'list-container__item list-container__item--space-between',
+								'list-container__item',
+								{'list-container__item--space-between':this.props.listType,
+								 'list-container__item--space-top':!this.props.listType},
 								{'list-container__item--grid':!this.props.listType})}>
 						<div className="list-container__section list-container__section--row">
 							<Link className="list-container__item-image" to={"/employees/"+user.name}>
