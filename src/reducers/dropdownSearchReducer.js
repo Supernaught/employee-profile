@@ -1,16 +1,16 @@
 export default function reducer(state={
-    filter: null,
-    result: [],
+    dropdownFilter: null,
+    dropdownResult: [],
     fetching: false,
     fetched: false,
     error: null,
   }, action) {
 
     switch (action.type) {
-      case "SET_USER_FILTER": {
-        return {...state, filter: action.payload}
+      case "SET_DROPDOWN_FILTER": {
+        return {...state, dropdownFilter: action.payload}
       }
-      case "SET_FILTER_RESULT": {
+      case "SET_DROPDOWN_RESULT": {
         return {
           ...state, 
           fetched: false,
@@ -20,7 +20,7 @@ export default function reducer(state={
       case "FETCH_FILTER_RESULT_FULFILLED": {
         return {
           ...state, 
-          result: action.payload,
+          dropdownResult: action.payload,
           fetched: true,
           fetching: false,
         }

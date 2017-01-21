@@ -35,14 +35,14 @@ export default class ListView extends Component {
 									classnames(
 										"list-container__item-image",
 										{'list-container__item-image--small' : !this.props.listType})} 
-								  to={"/employees/"+user.name}>
+								  to={"/employees/"+user.username}>
 								<ProfileAvatar
 									className={
 										classnames(
 											"list-container__item-image",
 											{'list-container__item-image--small' : !this.props.listType})}
-									imageSrc={user.image}
-									imageAlt={user.name} />
+									imageSrc={user.profile_picture}
+									imageAlt={user.username} />
 							</Link>
 							<div className="list-container__section">
 								<span>
@@ -51,8 +51,8 @@ export default class ListView extends Component {
 											classnames(
 												"list-container__item-name",
 												{"list-container__item-name--small-text" : !this.props.listType})}
-										to={'/employees/'+user.name}>
-											{user.name}
+										to={'/employees/'+user.username}>
+											{user.first_name +' '+ user.last_name}
 									</Link>
 								</span>
 								<div className={

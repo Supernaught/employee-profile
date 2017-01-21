@@ -10,9 +10,10 @@ import './index.css';
 export default class SearchPage extends Component {
 
 	componentDidMount() {
-		console.log("QUERY ",this.props.location.query);
-		console.log("ROUTER ",this.props.location);
-		console.log("CONTAINER PROPS ",this.props)
+		// console.log("QUERY ",this.props.location.query);
+		// console.log("ROUTER ",this.props.location);
+		// console.log("CONTAINER PROPS ",this.props)
+		console.log("REDUX SHIT ", this.props);
 		window.scrollTo(0, 0);
 	}
 
@@ -29,7 +30,7 @@ export default class SearchPage extends Component {
 				<div className="search-page content__wrapper">
 					<FilterBox />
 					<div className="search-page__section">
-						<UserList />
+						<UserList result={this.props.result} />
 					</div>
 				</div>
 			</div>

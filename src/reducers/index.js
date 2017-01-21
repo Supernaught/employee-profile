@@ -2,12 +2,14 @@
 
  import user from './userReducer.js';
  import tweet from './tweetsReducer.js';
- import filter from './filterUsersReducer.js';
+ import dropdownsearch from './dropdownSearchReducer.js';
+  import search from './searchReducer.js';
 
  const rootReducer = combineReducers({
  	user,
  	tweet,
- 	filter
+ 	dropdownsearch,
+ 	search
  });
 
  export default rootReducer;

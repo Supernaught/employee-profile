@@ -10,7 +10,7 @@ export function fetchUser() {
 
 export function setFilter(name) {
 	return {
-		type: "SET_USER_FILTER",
+		type: "SET_DROPDOWN_FILTER",
 		payload: name
 	}
 }
