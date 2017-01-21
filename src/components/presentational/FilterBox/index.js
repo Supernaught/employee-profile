@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
-import { StickyContainer, Sticky } from 'react-sticky';
+import { Sticky } from 'react-sticky';
 
 import './index.css';
 

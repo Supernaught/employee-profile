@@ -1,6 +1,6 @@
 import axios from 'axios';
-import store from '../store';
-import { getUsersSucess } from '../actions/userActions';
+// import store from '../store';
+// import { getUsersSucess } from '../actions/userActions';
 
 /**
 * Search users
