@@ -60,10 +60,14 @@ input::placeholder{
 	box-sizing: border-box;
 	
 	&__wrapper{
-		padding: 0 15px;
+		padding: 0px 15px;
 		margin: 0 auto;
 		max-width: $content-width;
 		box-sizing: border-box;
+
+		&--title{
+			padding: 35px 15px;
+		}
 	}
 }
 
@@ -72,10 +76,18 @@ input::placeholder{
 	border: 0;
 	border-bottom: solid 1px #e1e8ed;
 
+	&--dark{
+		background-color: #343436; 
+	}
+
 	&__title{
-		margin: 25px 0;
+		margin: 0px;
 		color: #484848;
 		font-size: 20px;
 		font-weight: normal;
+
+		&--light-text{
+			color: white;
+		}
 	}
 }

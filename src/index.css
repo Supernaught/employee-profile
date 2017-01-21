@@ -43,19 +43,25 @@ input::placeholder {
   width: 100%;
   box-sizing: border-box; }
   .content__wrapper {
-    padding: 0 15px;
+    padding: 0px 15px;
     margin: 0 auto;
     max-width: 1090px;
     box-sizing: border-box; }
+    .content__wrapper--title {
+      padding: 35px 15px; }
 
 .content-head {
   margin-bottom: 20px;
   border: 0;
   border-bottom: solid 1px #e1e8ed; }
+  .content-head--dark {
+    background-color: #343436; }
   .content-head__title {
-    margin: 25px 0;
+    margin: 0px;
     color: #484848;
     font-size: 20px;
     font-weight: normal; }
+    .content-head__title--light-text {
+      color: white; }
 
 /*# sourceMappingURL=index.css.map */
