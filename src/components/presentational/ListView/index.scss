@@ -43,8 +43,8 @@
 		&--space-top{
 			-webkit-box-pack: start;
 			-webkit-justify-content: flex-start;
-			    -ms-flex-pack: start;
-			        justify-content: flex-start;
+			-ms-flex-pack: start;
+			justify-content: flex-start;
 		}
 
 		&--grid{
@@ -63,13 +63,6 @@
 			border-bottom: solid 1px transparent;
 			box-sizing: border-box;
 		}
-	}
-
-	&--grid-view &__item--space-between{
-		/* -webkit-box-pack: start;*/
-		/* -webkit-justify-content: flex-start;*/
-		/* -ms-flex-pack: start;*/
-		/* justify-content: flex-start;*/
 	}
 
 	&__section{
@@ -105,18 +98,22 @@
 			-ms-flex-align: end;
 			align-items: flex-end;
 		}
-	}
 
-	&--grid-view &__section{
-		width: 100%;
-	}
+		&--stretch-width{
+			width: 100%;
+			-webkit-box-pack: start;
+			-webkit-justify-content: flex-start;
+			-ms-flex-pack: start;
+			justify-content: flex-start;
+		}
 
-	&--grid-view &__section--align-top{
-		padding-top: 10px;
-		-webkit-box-align: start;
-		-webkit-align-items: flex-start;
-		-ms-flex-align: start;
-		align-items: flex-start;
+		&--stick-left{
+			padding-top: 10px;
+			-webkit-box-align: start;
+			-webkit-align-items: flex-start;
+			-ms-flex-align: start;
+			align-items: flex-start;
+		}
 	}
 
 	&__item-image{
@@ -124,34 +121,34 @@
 		width: 120px;
 		height: 120px;
 		border-radius: 50%;
-	}
 
-	&--grid-view &__item-image{
-		width: 60px;
-		height: 60px;
+		&--small{
+			width: 60px;
+			height: 60px;
+		}
 	}
 
 	&__item-name{
 		color: #484848;
-		font-size: 22px;
+		font-size: 20px;
 		font-weight: bold;
 		text-decoration: none;
 
 		&:hover{
 			color: #1781E0;
 		}
-	}
 
-	&--grid-view &__item-name{
-		font-size: 16px;
+		&--small-text{
+			font-size: 16px;	
+		}
 	}
 
 	&__item-position{
 		color: gray;
-	}
 
-	&--grid-view &__item-position{
-		font-size: 15px;
+		&--small-text{
+			font-size: 13px;	
+		}
 	}
 
 	&__status{
@@ -168,12 +165,12 @@
 		&--text-right{
 			text-align: right;
 		}
-	}
 
-	&--grid-view &__status--inactive{
-		padding: 0px;
-		border: none;
-		border-radius: none;
+		&--no-border{
+			padding: 0px;
+			border: none;
+			border-radius: none;			
+		}
 	}
 }
 
@@ -181,16 +178,12 @@
 	.list-container{
 		&__item--grid{
 			width: -webkit-calc(100% / 2);
-			 width: calc(100% / 2);
+			width: calc(100% / 2);
 		}
 
 		&__item-image{
 			width: 90px;
 			height: 90px;
-		}
-
-		&__item-name{
-			font-size: 20px;
 		}
 	}
 }
