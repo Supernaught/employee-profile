@@ -28,6 +28,10 @@
   .user-list__counter {
     color: gray;
     font-size: 14px; }
+  .user-list__icon-label {
+    margin-right: 5px;
+    color: #5D6477;
+    font-size: 13px; }
   .user-list__icon-container {
     color: lightgray;
     fill: lightgray;
