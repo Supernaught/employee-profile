@@ -22,9 +22,11 @@ export default class SearchPage extends Component {
 		const search = this.props.location.query.search;
 		return (
 			<div className="content page">
-				<div className="content-head content-head--dark">
+				<div className="content-head">
 					<div className="content__wrapper content__wrapper--title">
-						<h1 className="content-head__title content-head__title--light-text">Find Employees</h1>
+						<h1 className="content-head__title">
+							Find Employees
+						</h1>
 					</div>
 				</div>
 				<div className="search-page content__wrapper">

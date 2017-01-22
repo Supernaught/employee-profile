@@ -63,5 +63,7 @@ input::placeholder {
     font-weight: normal; }
     .content-head__title--light-text {
       color: white; }
+    .content-head__title--center-text {
+      text-align: center; }
 
 /*# sourceMappingURL=index.css.map */

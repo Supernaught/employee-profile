@@ -89,5 +89,9 @@ input::placeholder{
 		&--light-text{
 			color: white;
 		}
+
+		&--center-text{
+			text-align: center;
+		}
 	}
 }
