@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
-import { StickyContainer } from 'react-sticky';
 
 import FilterBox from '../FilterBox';
 import UserList from '../UserList';
@@ -13,18 +11,19 @@ export default class SearchPage extends Component {
 		// console.log("QUERY ",this.props.location.query);
 		// console.log("ROUTER ",this.props.location);
 		// console.log("CONTAINER PROPS ",this.props)
-		console.log("REDUX SHIT ", this.props);
 		window.scrollTo(0, 0);
-		this.handleQueryChange();
+		// console.log("FUCK YOU",this.props.location);
 	}
 
-	handleQueryChange() {
-		console.log("what's up mananap");
+	componentWillReceiveProps() {
+		// console.log("FUCK YOU",this.props.location);
+	}
+
+	handleNewQuery(query) {
+		console.log("THIS IS THE QUERY ",query);
 	}
 
 	render() {
-		const page = this.props.location.query.page;
-		const search = this.props.location.query.search;
 		return (
 			<div className="content page">
 				<div className="content-head">
@@ -35,7 +34,7 @@ export default class SearchPage extends Component {
 					</div>
 				</div>
 				<div className="search-page content__wrapper">
-					<FilterBox handleQuery={this.handleQueryChange.bind(this)} />
+					<FilterBox {...this.props} handleQuery={this.handleNewQuery.bind(this)} />
 					<div className="search-page__section">
 						<UserList result={this.props.result} />
 					</div>

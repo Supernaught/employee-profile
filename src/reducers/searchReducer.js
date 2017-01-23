@@ -1,13 +1,31 @@
 export default function reducer(state={
   search: 'well fuck',
-  searchFilters: {
-    'developer':true,
-    'audio_editor':true,
-    '3dcg':true,
-    'accountant':true,
-    'illustrator':true,
-    'animator':true,
-  },
+  searchDepartment: [
+      {
+        "name": "developer",
+        "display_name": "Developer"
+      },
+      {
+        "name": "audio_editor",
+        "display_name": "Audio Editor"
+      },
+      {
+        "name": "3dcg",
+        "display_name": "3DCG"
+      },
+      {
+        "name": "accountant",
+        "display_name": "Accountant"
+      },
+      {
+        "name": "illustrator",
+        "display_name": "Illustrator"
+      },
+      {
+        "name": "animator",
+        "display_name": "Animator"
+      }
+  ],
   searchResult: 
   [ {
     "_id": "58784578e1cccd092722409b",
@@ -315,8 +333,8 @@ export default function reducer(state={
     case "SET_SEARCH": {
       return {...state, search: action.payload}
     }
-    case "SET_SEARCH_FILTERS": {
-      return {...state, searchFilters: action.payload}
+    case "SET_SEARCH_DEPARTMENT": {
+      return {...state, searchDepartment: action.payload}
     }
     case "SET_SEARCH_RESULT": {
       return {...state, searchResult: action.payload}

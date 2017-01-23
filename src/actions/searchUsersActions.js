@@ -7,7 +7,7 @@ export function setSearch(name) {
 
 export function setFilter(filters) {
 	return {
-		type: "SET_SEARCH_FILTERS",
+		type: "SET_SEARCH_DEPARTMENT",
 		payload: filters
 	}
 }
