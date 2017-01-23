@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { Sticky } from 'react-sticky';
+import { Link } from 'react-router';
 
 import './index.css';
 
 export default class FilterBox extends Component {
+
+  componentWillReceiveProps() {
+      this.props.handleQuery();
+  }
 
   render() {
     return (
@@ -14,42 +19,54 @@ export default class FilterBox extends Component {
         		<div className="filter-box__group-name">
         			Departments
         		</div>
-        		<div className="filter-box__input-container">
+        		<Link 
+                    className="filter-box__input-container"
+                    to="/employees?developer=false">
         			<input 
         				className="filter-box__checkbox" 
         				type="checkbox"/>
         			<div className="filter-box__input-name">Developer</div>
-        		</div>
-        		<div className="filter-box__input-container">
+        		</Link>
+        		<Link 
+                    className="filter-box__input-container"
+                    to="/employees?audio_editor=false">
         			<input 
         				className="filter-box__checkbox" 
         				type="checkbox"/>
         			<div className="filter-box__input-name">Audio Editor</div>
-        		</div>
-        		<div className="filter-box__input-container">
+        		</Link>
+        		<Link 
+                    className="filter-box__input-container"
+                    to="/employees?3dcg=false">
         			<input 
         				className="filter-box__checkbox" 
         				type="checkbox"/>
         			<div className="filter-box__input-name">3DCG</div>
-        		</div>
-        		<div className="filter-box__input-container">
+        		</Link>
+        		<Link 
+                    className="filter-box__input-container"
+                    to="/employees?accountant=false">
         			<input 
         				className="filter-box__checkbox" 
         				type="checkbox"/>
         			<div className="filter-box__input-name">Accountant</div>
-        		</div>
-        		<div className="filter-box__input-container">
+        		</Link>
+        		<Link 
+                    className="filter-box__input-container"
+                    to="/employees?illustrator=false">
         			<input 
         				className="filter-box__checkbox" 
         				type="checkbox"/>
         			<div className="filter-box__input-name">Illustrator</div>
-        		</div>
-                <div className="filter-box__input-container">
+        		</Link>
+                <Link 
+                    className="filter-box__input-container"
+                    to="/employees?animator=false">
                     <input 
                         className="filter-box__checkbox" 
                         type="checkbox"/>
                     <div className="filter-box__input-name">Animator</div>
-                </div>                
+                </Link>                
         		<div className="filter-box__group-name">
         			Employment Status
         		</div>

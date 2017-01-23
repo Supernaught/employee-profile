@@ -25,10 +25,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
-  .user-list__counter {
-    color: gray;
-    font-size: 14px; }
-  .user-list__icon-label {
+  .user-list__header-label {
     margin-right: 5px;
     color: #5D6477;
     font-size: 13px; }

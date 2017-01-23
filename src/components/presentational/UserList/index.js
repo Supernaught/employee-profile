@@ -51,10 +51,10 @@ export default class UserList extends Component {
 			<div className="user-list">
 				<div className="user-list__header user-list__header--space-between">	
 					<div className="user-list__section">
-						<i className="user-list__counter">{resultCountMessage}</i>
+						<div className="user-list__header-label">{resultCountMessage}</div>
 					</div>
 					<div className="user-list__section">
-						<div className="user-list__icon-label">{listLabel}</div>
+						<div className="user-list__header-label">{listLabel}</div>
 						<div className={
 							 classnames("user-list__icon-container", {"user-list__icon-container--active" : this.state.listView})}
 							 onClick={()=>this.handleToggleView(true)}>

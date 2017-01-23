@@ -15,6 +15,11 @@ export default class SearchPage extends Component {
 		// console.log("CONTAINER PROPS ",this.props)
 		console.log("REDUX SHIT ", this.props);
 		window.scrollTo(0, 0);
+		this.handleQueryChange();
+	}
+
+	handleQueryChange() {
+		console.log("what's up mananap");
 	}
 
 	render() {
@@ -30,7 +35,7 @@ export default class SearchPage extends Component {
 					</div>
 				</div>
 				<div className="search-page content__wrapper">
-					<FilterBox />
+					<FilterBox handleQuery={this.handleQueryChange.bind(this)} />
 					<div className="search-page__section">
 						<UserList result={this.props.result} />
 					</div>

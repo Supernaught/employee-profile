@@ -5,6 +5,9 @@ body {
   font-family: sans-serif;
   background: #F5F8FA; }
 
+a {
+  text-decoration: none; }
+
 hr {
   margin: 10px 0px;
   border: 0;
