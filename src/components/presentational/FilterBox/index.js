@@ -15,30 +15,22 @@ export default class FilterBox extends Component {
         let filterQuery = '';
         let isCheck = true;
 
-        if(this.props.location.query.filter !== undefined) {
-            isCheck = !(this.props.location.query.filter.indexOf(department.name) > -1);
+        if(this.props.location.query.department !== undefined) {
+            isCheck = !(this.props.location.query.department.indexOf(department.name) > -1);
         }
 
+        let tempQuery = this.props.location.query.department;
+        tempQuery = (tempQuery === null || tempQuery === undefined) ? [] : tempQuery.split(' ');
+
         if(isCheck) {
-            if(this.props.location.query.filter !== undefined){
-                filterQuery = this.props.location.search + '&filter=' + department.name;
-            } else{
-                filterQuery = '?filter=' + department.name;
-            }
+            tempQuery.push(department.name);
         } else{
-            if(typeof(this.props.location.query.filter) === 'object') {
-                const newFilter = this.props.location.query.filter.map((filter) => {
-                    if(filter !== department.name){
-                        return '&filter='+filter;
-                    } else {
-                        return '';
-                    }
-                });
-                filterQuery = '?'+newFilter.join('').slice(1);
-            } else if(typeof(this.props.location.query.filter) === 'string') {
-                filterQuery = "";
-            }
+            const i = tempQuery.indexOf(department.name);
+            tempQuery.splice(i, 1);
         }
+
+        tempQuery = tempQuery.join(' ');
+        filterQuery = (tempQuery.length <= 0) ? tempQuery : '?department='+tempQuery;
 
         return <Link 
                     key={shortid.generate()}
