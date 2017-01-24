@@ -24,12 +24,17 @@ export default class SearchPage extends Component {
 	}
 
 	render() {
+		const searchDisplay = (this.props.location.query.search === undefined) 
+							? "Employees" 
+							: <span className="content-head__display-input">
+								{this.props.location.query.search}
+							  </span>
 		return (
 			<div className="content page">
 				<div className="content-head">
 					<div className="content__wrapper content__wrapper--title">
 						<h1 className="content-head__title">
-							Find Employees
+							Find {searchDisplay}
 						</h1>
 					</div>
 				</div>

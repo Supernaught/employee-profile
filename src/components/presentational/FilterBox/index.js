@@ -3,6 +3,8 @@ import { Sticky } from 'react-sticky';
 import { Link } from 'react-router';
 import shortid from 'shortid';
 
+import { createDepartmentPath, replaceQueryElement } from '../../../methods/routesHelper.js';
+
 import './index.css';
 
 export default class FilterBox extends Component {
@@ -14,23 +16,14 @@ export default class FilterBox extends Component {
         const pathname = this.props.location.pathname;
         let filterQuery = '';
         let isCheck = true;
+        const query = this.props.location.query;
 
-        if(this.props.location.query.department !== undefined) {
-            isCheck = !(this.props.location.query.department.indexOf(department.name) > -1);
+        if(query.department !== undefined) {
+            isCheck = !(query.department.indexOf(department.name) > -1);
         }
 
-        let tempQuery = this.props.location.query.department;
-        tempQuery = (tempQuery === null || tempQuery === undefined) ? [] : tempQuery.split(' ');
-
-        if(isCheck) {
-            tempQuery.push(department.name);
-        } else{
-            const i = tempQuery.indexOf(department.name);
-            tempQuery.splice(i, 1);
-        }
-
-        tempQuery = tempQuery.join(' ');
-        filterQuery = (tempQuery.length <= 0) ? tempQuery : '?department='+tempQuery;
+        const deptPath = createDepartmentPath(query.department, isCheck, department.name);
+        filterQuery = replaceQueryElement(query, 'department', deptPath);
 
         return <Link 
                     key={shortid.generate()}

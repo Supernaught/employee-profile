@@ -98,4 +98,13 @@ input::placeholder{
 			text-align: center;
 		}
 	}
+
+	&__display-input{
+		color: $theme-color;
+		font-weight: bold;
+
+		&:before, &:after{
+			content: '"';
+		}
+	}
 }

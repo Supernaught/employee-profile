@@ -68,5 +68,10 @@ input::placeholder {
       color: white; }
     .content-head__title--center-text {
       text-align: center; }
+  .content-head__display-input {
+    color: #1781E0;
+    font-weight: bold; }
+    .content-head__display-input:before, .content-head__display-input:after {
+      content: '"'; }
 
 /*# sourceMappingURL=index.css.map */
