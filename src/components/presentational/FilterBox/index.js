@@ -3,7 +3,7 @@ import { Sticky } from 'react-sticky';
 import { Link } from 'react-router';
 import shortid from 'shortid';
 
-import { createDepartmentPath, replaceQueryElement } from '../../../methods/routesHelper.js';
+import { replaceQueryElement, addQueryElement, removeQueryElement } from '../../../methods/routesHelper.js';
 
 import './index.css';
 
@@ -12,18 +12,28 @@ export default class FilterBox extends Component {
     render() {
         this.props.handleQuery(this.props.location.query);
 
+        let query_target = this.props.location.query.exclude;
+        let isCheck = true;
+
         const departmentFilter = this.props.departments.map((department) => {
         const pathname = this.props.location.pathname;
         let filterQuery = '';
-        let isCheck = true;
         const query = this.props.location.query;
 
-        if(query.department !== undefined) {
-            isCheck = !(query.department.indexOf(department.name) > -1);
-        }
+        let departmentElements = '';
 
-        const deptPath = createDepartmentPath(query.department, isCheck, department.name);
-        filterQuery = replaceQueryElement(query, 'department', deptPath);
+        if(query_target !== undefined){
+            if(query_target.includes(department.name)){
+                departmentElements = removeQueryElement(query_target, department.name);
+                isCheck = false;
+            } else {
+                departmentElements = addQueryElement(query_target, department.name);
+                isCheck = true;
+            }
+            filterQuery = replaceQueryElement(query, {'exclude':departmentElements});
+        } else{
+            filterQuery = replaceQueryElement(query, {'exclude':department.name});
+        }
 
         return <Link 
                     key={shortid.generate()}

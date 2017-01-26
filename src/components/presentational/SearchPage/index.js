@@ -12,11 +12,11 @@ export default class SearchPage extends Component {
 		// console.log("ROUTER ",this.props.location);
 		// console.log("CONTAINER PROPS ",this.props)
 		window.scrollTo(0, 0);
-		// console.log("FUCK YOU",this.props.location);
+		// console.log("Component Did Mount",this.props.location);
 	}
 
 	componentWillReceiveProps() {
-		// console.log("FUCK YOU",this.props.location);
+		// console.log("Recieve Props",this.props.location);
 	}
 
 	handleNewQuery(query) {

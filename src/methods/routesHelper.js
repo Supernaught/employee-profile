@@ -1,40 +1,21 @@
-exports.createDepartmentPath = (location, bool, target) => {
-	let tempQuery = location;
-	tempQuery = (tempQuery === null || tempQuery === undefined) ? [] : tempQuery.split(' ');
-
-	if(bool) {
-		tempQuery.push(target);
-	} else{
-		const i = tempQuery.indexOf(target);
-		tempQuery.splice(i, 1);
-	}
-
-	tempQuery = tempQuery.join(' ');
-
-	// return (tempQuery.length <= 0) ? tempQuery : '?department='+tempQuery;
-	return tempQuery;
+exports.addQueryElement = (query_element, target) => {
+	return query_element.trim() +' '+ target.trim().replace('  ',' ');
 }
 
-exports.replaceQueryElement = (location, key, value) => {
-	let tempLocation = Object.assign(location);
-	const queries = Object.keys(tempLocation);
-	let newQuery = [];
+exports.removeQueryElement = (query_element, target) => {
+	return query_element.replace(target, '').replace('  ',' ').trim();
+}
 
-	if(tempLocation[key] === undefined) {
-		queries.forEach((query) => {
-			newQuery.push(query+"="+tempLocation[query].trim());
-		});
-		newQuery.push(key+"="+value);
-	} else {
-		queries.forEach((query) => {
-			if(key !== query) {
-				newQuery.push(query+"="+tempLocation[query].trim());
-			} else {
-				newQuery.push(query+"="+value.trim());
-			}
-		});
-	}
+exports.replaceQueryElement = (route_query, dictionary) => {
+	var newQuery = Object.assign(route_query, dictionary);
+	let newPath = [];
 
-	newQuery = '?'+newQuery.join('&');
-	return newQuery;
+	Object.keys(newQuery).forEach((key) => {
+		if(newQuery[key].trim().length > 0){
+			newPath.push(key+'='+newQuery[key].trim());
+		}
+	});
+
+	newPath = (newPath.length <= 0) ? '' : '?'+newPath.join('&');
+	return newPath;
 }
