@@ -1,6 +1,6 @@
 import React, {Component } from 'react';
-import ReactDOM from 'react-dom';
 import classnames from 'classnames';
+import { browserHistory } from 'react-router';
 
 import SearchResult from '../SearchResult';
 
@@ -34,9 +34,9 @@ export default class SearchBox extends Component {
     );
   }
 
-  handleClick = e => {
-    if(!ReactDOM.findDOMNode(this).contains(e.target)) {
-      this.setState({'activeDropDown':false});
+  handleEnterSearch(e) {
+    if(e.key === 'Enter' && this.searchFilterInput.value.trim().length > 0) {
+      browserHistory.push('/employees?search='+this.searchFilterInput.value.trim());
     }
   }
 
@@ -54,7 +54,8 @@ export default class SearchBox extends Component {
         ref={(input) => this.searchFilterInput = input}
         placeholder="Search Employee"
         onChange={this.handleUserInput.bind(this)}
-        onFocus={this.handleToggleDropdown.bind(this)} />
+        onFocus={this.handleToggleDropdown.bind(this)}
+        onKeyPress={this.handleEnterSearch.bind(this)} />
         
         <SearchResult activeDropDown={this.state.activeDropDown} data={this.props.resultList} />
         
