@@ -37,7 +37,7 @@ export default class FilterBox extends Component {
 
             return <Link 
                         key={shortid.generate()}
-                        className="filter-box__input-container"
+                        className="filter-box__input-container filter-box__input-container--hover"
                         to={pathname+filterQuery}>
                         <input 
                             className="filter-box__checkbox" 
@@ -64,28 +64,29 @@ export default class FilterBox extends Component {
         		<div className="filter-box__group-name">
         			Employment Status
         		</div>
-        		<div className="filter-box__input-container">
+        		<Link 
+                    className="filter-box__input-container filter-box__input-container--hover">
         			<input 
         				className="filter-box__checkbox"
                         type="radio"
                         name="employee-status"
                         defaultChecked />
         			<div className="filter-box__input-name">Active Employees</div>
-        		</div>
-        		<div className="filter-box__input-container">
+        		</Link>
+        		<Link className="filter-box__input-container filter-box__input-container--hover">
         			<input 
         				className="filter-box__checkbox"
                         type="radio"
                         name="employee-status"/>
         			<div className="filter-box__input-name">In-active Employees</div>
-        		</div>
-        		<div className="filter-box__input-container">
+        		</Link>
+        		<Link className="filter-box__input-container filter-box__input-container--hover">
         			<input 
         				className="filter-box__checkbox"
                         type="radio"
                         name="employee-status"/>
         			<div className="filter-box__input-name">Both</div>
-        		</div>
+        		</Link>
         	</div>
         </Sticky>
       </div>

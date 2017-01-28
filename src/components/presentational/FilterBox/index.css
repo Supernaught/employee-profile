@@ -42,9 +42,8 @@
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center;
-    cursor: pointer; }
-    .filter-box__input-container:hover {
+    align-items: center; }
+    .filter-box__input-container--hover:hover {
       color: #222;
       background: #e1e8ed; }
   .filter-box__input-name {
