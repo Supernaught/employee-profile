@@ -15,6 +15,7 @@ function mapStateToProps(state, props) {
   return { 
     search: state.search.search,
     departments: state.search.searchDepartment,
+    userStatus: state.search.userStatus,
     result: state.search.searchResult
   };
 }

@@ -26,6 +26,20 @@ export default function reducer(state={
         "display_name": "Animator"
       }
   ],
+  userStatus: [
+    {
+      "name": "active",
+      "display_name": "Active Employees",
+    },
+    {
+      "name": "inactive",
+      "display_name": "Inactive Employees",
+    },
+    {
+      "name": "both",
+      "display_name": "Both",
+    }
+  ],
   searchResult: 
   [ {
     "_id": "58784578e1cccd092722409b",

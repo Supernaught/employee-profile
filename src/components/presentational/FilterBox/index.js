@@ -13,7 +13,7 @@ export default class FilterBox extends Component {
         this.props.handleQuery(this.props.location.query);
 
         let query_target = this.props.location.query.exclude;
-        let isCheck = true;
+        let isDepartmentCheck = true;
 
         const departmentFilter = this.props.departments.map((department) => {
             const pathname = this.props.location.pathname;
@@ -25,10 +25,10 @@ export default class FilterBox extends Component {
             if(query_target !== undefined){
                 if(query_target.includes(department.name)){
                     departmentElements = removeQueryElement(query_target, department.name);
-                    isCheck = false;
+                    isDepartmentCheck = false;
                 } else {
                     departmentElements = addQueryElement(query_target, department.name);
-                    isCheck = true;
+                    isDepartmentCheck = true;
                 }
                 filterQuery = updateQueryElement(query, {'exclude':departmentElements});
             } else{
@@ -42,10 +42,34 @@ export default class FilterBox extends Component {
                         <input 
                             className="filter-box__checkbox" 
                             type="checkbox" 
-                            defaultChecked={isCheck} />
+                            defaultChecked={isDepartmentCheck} />
                         <div className="filter-box__input-name">{department.display_name}</div>
                     </Link>
         });
+
+        let isStatus = false;
+
+        const employeeStatus = this.props.userStatus.map((option) => {
+            const pathname = this.props.location.pathname;
+            const query = this.props.location.query;
+            let statusQuery = updateQueryElement(query, {'status':option.name});
+
+            // isStatus = query.status.includes(option.name);
+            // alert(query.status);
+
+            return <Link 
+                        key={shortid.generate()}
+                        className="filter-box__input-container filter-box__input-container--hover"
+                        to={pathname+statusQuery}>
+                        <input 
+                            className="filter-box__checkbox"
+                            type="radio"
+                            name="employee-status"
+                            defaultChecked={isStatus} />
+                        <div className="filter-box__input-name">{option.display_name}</div>
+                    </Link>
+        });
+
     return (
       <div className="filter-box filter-box--left">
       	<Sticky 
@@ -64,29 +88,7 @@ export default class FilterBox extends Component {
         		<div className="filter-box__group-name">
         			Employment Status
         		</div>
-        		<Link 
-                    className="filter-box__input-container filter-box__input-container--hover">
-        			<input 
-        				className="filter-box__checkbox"
-                        type="radio"
-                        name="employee-status"
-                        defaultChecked />
-        			<div className="filter-box__input-name">Active Employees</div>
-        		</Link>
-        		<Link className="filter-box__input-container filter-box__input-container--hover">
-        			<input 
-        				className="filter-box__checkbox"
-                        type="radio"
-                        name="employee-status"/>
-        			<div className="filter-box__input-name">In-active Employees</div>
-        		</Link>
-        		<Link className="filter-box__input-container filter-box__input-container--hover">
-        			<input 
-        				className="filter-box__checkbox"
-                        type="radio"
-                        name="employee-status"/>
-        			<div className="filter-box__input-name">Both</div>
-        		</Link>
+        		{employeeStatus}
         	</div>
         </Sticky>
       </div>
