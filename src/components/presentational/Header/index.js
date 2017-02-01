@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { Sticky } from 'react-sticky';
+import classnames from 'classnames';
 
 import SearchBox from '../../presentational/SearchBox';
 import { searchUser } from '../../../api/search-api';
@@ -16,6 +17,11 @@ export default class Header extends Component {
   }
 
   render() {
+    const searchboxComponent = (this.props.noSearch) ? null :
+            <SearchBox 
+              resultList={this.props.filterResult} 
+              onUserInput={this.handleSearchFilter.bind(this)} />;
+
     return (
       <Sticky className="header content">
         <div className="header__container content__wrapper">
@@ -26,9 +32,7 @@ export default class Header extends Component {
                 src={logo} 
                 alt="logo" />
             </Link>
-            <SearchBox 
-              resultList={this.props.filterResult} 
-              onUserInput={this.handleSearchFilter.bind(this)} />
+            {searchboxComponent}
             <Link className="header__nav" to={"/"}>Home</Link>
             <Link className="header__nav" to={"/employees"}>Employees</Link>
             <Link className="header__nav" to={"/employees/davy"}>Profile</Link>

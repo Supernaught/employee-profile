@@ -29,7 +29,7 @@
     overflow: hidden; }
   .filter-box__group-name {
     padding: 10px 0px;
-    color: #484848;
+    color: gray;
     font-weight: bold; }
   .filter-box__input-container {
     padding: 10px 5px;
@@ -48,6 +48,9 @@
       background: #e1e8ed; }
   .filter-box__input-name {
     margin-left: 10px; }
+  .filter-box__input-field {
+    color: blue;
+    border: solid 1px inherit; }
 
 .filter-box__checkbox:checked + .filter-box__input-name {
   color: #5D6477;

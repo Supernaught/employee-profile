@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 
 import FilterBox from '../FilterBox';
 import UserList from '../UserList';
+import Header from '../../containers/HeaderContainer';
 
 import './index.css';
+
+import { StickyContainer } from 'react-sticky';
 
 export default class SearchPage extends Component {
 
@@ -31,6 +34,7 @@ export default class SearchPage extends Component {
 							  </span>
 		return (
 			<div className="content page">
+				<Header noSearch={true} />
 				<div className="content-head">
 					<div className="content__wrapper content__wrapper--title">
 						<h1 className="content-head__title">
@@ -38,12 +42,12 @@ export default class SearchPage extends Component {
 						</h1>
 					</div>
 				</div>
-				<div className="search-page content__wrapper">
+				<StickyContainer className="search-page content__wrapper">
 					<FilterBox {...this.props} handleQuery={this.handleNewQuery.bind(this)} />
 					<div className="search-page__section">
 						<UserList result={this.props.result} />
 					</div>
-				</div>
+				</StickyContainer>
 			</div>
 			)
 	}
