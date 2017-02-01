@@ -23,7 +23,7 @@ export default class Header extends Component {
               onUserInput={this.handleSearchFilter.bind(this)} />;
 
     return (
-      <div className="header content">
+      <Sticky className="header content">
         <div className="header__container content__wrapper">
         	<div className="header__section">
             <Link className="header__nav header__nav--container" to={"/"}>
@@ -47,7 +47,7 @@ export default class Header extends Component {
         		Logout
         	</div>
         </div>
-      </div>
+      </Sticky>
     )
   }
 }
