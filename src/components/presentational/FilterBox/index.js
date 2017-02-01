@@ -14,6 +14,10 @@ import './index.css';
 
 export default class FilterBox extends Component {
 
+    handleEnterSearch() {
+        console.log("FUCK YOU");
+    }
+
     render() {
         return (
           <div className="filter-box filter-box--left">
@@ -21,7 +25,11 @@ export default class FilterBox extends Component {
                 Search Employee
             </div>
             <div className="filter-box__input-container">
-                <input className="filter-box__input-field" type="text" placeholder="search name..."/>
+                <input 
+                    className="filter-box__input-field" 
+                    type="text" 
+                    placeholder="search name..."
+                    defaultValue={this.props.location.query.search}/>
             </div>
             <Sticky 
                 className="filter-box__sticky">

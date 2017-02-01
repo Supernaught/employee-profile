@@ -49,6 +49,10 @@ $theme-color: #1781E0;
 		font-weight: bold;
 		text-decoration: none;
 
+		&--active{
+			color: $theme-color;
+		}
+
 		&--container{
 			padding: 0px;
 			margin: 0;

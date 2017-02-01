@@ -23,7 +23,7 @@ export default class Header extends Component {
               onUserInput={this.handleSearchFilter.bind(this)} />;
 
     return (
-      <Sticky className="header content">
+      <div className="header content">
         <div className="header__container content__wrapper">
         	<div className="header__section">
             <Link className="header__nav header__nav--container" to={"/"}>
@@ -33,15 +33,21 @@ export default class Header extends Component {
                 alt="logo" />
             </Link>
             {searchboxComponent}
-            <Link className="header__nav" to={"/"}>Home</Link>
-            <Link className="header__nav" to={"/employees"}>Employees</Link>
-            <Link className="header__nav" to={"/employees/davy"}>Profile</Link>
+            <Link className="header__nav" to={"/"} 
+                  activeClassName={'header__nav--active'} 
+                  onlyActiveOnIndex={true}>Home</Link>
+            <Link className="header__nav" to={"/employees"} 
+                  activeClassName={'header__nav--active'} 
+                  onlyActiveOnIndex={true}>Employees</Link>
+            <Link className="header__nav" to={"/employees/davy"} 
+                  activeClassName={'header__nav--active'} 
+                  onlyActiveOnIndex={true}>Profile</Link>
         	</div>
         	<div className="header__section">
         		Logout
         	</div>
         </div>
-      </Sticky>
+      </div>
     )
   }
 }
