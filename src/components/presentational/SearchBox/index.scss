@@ -1,12 +1,29 @@
 $glow-color: #83C2FF;
 $theme-color: #1781E0;
+$input-color: black;
+$shadow-color: #83C2FF;
 
 .searchbox{
 	margin-left: 15px;
 	position: relative;
 	
 	&__input{
+		padding: 0 8px;
 		width: 350px;
+		height: 30px;
+		color: $input-color;
+		background: #F8F8F8;
+		font-size: 13px;
+		outline: none;
+		box-sizing: border-box;
+		border: 1px solid #e1e8ed;
+		border-radius: 2px;
+		box-shadow: none;
+
+		&:focus{
+			border-color: $shadow-color;
+			box-shadow: 0px 0px 3px 0px $shadow-color;
+		}
 
 		&--active{
 			border-color: #83C2FF;

@@ -14,7 +14,7 @@ $theme-color: #1781E0;
 	}
 	
 	&__sticky{
-		padding: 10px 0;
+		padding-bottom: 10px;
 	}
 
 	&__container{
@@ -69,8 +69,24 @@ $theme-color: #1781E0;
 	}
 
 	&__input-field{
-		color: blue;
-		border: solid 1px inherit;
+		padding-left: 30px;
+		padding-right: 10px;
+		height: 30px;
+		color: black;
+		background-color: white;
+		font-size: 13px;
+		outline: none;
+		box-sizing: border-box;
+		border-radius: 2px;
+		box-shadow: none;
+		border: solid 1px #acacac;
+		background: url(./magnify.svg) no-repeat scroll 8px 50%;
+		background-size: 15px;
+
+		&:focus{
+			border-color: #83C2FF;
+			box-shadow: 0px 0px 3px 0px #83C2FF;
+		}
 	}
 }
 
@@ -83,8 +99,8 @@ $theme-color: #1781E0;
 	}
 }
 
-/* @media screen and (max-width: 800px) {*/
-	/* 	.filter-box{*/
-		/* 		display: none;*/
-		/* 	}*/
+	/* @media screen and (max-width: 800px) {*/
+		/* 	.filter-box{*/
+			/* 		display: none;*/
+			/* 	}*/
 /* }*/

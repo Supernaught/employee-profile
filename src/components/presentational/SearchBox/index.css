@@ -2,7 +2,20 @@
   margin-left: 15px;
   position: relative; }
   .searchbox__input {
-    width: 350px; }
+    padding: 0 8px;
+    width: 350px;
+    height: 30px;
+    color: black;
+    background: #F8F8F8;
+    font-size: 13px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #e1e8ed;
+    border-radius: 2px;
+    box-shadow: none; }
+    .searchbox__input:focus {
+      border-color: #83C2FF;
+      box-shadow: 0px 0px 3px 0px #83C2FF; }
     .searchbox__input--active {
       border-color: #83C2FF;
       box-shadow: 0px 0px 5px 0px #83C2FF; }

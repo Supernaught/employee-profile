@@ -9,7 +9,7 @@
   .filter-box--left {
     margin-right: 10px; }
   .filter-box__sticky {
-    padding: 10px 0; }
+    padding-bottom: 10px; }
   .filter-box__container {
     width: 100%;
     display: -webkit-box;
@@ -49,8 +49,22 @@
   .filter-box__input-name {
     margin-left: 10px; }
   .filter-box__input-field {
-    color: blue;
-    border: solid 1px inherit; }
+    padding-left: 30px;
+    padding-right: 10px;
+    height: 30px;
+    color: black;
+    background-color: white;
+    font-size: 13px;
+    outline: none;
+    box-sizing: border-box;
+    border-radius: 2px;
+    box-shadow: none;
+    border: solid 1px #acacac;
+    background: url(./magnify.svg) no-repeat scroll 8px 50%;
+    background-size: 15px; }
+    .filter-box__input-field:focus {
+      border-color: #83C2FF;
+      box-shadow: 0px 0px 3px 0px #83C2FF; }
 
 .filter-box__checkbox:checked + .filter-box__input-name {
   color: #5D6477;

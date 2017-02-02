@@ -28,7 +28,7 @@ export default class FilterBox extends Component {
                 <input 
                     className="filter-box__input-field" 
                     type="text" 
-                    placeholder="search name..."
+                    placeholder="Search name..."
                     defaultValue={this.props.location.query.search}/>
             </div>
             <Sticky 

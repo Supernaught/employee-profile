@@ -22,24 +22,6 @@ hr{
 	border-bottom: solid 1px #e1e8ed;
 }
 
-input[type="text"]{
-	padding: 0 8px;
-	height: 30px;
-	color: $input-color;
-	background: #F8F8F8;
-	font-size: 13px;
-	outline: none;
-	box-sizing: border-box;
-	border: 1px solid #e1e8ed;
-	border-radius: 2px;
-	box-shadow: none;
-
-	&:focus{
-		border-color: $shadow-color;
-		box-shadow: 0px 0px 3px 0px $shadow-color;
-	}
-}
-
 input::-webkit-input-placeholder{
 	color: $placeholder-color;
 }

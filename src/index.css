@@ -13,21 +13,6 @@ hr {
   border: 0;
   border-bottom: solid 1px #e1e8ed; }
 
-input[type="text"] {
-  padding: 0 8px;
-  height: 30px;
-  color: black;
-  background: #F8F8F8;
-  font-size: 13px;
-  outline: none;
-  box-sizing: border-box;
-  border: 1px solid #e1e8ed;
-  border-radius: 2px;
-  box-shadow: none; }
-  input[type="text"]:focus {
-    border-color: #83C2FF;
-    box-shadow: 0px 0px 3px 0px #83C2FF; }
-
 input::-webkit-input-placeholder {
   color: lightgray; }
 
