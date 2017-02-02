@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Sticky } from 'react-sticky';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
+import createHashHistory from 'history/lib/createHashHistory';
 import shortid from 'shortid';
 
 // Department filter toggle group
@@ -14,8 +15,12 @@ import './index.css';
 
 export default class FilterBox extends Component {
 
-    handleEnterSearch() {
-        console.log("FUCK YOU");
+    handleEnterSearch(e) {
+        if(e.key === 'Enter') {
+            const history = Object.assign(browserHistory.getCurrentLocation(), {query: { search:e.target.value }});
+            browserHistory.push(history);
+            // browserHistory.push({ pathname: '/employees', query: { search: 'nyahahaha' } });
+        }
     }
 
     render() {
@@ -28,8 +33,9 @@ export default class FilterBox extends Component {
                 <input 
                     className="filter-box__input-field" 
                     type="text" 
+                    ref={(input) => this.searchEmployeeInput = input}
                     placeholder="Search name..."
-                    defaultValue={this.props.location.query.search}/>
+                    onKeyPress={this.handleEnterSearch.bind(this)}/>
             </div>
             <Sticky 
                 className="filter-box__sticky">

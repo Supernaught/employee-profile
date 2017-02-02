@@ -11,15 +11,12 @@ import { StickyContainer } from 'react-sticky';
 export default class SearchPage extends Component {
 
 	componentDidMount() {
-		// console.log("QUERY ",this.props.location.query);
-		// console.log("ROUTER ",this.props.location);
-		// console.log("CONTAINER PROPS ",this.props)
 		window.scrollTo(0, 0);
-		// console.log("Component Did Mount",this.props.location);
+		this.props.actions.setSearch(this.props.location.query.search);
 	}
 
-	componentWillReceiveProps() {
-		// console.log("Recieve Props",this.props.location);
+	componentDidUpdate() {
+		this.props.actions.setSearch(this.props.location.query.search);
 	}
 
 	handleNewQuery(query) {
@@ -27,10 +24,10 @@ export default class SearchPage extends Component {
 	}
 
 	render() {
-		const searchDisplay = (this.props.location.query.search === undefined) 
+		const searchDisplay = (this.props.search === undefined || this.props.search.trim().length <= 0) 
 							? "Employees" 
 							: <span className="content-head__display-input">
-								{this.props.location.query.search}
+								{this.props.search}
 							  </span>
 		return (
 			<div className="content page">

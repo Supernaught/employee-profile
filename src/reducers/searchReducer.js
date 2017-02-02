@@ -1,5 +1,5 @@
 export default function reducer(state={
-  search: 'well fuck',
+  search: '',
   searchDepartment: [
       {
         "name": "developer",

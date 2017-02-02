@@ -25,7 +25,7 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
-  .header__logo-wrapper:hover > .header__logo {
+  .header__logo-wrapper:hover .header__logo {
     fill: #222222; }
   .header__logo {
     width: 35px;

@@ -34,7 +34,7 @@ $theme-color: #1781E0;
 	}
 
 	&__logo-wrapper:hover{
-		& > .header__logo{
+		& .header__logo{
 			fill: rgb(34, 34, 34);
 		}
 	}
