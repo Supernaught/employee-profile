@@ -17,9 +17,9 @@ export default class FilterBox extends Component {
 
     handleEnterSearch(e) {
         if(e.key === 'Enter') {
-            const history = Object.assign(browserHistory.getCurrentLocation(), {query: { search:e.target.value }});
-            browserHistory.push(history);
-            // browserHistory.push({ pathname: '/employees', query: { search: 'nyahahaha' } });
+            let searchQuery = Object.assign(browserHistory.getCurrentLocation().query, {search:e.target.value});
+            const targetLocation = Object.assign(browserHistory.getCurrentLocation(), {query: searchQuery});
+            browserHistory.push(targetLocation);
         }
     }
 
