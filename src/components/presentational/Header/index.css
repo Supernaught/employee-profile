@@ -25,8 +25,14 @@
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+  .header__logo-wrapper:hover > .header__logo {
+    fill: #222222; }
   .header__logo {
-    height: 30px; }
+    width: 35px;
+    height: 35px;
+    fill: #187ad9;
+    -webkit-transition: fill .2s ease-in;
+    transition: fill .2s ease-in; }
   .header__nav {
     margin-left: 15px;
     padding: 5px;

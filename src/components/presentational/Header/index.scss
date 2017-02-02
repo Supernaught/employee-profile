@@ -33,12 +33,18 @@ $theme-color: #1781E0;
 		        align-items: center;
 	}
 
-	&__logo{
-		height: 30px;
-
-		&:hover{
-			
+	&__logo-wrapper:hover{
+		& > .header__logo{
+			fill: rgb(34, 34, 34);
 		}
+	}
+
+	&__logo{
+		width: 35px;
+		height: 35px;
+		fill: rgb(24, 122, 217);
+		-webkit-transition: fill .2s ease-in;
+		transition: fill .2s ease-in;
 	}	
 
 	&__nav{
