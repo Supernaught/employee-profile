@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 
 import FilterBox from '../FilterBox';
 import UserList from '../UserList';
@@ -17,10 +18,7 @@ export default class SearchPage extends Component {
 
 	componentDidUpdate() {
 		this.props.actions.setSearch(this.props.location.query.search);
-	}
-
-	handleNewQuery(query) {
-		console.log("THIS IS THE QUERY ",query);
+		console.log("THIS IS THE QUERY ",browserHistory.getCurrentLocation().query);
 	}
 
 	render() {
@@ -40,7 +38,7 @@ export default class SearchPage extends Component {
 					</div>
 				</div>
 				<StickyContainer className="search-page content__wrapper">
-					<FilterBox {...this.props} handleQuery={this.handleNewQuery.bind(this)} />
+					<FilterBox {...this.props} />
 					<div className="search-page__section">
 						<UserList result={this.props.result} />
 					</div>

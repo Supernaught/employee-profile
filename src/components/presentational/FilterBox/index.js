@@ -8,8 +8,6 @@ import DepartmentFilterGroup from '../DepartmentFilter';
 // Employement status filter toggle group
 // import StatusFilterGroup from '../EmploymentStatusFilter';
 
-import { updateQueryElement, addQueryElement, removeQueryElement } from '../../../methods/routesHelper.js';
-
 import './index.css';
 
 export default class FilterBox extends Component {
