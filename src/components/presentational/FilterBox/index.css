@@ -30,6 +30,7 @@
   .filter-box__group-name {
     padding: 10px 0px;
     color: gray;
+    font-size: 12px;
     font-weight: bold; }
   .filter-box__input-container {
     padding: 10px 5px;
@@ -53,7 +54,6 @@
     padding-right: 10px;
     height: 30px;
     color: black;
-    background-color: white;
     font-size: 13px;
     outline: none;
     box-sizing: border-box;
@@ -61,10 +61,12 @@
     box-shadow: none;
     border: solid 1px #acacac;
     background: url(./magnify.svg) no-repeat scroll 8px 50%;
+    background-color: transparent;
     background-size: 15px; }
     .filter-box__input-field:focus {
       border-color: #83C2FF;
-      box-shadow: 0px 0px 3px 0px #83C2FF; }
+      box-shadow: 0px 0px 3px 0px #83C2FF;
+      background-color: white; }
 
 .filter-box__checkbox:checked + .filter-box__input-name {
   color: #5D6477;

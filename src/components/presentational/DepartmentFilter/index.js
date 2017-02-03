@@ -1,7 +1,7 @@
 /***
     DepartmentFilter.js
 
-    Generates the department filter button set for excluding the selected 
+    Generates the department filter button set for 'EXCLUDING' the selected 
     department from the list. 
     Once any of these buttons are pressed, the page will be redirected to
     a new location with its toggled department either it would be part or

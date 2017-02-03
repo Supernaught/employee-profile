@@ -28,9 +28,9 @@ export default class FilterBox extends Component {
 
             if(newLocation.query['status'] !== undefined && newLocation.query['status'].trim() === status.name) {
                 isChecked = true;
-            } else if(newLocation.query['status'] === undefined && status.name === 'both') {
+            } else if(newLocation.query['status'] === undefined && status.name === 'active') {
                 isChecked = true;
-            }
+            }   
 
             newLocation.query['status'] = status.name;
 

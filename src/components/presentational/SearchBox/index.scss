@@ -8,12 +8,14 @@ $shadow-color: #83C2FF;
 	position: relative;
 	
 	&__input{
-		padding: 0 8px;
-		width: 350px;
+		padding: 0 10px 0 30px;
+		width: 300px;
 		height: 30px;
 		color: $input-color;
-		background: #F8F8F8;
 		font-size: 13px;
+		background: url(./magnify.svg) no-repeat scroll 8px 50%;
+		background-color: #F8F8F8;
+		background-size: 15px;
 		outline: none;
 		box-sizing: border-box;
 		border: 1px solid #e1e8ed;

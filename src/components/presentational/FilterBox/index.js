@@ -23,8 +23,8 @@ export default class FilterBox extends Component {
     render() {
         return (
           <div className="filter-box filter-box--left">
-            <div className="filter-box__group-name">
-                Search Employee
+            <div className="filter-box__group-name" style={{'paddingTop':'23px'}}>
+                SEARCH EMPLOYEE
             </div>
             <div className="filter-box__input-container">
                 <input 
@@ -38,11 +38,11 @@ export default class FilterBox extends Component {
                 className="filter-box__sticky">
                 <div className="filter-box__container">
                     <div className="filter-box__group-name">
-                        Departments
+                        DEPARTMENTS
                     </div>
                     <DepartmentFilterGroup {...this.props} />
                     <div className="filter-box__group-name">
-                        Employee Status
+                        EMPLOYEE STATUS
                     </div>
                     <EmployeeStatusFilterGroup {...this.props} />
                 </div>
