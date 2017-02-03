@@ -1,47 +1,33 @@
 import React, { Component } from 'react';
 import { Sticky } from 'react-sticky';
-import { Link } from 'react-router';
+import { Link, browserHistory } from 'react-router';
 import shortid from 'shortid';
-
-import { updateQueryElement, addQueryElement, removeQueryElement } from '../../../methods/routesHelper.js';
 
 export default class FilterBox extends Component {
 
     render() {
-        this.props.handleQuery(this.props.location.query);
+        const departmentFilter = this.props.userStatus.map((status) => {
 
-        const pathname = this.props.location.pathname;
-        const query = this.props.location.query;
-        let query_target = this.props.location.query.exclude;
-        let isDepartmentCheck = true;
-        let filterQuery = '';
+            const newLocation = Object.assign(browserHistory.getCurrentLocation());
+            let isChecked = false;
 
-        const departmentFilter = this.props.departments.map((department) => {
-
-            let departmentElements = '';
-
-            if(query_target !== undefined) {
-                if(query_target.includes(department.name)) {
-                    departmentElements = removeQueryElement(query_target, department.name);
-                    isDepartmentCheck = false;
-                } else {
-                    departmentElements = addQueryElement(query_target, department.name);
-                    isDepartmentCheck = true;
-                }
-                filterQuery = updateQueryElement(query, {'exclude':departmentElements});
-            } else{
-                filterQuery = updateQueryElement(query, {'exclude':department.name});
+            if(newLocation.query['status'] !== undefined && newLocation.query['status'].trim() === status.name) {
+                isChecked = true;
+            } else if(newLocation.query['status'] === undefined && status.name === 'both') {
+                isChecked = true;
             }
+
+            newLocation.query['status'] = status.name;
 
             return <Link 
                         key={shortid.generate()}
                         className="filter-box__input-container filter-box__input-container--hover"
-                        to={pathname+filterQuery}>
+                        to={newLocation}>
                         <input 
                             className="filter-box__checkbox" 
                             type="checkbox" 
-                            defaultChecked={isDepartmentCheck} />
-                        <div className="filter-box__input-name">{department.display_name}</div>
+                            defaultChecked={isChecked} />
+                        <div className="filter-box__input-name">{status.display_name}</div>
                     </Link>
         });
 

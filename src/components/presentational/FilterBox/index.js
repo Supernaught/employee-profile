@@ -6,7 +6,7 @@ import shortid from 'shortid';
 // Department filter toggle group
 import DepartmentFilterGroup from '../DepartmentFilter';
 // Employement status filter toggle group
-// import StatusFilterGroup from '../EmploymentStatusFilter';
+import EmployeeStatusFilterGroup from '../EmploymentStatusFilter';
 
 import './index.css';
 
@@ -41,6 +41,10 @@ export default class FilterBox extends Component {
                         Departments
                     </div>
                     <DepartmentFilterGroup {...this.props} />
+                    <div className="filter-box__group-name">
+                        Employee Status
+                    </div>
+                    <EmployeeStatusFilterGroup {...this.props} />
                 </div>
             </Sticky>
           </div>
