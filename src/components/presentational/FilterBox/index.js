@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Sticky } from 'react-sticky';
 import { Link, browserHistory } from 'react-router';
-import createHashHistory from 'history/lib/createHashHistory';
 import shortid from 'shortid';
 
 // Department filter toggle group

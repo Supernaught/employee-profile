@@ -36,7 +36,8 @@ export default class SearchBox extends Component {
 
   handleEnterSearch(e) {
     if(e.key === 'Enter' && this.searchFilterInput.value.trim().length > 0) {
-      browserHistory.push('/employees?search='+this.searchFilterInput.value.trim());
+      const targetLocation = Object.assign(browserHistory.getCurrentLocation(), {pathname:'/employees'}, {query: {search:this.searchFilterInput.value.trim()}});
+      browserHistory.push(targetLocation);
     }
   }
 
