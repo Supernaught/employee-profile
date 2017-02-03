@@ -1,3 +1,13 @@
+/***
+    DepartmentFilter.js
+
+    Generates the department filter button set for excluding the selected 
+    department from the list. 
+    Once any of these buttons are pressed, the page will be redirected to
+    a new location with its toggled department either it would be part or
+    removed from the list.
+***/
+
 import React, { Component } from 'react';
 import { Sticky } from 'react-sticky';
 import { Link, browserHistory } from 'react-router';
@@ -8,14 +18,14 @@ export default class FilterBox extends Component {
     render() {
         const departmentFilter = this.props.departments.map((department) => {
             /***
-                -create new location using 'newLocation'
-                -copy current route location to newLocation using '.getCurrentLocation()' method
-                -fetch and store 'exclude' query through 'excludeDepartmentArr'
-                -convert string query to array using split()
-                -check if target is in query:
-                 * if 'TRUE' then remove it from query then set isIncluded to false to disable checkbox UI
-                 * if 'FALSE' then push it into array
-                -convert array into string by using join() then update it into newLocation
+                - Create new location using 'newLocation'
+                - Clone current route location to newLocation using '.getCurrentLocation()' method
+                - Fetch and store 'exclude' query through 'excludeDepartmentArr'
+                - Convert string query to array using split()
+                - Check if target is in query:
+                 * if it's TRUE', then remove it from query then set isIncluded to false to disable checkbox UI
+                 * if it's FALSE', then push it into array
+                - Convert array into string by using join() then update it into newLocation
             ***/
             const newLocation = Object.assign(browserHistory.getCurrentLocation());
             let excludeDepartmentArr = (newLocation.query['exclude'] !== undefined) 
