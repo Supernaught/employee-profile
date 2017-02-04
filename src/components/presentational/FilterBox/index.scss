@@ -90,6 +90,12 @@ $theme-color: #1781E0;
 			background-color: white;
 		}
 	}
+
+	&__divider{
+		width: 40px;
+		border: none;
+		border-top: solid 1px #e1e8ed;
+	}
 }
 
 .filter-box__checkbox{

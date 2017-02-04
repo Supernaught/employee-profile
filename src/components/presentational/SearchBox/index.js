@@ -3,6 +3,7 @@ import classnames from 'classnames';
 import { browserHistory } from 'react-router';
 
 import SearchResult from '../SearchResult';
+import LoadingIcon from '../LoadingIcon';
 
 import './index.css';
 
@@ -13,6 +14,7 @@ export default class SearchBox extends Component {
 
     this.state = {
       activeDropDown: false,
+      isLoading: false
     };
   }
 
@@ -42,13 +44,19 @@ export default class SearchBox extends Component {
   }
 
   render() {
+    const loadingIcon = (!this.state.isLoading) ? null : 
+                        <LoadingIcon 
+                          className={
+                            classnames('searchbox__loading-icon')
+                          } />
     return (
       <div className="searchbox">
         <input 
         className={
           classnames(
             "searchbox__input",
-            {'searchbox__input--active' : this.state.activeDropDown}
+            {'searchbox__input--active' : this.state.activeDropDown,
+             'searchbox__input--loading' : this.state.isLoading}
         )}
         type="text"
         name="search-employee"
@@ -59,7 +67,7 @@ export default class SearchBox extends Component {
         onKeyPress={this.handleEnterSearch.bind(this)} />
         
         <SearchResult activeDropDown={this.state.activeDropDown} data={this.props.resultList} />
-        
+        {loadingIcon}
       </div>
       )
     }

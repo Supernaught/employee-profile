@@ -40,7 +40,7 @@ export default class FilterBox extends Component {
                         to={newLocation}>
                         <input 
                             className="filter-box__checkbox" 
-                            type="checkbox" 
+                            type="radio" 
                             defaultChecked={isChecked} />
                         <div className="filter-box__input-name">{status.display_name}</div>
                     </Link>

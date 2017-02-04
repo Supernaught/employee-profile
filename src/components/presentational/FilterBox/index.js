@@ -31,9 +31,10 @@ export default class FilterBox extends Component {
                     className="filter-box__input-field" 
                     type="text" 
                     ref={(input) => this.searchEmployeeInput = input}
-                    placeholder="Search name..."
+                    placeholder="Search Employee"
                     onKeyPress={this.handleEnterSearch.bind(this)}/>
             </div>
+            <hr className="filter-box__divider"/>
             <Sticky 
                 className="filter-box__sticky">
                 <div className="filter-box__container">
@@ -41,6 +42,7 @@ export default class FilterBox extends Component {
                         DEPARTMENTS
                     </div>
                     <DepartmentFilterGroup {...this.props} />
+                    <hr className="filter-box__divider"/>
                     <div className="filter-box__group-name">
                         EMPLOYEE STATUS
                     </div>

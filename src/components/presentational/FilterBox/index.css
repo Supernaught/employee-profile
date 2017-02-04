@@ -67,6 +67,10 @@
       border-color: #83C2FF;
       box-shadow: 0px 0px 3px 0px #83C2FF;
       background-color: white; }
+  .filter-box__divider {
+    width: 40px;
+    border: none;
+    border-top: solid 1px #e1e8ed; }
 
 .filter-box__checkbox:checked + .filter-box__input-name {
   color: #5D6477;
