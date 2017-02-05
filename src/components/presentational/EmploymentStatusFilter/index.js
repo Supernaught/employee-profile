@@ -7,7 +7,6 @@
 ***/
 
 import React, { Component } from 'react';
-import { Sticky } from 'react-sticky';
 import { Link, browserHistory } from 'react-router';
 import shortid from 'shortid';
 

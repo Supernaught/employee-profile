@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { Sticky } from 'react-sticky';
-import classnames from 'classnames';
 
 import SearchBox from '../../presentational/SearchBox';
 import { searchUser } from '../../../api/search-api';

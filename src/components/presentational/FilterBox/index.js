@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Sticky } from 'react-sticky';
-import { Link, browserHistory } from 'react-router';
-import shortid from 'shortid';
+import { browserHistory } from 'react-router';
 
 // Department filter toggle group
 import DepartmentFilterGroup from '../DepartmentFilter';
