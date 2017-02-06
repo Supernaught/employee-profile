@@ -12,10 +12,7 @@ export default class ListView extends Component {
 		const userCards = this.props.users.map((user) => {
 
 			const Inactive = (!user.inactive) ? null :
-								<div className={
-									classnames(
-										"list-container__status list-container__status--inactive",
-										{"list-container__status--no-border" : !this.props.listType})}>
+								<div className="list-container__status list-container__status--inactive">
 									Inactive
 								</div>;
 

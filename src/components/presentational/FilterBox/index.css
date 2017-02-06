@@ -1,5 +1,5 @@
 .filter-box {
-  width: 250px;
+  width: 230px;
   position: relative;
   font-size: 14px;
   overflow-y: scroll;
@@ -81,5 +81,8 @@
 /* 		display: none;*/
 /* 	}*/
 /* }*/
+@media screen and (max-width: 700px) {
+  .filter-box {
+    display: none; } }
 
 /*# sourceMappingURL=index.css.map */
