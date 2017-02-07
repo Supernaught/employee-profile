@@ -79,3 +79,9 @@ $theme-color: #1781E0;
 		}
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.list-view-option{
+		display: none;
+	}
+}

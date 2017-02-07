@@ -57,4 +57,8 @@
     .user-list__icon--space-right {
       margin-right: 5px; }
 
+@media screen and (max-width: 600px) {
+  .list-view-option {
+    display: none; } }
+
 /*# sourceMappingURL=index.css.map */
