@@ -53,7 +53,7 @@ export default class UserList extends Component {
 					<div className="user-list__section">
 						<div className="user-list__header-label">{resultCountMessage}</div>
 					</div>
-					<div className="user-list__section">
+					<div className="list-view-option user-list__section">
 						<div className="user-list__header-label">{listLabel}</div>
 						<div className={
 							 classnames("user-list__icon-container", {"user-list__icon-container--active" : this.state.listView})}

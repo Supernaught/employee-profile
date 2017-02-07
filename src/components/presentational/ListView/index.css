@@ -128,40 +128,51 @@
       border-radius: none; }
 
 @media screen and (max-width: 950px) {
-  .list-container {
-    /* &__item-image{*/
-    /* 	width: 90px;*/
-    /* 	height: 90px;*/
-    /* }*/ }
-    .list-container__item--grid {
-      width: -webkit-calc(100% / 2);
-      width: calc(100% / 2); } }
-@media screen and (max-width: 600px) {
-  .list-container--grid-view {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column; }
   .list-container__item--grid {
-    padding: 15px;
-    width: 100%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    border-bottom: solid 1px #e1e8ed;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    width: -webkit-calc(100% / 2);
+    width: calc(100% / 2); }
+  .list-container__item-image {
+    width: 90px;
+    height: 90px; } }
+@media screen and (max-width: 600px) {
+  .list-container {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
-  .list-container__item-image {
-    width: 90px;
-    height: 90px; } }
+    .list-container__item--space-top {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+    .list-container__item--grid {
+      padding: 15px;
+      width: 100%;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-box-align: inherit;
+      -webkit-align-items: inherit;
+      -ms-flex-align: inherit;
+      align-items: inherit;
+      border-bottom: solid 1px #e1e8ed; }
+    .list-container__item-name--small-text {
+      font-size: 20px; }
+    .list-container__item-position--small-text {
+      font-size: 16px; }
+    .list-container__section--stick-left {
+      padding-top: 0px;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end; }
+    .list-container__section--stretch-width {
+      width: auto;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; } }
 
 /*# sourceMappingURL=index.css.map */

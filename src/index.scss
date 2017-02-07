@@ -91,3 +91,10 @@ input::placeholder{
 		}
 	}
 }
+
+
+@media screen and (max-width: 600px) {
+	.content-head__title{
+		text-align: center;
+	}	
+}
