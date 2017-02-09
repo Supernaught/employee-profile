@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { Sticky } from 'react-sticky';
+import classnames from 'classnames';
 
 import SearchBox from '../../presentational/SearchBox';
 import ProfileAvatar from '../../presentational/ProfileAvatar';
@@ -10,9 +11,22 @@ import './index.css';
 
 export default class Header extends Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      dropdownActive:false
+    };
+
+    // this.handleToggleDropdown = this.handleToggleDropdown.bind(this);
+  }
+
   handleSearchFilter(searchFilter) {
     this.props.actions.setFilter(searchFilter);
     this.props.actions.fetchFilterResult(searchUser(searchFilter));
+  }
+
+  handleToggleDropdown(bool, e) {
+    this.setState({dropdownActive: bool});
   }
 
   render() {
@@ -40,7 +54,9 @@ export default class Header extends Component {
         	</div>
         	<div className="header__section">
             {searchboxComponent}
-            <div className="header__nav dropdown">
+            <div 
+              className={classnames("header__nav dropdown", {'dropdown--active': this.state.dropdownActive})}
+              onClick={this.handleToggleDropdown.bind(this, true)}>
               <ProfileAvatar className="header__user-picture" />
               <svg className="dropdown__toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path d="M7,10L12,15L17,10H7Z" />
