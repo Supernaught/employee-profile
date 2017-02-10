@@ -132,10 +132,14 @@ input::placeholder {
     font-size: 14px;
     font-weight: normal;
     box-sizing: border-box;
-    display: block; }
+    display: block;
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px transparent; }
     .dropdown__menu-item:hover {
       color: white;
-      background: #1781E0; }
+      background: #1781E0;
+      border-top-color: #1574c9;
+      border-bottom-color: #1574c9; }
 
 @media screen and (max-width: 600px) {
   .content-head__title {

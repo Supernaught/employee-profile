@@ -1,4 +1,5 @@
 import React, {Component } from 'react';
+import ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import { browserHistory } from 'react-router';
 
@@ -6,6 +7,8 @@ import SearchResult from '../SearchResult';
 import LoadingIcon from '../LoadingIcon';
 
 import './index.css';
+
+let unlisten = null;
 
 export default class SearchBox extends Component {
 
@@ -20,10 +23,14 @@ export default class SearchBox extends Component {
 
   componentWillMount() {
     document.addEventListener('click', this.handleClick, false);
+    unlisten = browserHistory.listen( location =>  {
+      this.handleToggleDropdown(false);
+    });
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.handleClick, false);
+    unlisten();
   }
 
   handleToggleDropdown(bool) {
@@ -33,7 +40,7 @@ export default class SearchBox extends Component {
   handleUserInput() {
     this.props.onUserInput(
       this.searchFilterInput.value
-    );
+      );
   }
 
   handleEnterSearch(e) {
@@ -43,21 +50,27 @@ export default class SearchBox extends Component {
     }
   }
 
+  handleClick = e => {
+    if(!ReactDOM.findDOMNode(this).contains(e.target)) {
+      this.handleToggleDropdown(false);
+    }
+  }
+
   render() {
     const loadingIcon = (!this.state.isLoading) ? null : 
-                        <LoadingIcon 
-                          className={
-                            classnames('searchbox__loading-icon')
-                          } />
+    <LoadingIcon 
+    className={
+      classnames('searchbox__loading-icon')
+    } />
     return (
       <div className="searchbox">
-        <input 
-        className={
-          classnames(
-            "searchbox__input",
-            {'searchbox__input--active' : this.state.activeDropDown,
-             'searchbox__input--loading' : this.state.isLoading}
-        )}
+      <input 
+      className={
+        classnames(
+          "searchbox__input",
+          {'searchbox__input--active' : this.state.activeDropDown,
+          'searchbox__input--loading' : this.state.isLoading}
+          )}
         type="text"
         name="search-employee"
         ref={(input) => this.searchFilterInput = input}
@@ -68,7 +81,7 @@ export default class SearchBox extends Component {
         
         <SearchResult activeDropDown={this.state.activeDropDown} data={this.props.resultList} />
         {loadingIcon}
-      </div>
-      )
-    }
+        </div>
+        )
   }
+}

@@ -54,6 +54,17 @@ $theme-color: #1781E0;
 		font-size: 13px;
 		font-weight: bold;
 		text-decoration: none;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+
+		&--mobile{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+		}
 
 		&--active{
 			color: #222;
@@ -77,9 +88,26 @@ $theme-color: #1781E0;
 		}
 	}
 
+	&__nav-icon{
+		width: 25px;
+		height: 25px;
+		fill: #737373;
+
+		&:hover{
+			fill: #222;
+		}
+	}
+
 	&__user-picture{
 		width: 30px;
 		height: 30px;
 		border-radius: 2px;
+	}
+}
+
+
+@media screen and (min-width: 800px) {
+	.header__nav--mobile{
+		display: none;
 	}
 }

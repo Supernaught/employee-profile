@@ -46,3 +46,9 @@ $shadow-color: #83C2FF;
 		left: 4px;
 	}
 }
+
+@media screen and (max-width: 799px) {
+	.searchbox{
+		display: none;
+	}
+}

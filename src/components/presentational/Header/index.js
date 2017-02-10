@@ -1,32 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { Sticky } from 'react-sticky';
-import classnames from 'classnames';
 
 import SearchBox from '../../presentational/SearchBox';
-import ProfileAvatar from '../../presentational/ProfileAvatar';
+import HeaderUtilityDropdown from '../../presentational/HeaderUtilityDropdown';
 import { searchUser } from '../../../api/search-api';
 
 import './index.css';
 
 export default class Header extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      dropdownActive:false
-    };
-
-    // this.handleToggleDropdown = this.handleToggleDropdown.bind(this);
-  }
-
   handleSearchFilter(searchFilter) {
     this.props.actions.setFilter(searchFilter);
     this.props.actions.fetchFilterResult(searchUser(searchFilter));
-  }
-
-  handleToggleDropdown(bool, e) {
-    this.setState({dropdownActive: bool});
   }
 
   render() {
@@ -54,21 +40,12 @@ export default class Header extends Component {
         	</div>
         	<div className="header__section">
             {searchboxComponent}
-            <div 
-              className={classnames("header__nav dropdown", {'dropdown--active': this.state.dropdownActive})}
-              onClick={this.handleToggleDropdown.bind(this, true)}>
-              <ProfileAvatar className="header__user-picture" />
-              <svg className="dropdown__toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M7,10L12,15L17,10H7Z" />
+            <Link className="header__nav header__nav--mobile" to="/employees">
+              <svg className="header__nav-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
               </svg>
-              <div className="dropdown__menu">
-                <Link to="/employees/davy" className="dropdown__menu-item">Your Profile</Link>
-                <Link to="" className="dropdown__menu-item">Edit Profile</Link>
-                <Link to="/about" className="dropdown__menu-item">About</Link>
-                <hr/>
-                <Link to="" className="dropdown__menu-item">Sign out</Link>
-              </div>
-            </div>
+            </Link>
+            <HeaderUtilityDropdown />
         	</div>
         </div>
       </Sticky>

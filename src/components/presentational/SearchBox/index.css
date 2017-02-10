@@ -31,4 +31,8 @@
     top: 3px;
     left: 4px; }
 
+@media screen and (max-width: 799px) {
+  .searchbox {
+    display: none; } }
+
 /*# sourceMappingURL=index.css.map */

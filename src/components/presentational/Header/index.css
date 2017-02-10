@@ -39,7 +39,16 @@
     color: #737373;
     font-size: 13px;
     font-weight: bold;
-    text-decoration: none; }
+    text-decoration: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .header__nav--mobile {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
     .header__nav--active {
       color: #222; }
     .header__nav--container {
@@ -55,9 +64,19 @@
       align-items: center; }
     .header__nav:hover {
       color: #1781E0; }
+  .header__nav-icon {
+    width: 25px;
+    height: 25px;
+    fill: #737373; }
+    .header__nav-icon:hover {
+      fill: #222; }
   .header__user-picture {
     width: 30px;
     height: 30px;
     border-radius: 2px; }
+
+@media screen and (min-width: 800px) {
+  .header__nav--mobile {
+    display: none; } }
 
 /*# sourceMappingURL=index.css.map */
