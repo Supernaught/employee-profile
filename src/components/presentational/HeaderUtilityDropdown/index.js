@@ -47,6 +47,7 @@ export default class Header extends Component {
             <Link to="/employees/davy" className="dropdown__menu-item">Your Profile</Link>
             <Link to="" className="dropdown__menu-item">Edit Profile</Link>
             <Link to="/about" className="dropdown__menu-item">About</Link>
+            <Link to="" className="dropdown__menu-item">Help</Link>
             <hr/>
             <Link to="" className="dropdown__menu-item">Sign out</Link>
           </div>
