@@ -1,16 +1,6 @@
-.profile-page{
-	/* background: red;*/
+$theme-color: #1781E0;
 
-	&__banner{
-		height: 20vw;
-		min-height: 150px;
-		max-height: 300px;
-		width: 100%;
-		background: #222;
-		/* background-image: url("https://pbs.twimg.com/profile_banners/702064662922178560/1456273905/1500x500");*/
-		background-position: center;
-		background-size: cover;		
-	}
+.profile-page{
 
 	&__nav-bar{
 		width: 100%;

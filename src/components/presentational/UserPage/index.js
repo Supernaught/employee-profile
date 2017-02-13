@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from '../../containers/HeaderContainer';
+import ProfileAvatar from '../../presentational/ProfileAvatar';
 
 import './index.css';
 
@@ -10,12 +11,6 @@ export default class UserPage extends Component {
 		return (
 			<div className="profile-page content page">
 				<Header />
-				<div className="profile-page__banner">
-
-				</div>
-				<div className="profile-page__nav-bar">
-				s
-				</div>
 				<div className="content__wrapper">
 					--{userId} Profile
 					{this.props.children}
