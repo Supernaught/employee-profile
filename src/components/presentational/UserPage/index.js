@@ -10,6 +10,15 @@ import './index.css';
 export default class UserPage extends Component {
 	render() {
 		const userId = this.props.params.id;
+
+		const userInfo = {
+				"email":"davy@g-angle.co.jp",
+				"mobile":"09177700058",
+				"birthday":"October 21, 1992",
+				"startwork":"June 1, 2015",
+				"location":"Cebu City",
+		};
+
 		return (
 			<div className="profile-page content page">
 				<Header />
@@ -63,7 +72,7 @@ export default class UserPage extends Component {
 					</div>
 				</div>
 				<div className="profile-page__content content__wrapper">
-					<ProfileCardInfo />
+					<ProfileCardInfo {...this.props} info={userInfo} />
 					--{userId} Profile
 					{this.props.children}
 				</div>
