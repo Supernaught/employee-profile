@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, IndexLink } from 'react-router';
 
 import Header from '../../containers/HeaderContainer';
 import ProfileAvatar from '../../presentational/ProfileAvatar';
@@ -16,11 +17,11 @@ export default class UserPage extends Component {
 						<div className="banner__counter-container">
 							<span className="banner__counter ">
 								<h4 className="banner__counter-label">VACATION LEAVES</h4>
-								<h2 data-denominator="/10" className="banner__counter-value banner__counter-value--fraction">10</h2>
+								<h2 data-denominator={"/10"} className="banner__counter-value banner__counter-value--fraction">10</h2>
 							</span>
 							<span className="banner__counter">
 								<h4 className="banner__counter-label">SICK LEAVES</h4>
-								<h2 data-denominator="/10" className="banner__counter-value banner__counter-value--fraction">8</h2>
+								<h2 data-denominator={"/10"} className="banner__counter-value banner__counter-value--fraction">8</h2>
 							</span>
 							<span className="banner__counter">
 								<h4 className="banner__counter-label">LATES THIS MONTH</h4>
@@ -33,7 +34,37 @@ export default class UserPage extends Component {
 						</div>
 					</div>
 				</div>
+				<div className="profile-page__nav-container">
+					<div className="content__wrapper">
+						<nav className="profile-page__nav-bar">
+							<Link 
+								className="profile-page__nav-button" 
+								to="/employees/davy?tab=overview" 
+								activeClassName="profile-page__nav-button--active"
+								onlyActiveOnIndex={true}>
+								Overview
+							</Link>
+							<Link 
+								className="profile-page__nav-button" 
+								to="/employees/davy?tab=lates" 
+								activeClassName="profile-page__nav-button--active"
+								onlyActiveOnIndex={true}>
+								Lates
+							</Link>
+							<Link 
+								className="profile-page__nav-button" 
+								to="/employees/davy?tab=absences" 
+								activeClassName="profile-page__nav-button--active"
+								onlyActiveOnIndex={true}>
+								Absences
+							</Link>
+						</nav>
+					</div>
+				</div>
 				<div className="content__wrapper">
+					<div className="">
+						Hi
+					</div>
 					--{userId} Profile
 					{this.props.children}
 				</div>
