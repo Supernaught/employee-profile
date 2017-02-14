@@ -8,3 +8,71 @@ $theme-color: #1781E0;
 		background: white;
 	}
 }
+
+.banner{
+	height: 200px;
+	width: 100%;
+	background: #e96443; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #e96443 , #904e95); /* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(right, #e96443 , #904e95);
+	background: linear-gradient(to left, #e96443 , #904e95); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: inset 0px 0px 7px 0px rgba(0,0,0,.3);
+	position: relative;
+
+	&--start-bottom{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+	}
+
+	&__content{
+		width: 100%;
+	}
+
+	&__counter-container{
+		margin-left: 250px;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	}
+
+	&__counter{
+		color: white;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+
+	&__counter-label{
+		font-weight: 100;
+		font-size: 12px;
+		letter-spacing: 1px;
+	}
+
+	&__counter-value{
+		text-align: center;
+		font-weight: bold;
+
+		&--fraction:after{
+			content: attr(data-denominator);
+			font-size: 14px;
+		}
+	}
+}
