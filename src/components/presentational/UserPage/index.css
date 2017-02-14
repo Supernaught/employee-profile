@@ -36,6 +36,11 @@
     color: #1781E0; }
   .profile-page__nav-button--active {
     color: #222; }
+.profile-page__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .banner {
   height: 200px;

@@ -1,0 +1,21 @@
+.user-card {
+  /* margin-top: 30px;*/
+  padding: 0px 10px 0px 0px;
+  width: 250px;
+  color: #222;
+  position: relative;
+  bottom: 130px; }
+  .user-card__profile-picture {
+    width: 200px;
+    height: 200px;
+    border: solid 8px white;
+    border-radius: 4px;
+    box-sizing: border-box; }
+  .user-card__name {
+    font-weight: bold; }
+  .user-card__role {
+    color: Gray;
+    font-size: 18px;
+    font-weight: 300; }
+
+/*# sourceMappingURL=index.css.map */

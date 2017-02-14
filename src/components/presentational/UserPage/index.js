@@ -3,6 +3,7 @@ import { Link, IndexLink } from 'react-router';
 
 import Header from '../../containers/HeaderContainer';
 import ProfileAvatar from '../../presentational/ProfileAvatar';
+import ProfileCardInfo from '../../presentational/ProfileCardInfo';
 
 import './index.css';
 
@@ -61,10 +62,8 @@ export default class UserPage extends Component {
 						</nav>
 					</div>
 				</div>
-				<div className="content__wrapper">
-					<div className="">
-						Hi
-					</div>
+				<div className="profile-page__content content__wrapper">
+					<ProfileCardInfo />
 					--{userId} Profile
 					{this.props.children}
 				</div>

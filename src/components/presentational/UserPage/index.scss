@@ -49,6 +49,13 @@ $theme-color: #1781E0;
 			color: #222;
 		}
 	}
+
+	&__content{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
 }
 
 .banner{
