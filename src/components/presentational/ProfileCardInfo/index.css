@@ -4,7 +4,10 @@
   width: 200px;
   color: #222;
   position: relative;
-  bottom: 160px; }
+  bottom: 160px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
   .user-card__sticky-container {
     padding-top: 10px; }
   .user-card__profile-picture {

@@ -5,6 +5,9 @@
 	color: #222;
 	position: relative;
 	bottom: 160px;
+	-webkit-flex-shrink: 0;
+	    -ms-flex-negative: 0;
+	        flex-shrink: 0;
 
 	&__sticky-container{
 		padding-top: 10px;

@@ -5,7 +5,9 @@ export default class UserAttendance extends Component {
 	render() {
 		return (
 			<div>
-			---User Attendance (Default Route)
+				<div className="card">
+					hi
+				</div>
 			</div>
 			)
 	}

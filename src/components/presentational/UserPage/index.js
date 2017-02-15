@@ -4,6 +4,7 @@ import { Link, IndexLink } from 'react-router';
 import Header from '../../containers/HeaderContainer';
 import ProfileAvatar from '../../presentational/ProfileAvatar';
 import ProfileCardInfo from '../../presentational/ProfileCardInfo';
+import Widget from '../../presentational/Widget';
 
 import './index.css';
 
@@ -82,9 +83,19 @@ export default class UserPage extends Component {
 				</div>
 				<div className="profile-page__content content__wrapper">
 					<ProfileCardInfo {...this.props} info={userInfo} />
-					<div style={{'paddingTop':'10px'}}>
+					<div className="tab-container">
 						{this.props.children}
 					</div>
+					<Widget>
+						<div className="widget__card">
+							<h1 className="widget__title">REMINDERS</h1>
+							<hr/>
+						</div>
+						<div className="widget__card">
+							<h1 className="widget__title">UPCOMING EVENTS</h1>
+							<hr/>
+						</div>
+					</Widget>
 				</div>
 			</div>
 			)
