@@ -108,9 +108,45 @@
 
 .tab-container {
   margin-top: 10px;
+  width: 100%; }
+
+.tab {
   width: 100%;
-  height: 1500px;
-  box-sizing: border-box; }
+  position: relative; }
+
+.tab-bar {
+  margin-bottom: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: solid 1px #e1e8ed; }
+  .tab-bar__nav-elem {
+    padding: 10px;
+    padding-bottom: 20px;
+    font-size: 13px;
+    /* font-weight: bold;*/
+    color: gray;
+    border-bottom: solid 2px transparent; }
+    .tab-bar__nav-elem:hover {
+      color: #1781E0;
+      text-decoration: underline; }
+    .tab-bar__nav-elem:not(:first-of-type) {
+      margin-left: 10px; }
+    .tab-bar__nav-elem--active {
+      color: #1781E0;
+      position: relative;
+      border-bottom-color: #1781E0; }
+  .tab-bar__index-nav {
+    color: #1781E0;
+    font-weight: bold; }
+    .tab-bar__index-nav:hover {
+      color: #222; }
 
 .card {
   padding: 10px;

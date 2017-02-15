@@ -9,6 +9,11 @@ import Widget from '../../presentational/Widget';
 import './index.css';
 
 export default class UserPage extends Component {
+
+	componentDidMount() {
+		window.scrollTo(0, 0);
+	}
+
 	render() {
 		const userId = this.props.params.id;
 
@@ -90,10 +95,16 @@ export default class UserPage extends Component {
 						<div className="widget__card">
 							<h1 className="widget__title">REMINDERS</h1>
 							<hr/>
+							<ul className="widget__list">
+								
+							</ul>
 						</div>
 						<div className="widget__card">
 							<h1 className="widget__title">UPCOMING EVENTS</h1>
 							<hr/>
+							<ul className="widget__list">
+								1
+							</ul>
 						</div>
 					</Widget>
 				</div>

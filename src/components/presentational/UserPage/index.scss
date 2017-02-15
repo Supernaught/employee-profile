@@ -139,8 +139,58 @@ $theme-color: #1781E0;
 .tab-container{
 	margin-top: 10px;
 	width: 100%;
-	height: 1500px;
-	box-sizing: border-box;
+}
+
+.tab{
+	width: 100%;
+	position: relative;
+}
+
+.tab-bar{
+	margin-bottom: 10px;
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	border-bottom: solid 1px #e1e8ed;
+
+	&__nav-elem{
+		padding: 10px;
+		padding-bottom: 20px;
+		font-size: 13px;
+		/* font-weight: bold;*/
+		color: gray;
+		border-bottom: solid 2px transparent;
+
+		&:hover{
+			color: $theme-color;
+			text-decoration: underline;
+		}
+
+		&:not(:first-of-type){
+			margin-left: 10px;
+		}
+
+		&--active{
+			color: $theme-color;
+			position: relative;
+			border-bottom-color: $theme-color;
+		}
+	}
+
+	&__index-nav{
+		color: $theme-color;
+		font-weight: bold;
+
+		&:hover{
+			color: #222;
+		}
+	}
 }
 
 .card{
