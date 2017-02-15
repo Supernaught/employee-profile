@@ -56,7 +56,7 @@ export default class ProfileCardInfo extends Component {
 	    		<ProfileAvatar className="user-card__profile-picture" />
 		        <h2>
 			        <div className="user-card__name">{this.props.params.id}</div>
-			        <div className="user-card__role">Developer</div>
+			        <div className="user-card__role">developer</div>
 		        </h2>
 		        <ul className="user-card__info-list">
           			{emailElement}

@@ -2,7 +2,7 @@
   width: 100%;
   height: 50px;
   background: white;
-  border-bottom: .5px solid #E5E5E5; }
+  border-bottom: .5px solid #e1e8ed; }
 .profile-page__nav-bar {
   margin-left: 250px;
   height: 50px;
@@ -31,11 +31,19 @@
   -ms-flex-pack: center;
   justify-content: center;
   text-decoration: none;
-  font-weight: bold; }
+  font-weight: bold;
+  fill: gray; }
   .profile-page__nav-button:hover:not(.profile-page__nav-button--active) {
-    color: #1781E0; }
+    color: #1781E0;
+    fill: #1781E0; }
   .profile-page__nav-button--active {
-    color: #222; }
+    color: #222;
+    fill: #222; }
+.profile-page__nav-icon {
+  margin-right: 3px;
+  width: 18px;
+  height: 18px;
+  fill: inherit; }
 .profile-page__content {
   display: -webkit-box;
   display: -webkit-flex;

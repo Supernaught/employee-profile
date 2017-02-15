@@ -35,8 +35,7 @@ export default class Header extends Component {
                   activeClassName={'header__nav--active'} 
                   onlyActiveOnIndex={true}>Employees</Link>
             <Link className="header__nav" to={"/employees/davy"} 
-                  activeClassName={'header__nav--active'} 
-                  onlyActiveOnIndex={true}>Profile</Link>
+                  activeClassName={'header__nav--active'}>Profile</Link>
         	</div>
         	<div className="header__section">
             {searchboxComponent}
