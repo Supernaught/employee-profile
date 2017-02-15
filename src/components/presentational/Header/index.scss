@@ -84,7 +84,7 @@ $theme-color: #1781E0;
 			align-items: center;
 		}
 
-		&:hover{
+		&:hover:not(.header__nav--active){
 			color: $theme-color;
 		}
 	}

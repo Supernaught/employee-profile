@@ -63,7 +63,7 @@
       -webkit-align-items: center;
       -ms-flex-align: center;
       align-items: center; }
-    .header__nav:hover {
+    .header__nav:hover:not(.header__nav--active) {
       color: #1781E0; }
   .header__nav-icon {
     width: 25px;
