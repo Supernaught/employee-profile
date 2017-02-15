@@ -63,7 +63,7 @@ export default class UserPage extends Component {
 								activeClassName="profile-page__nav-button--active"
 								onlyActiveOnIndex={true}>
 								<svg className="profile-page__nav-icon" viewBox="0 0 24 24">
-    								<path fill="inherit" d="M17,9H7V7H17M17,13H7V11H17M14,17H7V15H14M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z" />
+    								<path fill="inherit" d="M19,18H9A2,2 0 0,1 7,16V4A2,2 0 0,1 9,2H10V7L12,5.5L14,7V2H19A2,2 0 0,1 21,4V16A2,2 0 0,1 19,18M17,20V22H5A2,2 0 0,1 3,20V6H5V20H17Z" />
 								</svg>
 								<span>Leaves</span>
 							</Link>
@@ -73,7 +73,7 @@ export default class UserPage extends Component {
 								activeClassName="profile-page__nav-button--active"
 								onlyActiveOnIndex={true}>
 								<svg className="profile-page__nav-icon" viewBox="0 0 24 24">
-								    <path fill="inherit" d="M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10A2,2 0 0,1 6,8H15V6A3,3 0 0,0 12,3A3,3 0 0,0 9,6H7A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,17A2,2 0 0,0 14,15A2,2 0 0,0 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17Z" />
+    								<path fill="inherit" d="M6,17C6,15 10,13.9 12,13.9C14,13.9 18,15 18,17V18H6M15,9A3,3 0 0,1 12,12A3,3 0 0,1 9,9A3,3 0 0,1 12,6A3,3 0 0,1 15,9M3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3H5C3.89,3 3,3.9 3,5Z" />
 								</svg>
 								<span>Personal Info</span>
 							</Link>
@@ -82,7 +82,9 @@ export default class UserPage extends Component {
 				</div>
 				<div className="profile-page__content content__wrapper">
 					<ProfileCardInfo {...this.props} info={userInfo} />
-					{this.props.children}
+					<div style={{'paddingTop':'10px'}}>
+						{this.props.children}
+					</div>
 				</div>
 			</div>
 			)

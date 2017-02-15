@@ -19,7 +19,7 @@ export default class UserAttendanceContainer extends Component {
 	render() {
 		return (
 			<div>
-			{this.handleSelectTab()}
+				{this.handleSelectTab()}
 			</div>
 			)
 	}

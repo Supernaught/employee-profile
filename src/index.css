@@ -95,9 +95,9 @@ input::placeholder {
     position: absolute;
     right: -8px;
     top: 100%;
-    border: solid 1px #e1e8ed;
+    /* border: solid 1px #e1e8ed;*/
     border-radius: 2px;
-    box-shadow: 0px 0px 5px 0px #D9D9D9;
+    box-shadow: 0px 0px 5px 0px rgba(1, 1, 1, 0.1);
     box-sizing: border-box;
     cursor: default;
     display: block;
@@ -112,7 +112,7 @@ input::placeholder {
     .dropdown__menu:before {
       content: "";
       border: 8px solid transparent;
-      border-bottom-color: #D9D9D9;
+      border-bottom-color: rgba(1, 1, 1, 0.1);
       position: absolute;
       top: -16px;
       right: 9px;
