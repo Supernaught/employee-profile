@@ -163,9 +163,11 @@ $theme-color: #1781E0;
 		padding: 10px;
 		padding-bottom: 20px;
 		font-size: 13px;
-		/* font-weight: bold;*/
 		color: gray;
 		border-bottom: solid 2px transparent;
+		-webkit-transform: translateY(1.5px);
+		    -ms-transform: translateY(1.5px);
+		        transform: translateY(1.5px);
 
 		&:hover{
 			color: $theme-color;

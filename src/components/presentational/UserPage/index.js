@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
 
 import Header from '../../containers/HeaderContainer';
-import ProfileAvatar from '../../presentational/ProfileAvatar';
 import ProfileCardInfo from '../../presentational/ProfileCardInfo';
 import Widget from '../../presentational/Widget';
 
@@ -15,7 +14,7 @@ export default class UserPage extends Component {
 	}
 
 	render() {
-		const userId = this.props.params.id;
+		// const userId = this.props.params.id;
 
 		const userInfo = {
 				"email":"davy@g-angle.co.jp",

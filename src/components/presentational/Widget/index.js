@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link, IndexLink } from 'react-router';
 import { Sticky, StickyContainer } from 'react-sticky';
 
 import './index.css';

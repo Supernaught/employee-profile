@@ -20,6 +20,14 @@
 		&:not(:first-of-type){
 			margin-top: 10px;
 		}
+
+		&--borderless{
+			padding: 0px;
+			padding-bottom: 10px;
+			background: none;
+			border-radius: none;
+			border: none;
+		}
 	}
 
 	&__title{
