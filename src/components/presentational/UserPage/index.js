@@ -87,25 +87,27 @@ export default class UserPage extends Component {
 				</div>
 				<div className="profile-page__content content__wrapper">
 					<ProfileCardInfo {...this.props} info={userInfo} />
-					<div className="tab-container">
-						{this.props.children}
+					<div className="profile-page__content profile-page__content--fill-width profile-page__mobile-content">
+						<div className="tab-container">
+							{this.props.children}
+						</div>
+						<Widget>
+							<div className="widget__card">
+								<h1 className="widget__title">REMINDERS</h1>
+								<hr/>
+								<ul className="widget__list">
+									
+								</ul>
+							</div>
+							<div className="widget__card">
+								<h1 className="widget__title">UPCOMING EVENTS</h1>
+								<hr/>
+								<ul className="widget__list">
+									1
+								</ul>
+							</div>
+						</Widget>
 					</div>
-					<Widget>
-						<div className="widget__card">
-							<h1 className="widget__title">REMINDERS</h1>
-							<hr/>
-							<ul className="widget__list">
-								
-							</ul>
-						</div>
-						<div className="widget__card">
-							<h1 className="widget__title">UPCOMING EVENTS</h1>
-							<hr/>
-							<ul className="widget__list">
-								1
-							</ul>
-						</div>
-					</Widget>
 				</div>
 			</div>
 			)

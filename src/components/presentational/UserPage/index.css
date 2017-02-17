@@ -49,6 +49,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  .profile-page__content--fill-width {
+    width: 100%; }
 
 .banner {
   height: 200px;
@@ -159,5 +161,14 @@
   box-sizing: border-box; }
   .card:not(:first-of-type) {
     margin-top: 10px; }
+
+@media screen and (max-width: 1200px) {
+  .profile-page__mobile-content {
+    width: 590px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -202,3 +202,13 @@ input::placeholder{
 		text-align: center;
 	}	
 }
+
+@media screen and (max-width: 1200px) {
+	.content{
+		&__wrapper{
+			width: 100%;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+	}	
+}

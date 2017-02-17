@@ -65,6 +65,10 @@ $theme-color: #1781E0;
 		display: -webkit-flex;
 		display: -ms-flexbox;
 		display: flex;
+
+		&--fill-width{
+			width: 100%;
+		}
 	}
 }
 
@@ -206,4 +210,17 @@ $theme-color: #1781E0;
 	&:not(:first-of-type){
 		margin-top: 10px;
 	}
+}
+
+@media screen and (max-width: 1200px) {
+	.profile-page{
+		&__mobile-content{
+			width: 590px;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			        flex-direction: column;
+		}
+	}	
 }
