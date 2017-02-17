@@ -3,6 +3,7 @@ import { Link, IndexLink } from 'react-router';
 
 import Header from '../../containers/HeaderContainer';
 import ProfileCardInfo from '../../presentational/ProfileCardInfo';
+import ProfileAvatar from '../../presentational/ProfileAvatar';
 import Widget from '../../presentational/Widget';
 
 import './index.css';
@@ -29,7 +30,7 @@ export default class UserPage extends Component {
 				<Header />
 				<div className="banner banner--start-bottom content">
 					<div className="banner__content content__wrapper">
-						<div className="banner__counter-container">
+						<div className="banner__content-container">
 							<span className="banner__counter ">
 								<h4 className="banner__counter-label">VACATION LEAVES</h4>
 								<h2 data-denominator={"/10"} className="banner__counter-value banner__counter-value--fraction">10</h2>
@@ -49,8 +50,15 @@ export default class UserPage extends Component {
 						</div>
 					</div>
 				</div>
+				<div className="user-card content__wrapper content__view-mobile user-card--mobile">
+					<ProfileAvatar className="user-card__user-avatar" />
+					<h2>
+			        	<div className="user-card__name user-card__name--text-center user-card__name--mobile">{this.props.params.id}</div>
+			        	<div className="user-card__role user-card__role--text-center">developer</div>
+		        	</h2>
+				</div>
 				<div className="profile-page__nav-container">
-					<div className="content__wrapper">
+					<div className="content__wrapper content__wrapper--mobile">
 						<nav className="profile-page__nav-bar">
 							<IndexLink 
 								className="profile-page__nav-button" 
@@ -85,7 +93,7 @@ export default class UserPage extends Component {
 						</nav>
 					</div>
 				</div>
-				<div className="profile-page__content content__wrapper">
+				<div className="profile-page__content content__wrapper content__wrapper--mobile">
 					<ProfileCardInfo {...this.props} info={userInfo} />
 					<div className="profile-page__content profile-page__content--fill-width profile-page__mobile-content">
 						<div className="tab-container">
