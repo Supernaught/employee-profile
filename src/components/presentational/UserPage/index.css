@@ -115,6 +115,10 @@
 .tab {
   width: 100%;
   position: relative; }
+  .tab__header {
+    font-weight: 200; }
+  .tab__divider {
+    margin: 30px 0; }
 
 .tab-bar {
   margin-bottom: 10px;

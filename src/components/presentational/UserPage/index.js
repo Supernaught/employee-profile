@@ -21,7 +21,7 @@ export default class UserPage extends Component {
 				"email":"davy@g-angle.co.jp",
 				"mobile":"09177700058",
 				"birthday":"October 21, 1992",
-				"startwork":"June 01, 2015",
+				"startwork":"June 1, 2015",
 				"location":"Cebu City",
 		};
 

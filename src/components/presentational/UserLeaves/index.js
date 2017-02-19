@@ -5,7 +5,9 @@ export default class UserLeaves extends Component {
 	render() {
 		return (
 			<div>
-			---User Leaves
+				<div className="card">
+					<h3 className="tab__header">Your Leaves</h3>
+				</div>
 			</div>
 			)
 	}

@@ -6,6 +6,7 @@ export default class UserLates extends Component {
   render() {
     return (
       <div>
+      <h3 className="tab__header">Lates</h3>
       <svg 
       className={classnames('foo', { bar: true, duck: false }, 'baz', { quux: true })} 
       width='15px' 
