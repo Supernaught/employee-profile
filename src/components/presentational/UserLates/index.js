@@ -1,21 +1,35 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import DayPicker from 'react-day-picker';
+
+import "react-day-picker/lib/style.css"
 
 export default class UserLates extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      'selectedDay': new Date()
+    }
+  }
+
+  handleDayClick(day, { disabled, selected }) {
+    if (disabled) {
+      return;
+    }
+    this.setState({ selectedDay: selected ? null : day })
+  }
 
   render() {
     return (
       <div>
       <h3 className="tab__header">Lates</h3>
-      <svg 
-      className={classnames('foo', { bar: true, duck: false }, 'baz', { quux: true })} 
-      width='15px' 
-      height='15px' 
-      viewBox="0 0 24 24" 
-      fill="red">
-      <path d="M13,13H11V7H13M12,17.3A1.3,1.3 0 0,1 10.7,16A1.3,1.3 0 0,1 12,14.7A1.3,1.3 0 0,1 13.3,16A1.3,1.3 0 0,1 12,17.3M15.73,3H8.27L3,8.27V15.73L8.27,21H15.73L21,15.73V8.27L15.73,3Z" />
-      </svg>
-      ----User Lates
+      <DayPicker
+        numberOfMonths={2}
+        initialMonth={ new Date(2016, 1) }
+        selectedDays={ this.state.selectedDay }
+        onDayClick={ this.handleDayClick.bind(this) }
+      />
       </div>
       )
   }

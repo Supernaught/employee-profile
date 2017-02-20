@@ -47,15 +47,10 @@ export default class HeaderMenuDropdown extends Component {
         </svg>
         <div className="dropdown__menu">
           <Link to="/" className="dropdown__menu-item">Home</Link>
-          <hr/>
           <Link to="/employees" className="dropdown__menu-item">Employees</Link>
-          <hr/>
           <Link to="/employees/davy" className="dropdown__menu-item">Profile</Link>
         </div>
       </div>
     )
   }
 }
-
-// className={classnames("header__nav dropdown", {'dropdown--active': this.state.dropdownActive})}
-//           onClick={this.handleToggleDropdown.bind(this, true)}>
