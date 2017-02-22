@@ -1,5 +1,3 @@
-@import "heatmap-style";
-
 $placeholder-color: lightgray;
 $input-color: black;
 $shadow-color: #83C2FF;
@@ -163,7 +161,7 @@ input::placeholder{
 		left: 0;
 		right: -8px;
 		border-radius: 2px;
-		box-shadow: 0px 0px 5px 0px rgba(1,1,1,.1);
+		box-shadow: 0px 0px 5px 0px rgba(1,1,1,.2);
 		box-sizing: border-box;
 		cursor: default;
 		display: block;
@@ -269,6 +267,11 @@ input::placeholder{
 			}
 		}
 
+		&--sunday{
+			/* color: blue !important;*/
+			/* background: white;*/
+		}
+
 		&--selected:not(:empty){
 			color: $theme-color !important;
 			background-color: rgba(23, 129, 224, .1) !important;
@@ -287,55 +290,38 @@ input::placeholder{
 			}
 		}
 
-		&--late:not(:empty):not(.DayPicker-Day--sunday){
-			color: rgba(254, 186, 77, 1);
-			background: rgba(254, 186, 77, .1);
+		&--absent:not(:empty):not(.DayPicker-Day--sunday){
+			color: silver;
 			font-weight: bold;
-			position: relative;
-
-			&:after{
-				content: '';
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				left: -1px;
-				top: -1px;
-				border: solid 1px rgba(254, 186, 77, 1);
-			}
+			background: #E1E8ED;
 		}
 
-		&--leave:not(:empty):not(.DayPicker-Day--sunday){
+		&--late:not(:empty):not(.DayPicker-Day--sunday){
+			color: rgba(251, 96, 127, 1);
+			background: rgba(251, 96, 127, .2);
+			font-weight: bold;
+			position: relative;
+		}
+
+		&--event:not(:empty):not(.DayPicker-Day--sunday){
 			color: rgba(154, 205, 50, 1);
 			background: rgba(154, 205, 50, .1);
 			font-weight: bold;
 			position: relative;
-
-			&:after{
-				content: '';
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				left: -1px;
-				top: -1px;
-				border: solid 1px rgba(154, 205, 50, 1);
-			}
 		}
 
-		&--absent:not(:empty):not(.DayPicker-Day--sunday){
-			color: rgba(251, 96, 127, 1);
-			background: rgba(251, 96, 127, .1);
+		&--leave:not(:empty):not(.DayPicker-Day--sunday){
+			color: rgba(254, 186, 77, 1);
+			background: rgba(254, 186, 77, .1);
 			font-weight: bold;
 			position: relative;
+		}
 
-			&:after{
-				content: '';
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				left: -1px;
-				top: -1px;
-				border: solid 1px rgba(251, 96, 127, 1);
-			}
+		&--holiday:not(:empty):not(.DayPicker-Day--sunday){
+			color: lightgray;
+			background: #f7f8f8;
+			font-weight: bold;
+			position: relative;
 		}
 	}
 }

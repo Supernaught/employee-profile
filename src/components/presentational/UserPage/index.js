@@ -10,20 +10,50 @@ import './index.css';
 
 export default class UserPage extends Component {
 
+	constructor(props) {
+		super(props);
+		this.state = {'isMobile':false};
+	}
+
 	componentDidMount() {
 		window.scrollTo(0, 0);
+		this.handleResize();
+		window.addEventListener("resize", this.handleResize.bind(this));
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener("resize", this.handleResize.bind(this));
+	}
+
+	handleResize() {
+		// 800px width mobile mode
+		if(window.innerWidth <= 800) {
+			this.setState({'isMobile':true});
+		} else {
+			this.setState({'isMobile':false});
+		}
 	}
 
 	render() {
 		// const userId = this.props.params.id;
-
 		const userInfo = {
-				"email":"davy@g-angle.co.jp",
-				"mobile":"09177700058",
-				"birthday":"October 21, 1992",
-				"startwork":"June 1, 2015",
-				"location":"Cebu City",
+			"email":"davy@g-angle.co.jp",
+			"mobile":"09177700058",
+			"birthday":"October 21, 1992",
+			"startwork":"June 1, 2015",
+			"location":"Cebu City",
 		};
+
+		const userCardMobile = (!this.state.isMobile) ? null : 
+				<div className="user-card content__wrapper content__view-mobile user-card--mobile">
+					<ProfileAvatar className="user-card__user-avatar" src="http://i.imgur.com/BgC2FVK.png" />
+					<h2>
+			        	<div className="user-card__name user-card__name--text-center user-card__name--mobile">{this.props.params.id}</div>
+			        	<div className="user-card__role user-card__role--text-center">developer</div>
+		        	</h2>
+				</div>;
+
+		const userCardDesktop = (this.state.isMobile) ? null : <ProfileCardInfo {...this.props} info={userInfo} />;
 
 		return (
 			<div className="profile-page content page">
@@ -50,13 +80,7 @@ export default class UserPage extends Component {
 						</div>
 					</div>
 				</div>
-				<div className="user-card content__wrapper content__view-mobile user-card--mobile">
-					<ProfileAvatar className="user-card__user-avatar" />
-					<h2>
-			        	<div className="user-card__name user-card__name--text-center user-card__name--mobile">{this.props.params.id}</div>
-			        	<div className="user-card__role user-card__role--text-center">developer</div>
-		        	</h2>
-				</div>
+				{userCardMobile}
 				<div className="profile-page__nav-container">
 					<div className="content__wrapper content__wrapper--mobile">
 						<nav className="profile-page__nav-bar">
@@ -94,7 +118,7 @@ export default class UserPage extends Component {
 					</div>
 				</div>
 				<div className="profile-page__content content__wrapper content__wrapper--mobile">
-					<ProfileCardInfo {...this.props} info={userInfo} />
+					{userCardDesktop}
 					<div className="profile-page__content profile-page__content--fill-width profile-page__mobile-content">
 						<div className="tab-container">
 							{this.props.children}

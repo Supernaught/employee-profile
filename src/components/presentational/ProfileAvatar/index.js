@@ -8,15 +8,15 @@ import './index.css';
 
 export default class ProfileAvatar extends Component {
 	render() {
-		const image = (String(this.props.imageSrc).trim().length <= 0 
-						 		|| this.props.imageSrc === null 
-						 		|| this.props.imageSrc === undefined) 
-									? defaultavatar : this.props.imageSrc;
+		const image = (String(this.props.src).trim().length <= 0 
+						 		|| this.props.src === null 
+						 		|| this.props.src === undefined) 
+									? defaultavatar : this.props.src;
 		return (
 			<img 
 				className={classnames('user-avatar', this.props.className)} 
 				src={image} 
-				alt={this.props.imageAlt} />
+				alt={this.props.alt} />
 		)
 	}
 }

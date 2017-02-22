@@ -38,8 +38,8 @@ export default class ListView extends Component {
 										classnames(
 											"list-container__item-image",
 											{'list-container__item-image--small' : !this.props.listType})}
-									imageSrc={user.profile_picture}
-									imageAlt={user.username} />
+									src={user.profile_picture}
+									alt={user.username} />
 							</Link>
 							<div className="list-container__section">
 								<span>

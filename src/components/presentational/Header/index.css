@@ -1,7 +1,7 @@
 .header {
   background: white;
   border-bottom: solid 1px #e1e8ed;
-  z-index: 1;
+  z-index: 2;
   position: relative; }
   .header__container {
     height: 50px;

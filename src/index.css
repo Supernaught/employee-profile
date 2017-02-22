@@ -1,71 +1,3 @@
-/*
- * react-calendar-heatmap styles
- *
- * All of the styles in this file are optional and configurable!
- * The github and gitlab color scales are provided for reference.
- */
-.react-calendar-heatmap text {
-  font-size: 10px;
-  fill: #aaa; }
-
-.react-calendar-heatmap rect:hover {
-  stroke: #555;
-  stroke-width: 1px; }
-
-/*
- * Default color scale
- */
-.react-calendar-heatmap .color-empty {
-  fill: #eeeeee; }
-
-.react-calendar-heatmap .color-filled {
-  fill: #8cc665; }
-
-/*
- * Github color scale
- */
-.react-calendar-heatmap .color-github-0 {
-  fill: #eeeeee; }
-
-.react-calendar-heatmap .color-github-1 {
-  fill: #d6e685; }
-
-.react-calendar-heatmap .color-github-2 {
-  fill: #8cc665; }
-
-.react-calendar-heatmap .color-github-3 {
-  fill: #44a340; }
-
-.react-calendar-heatmap .color-github-4 {
-  fill: #1e6823; }
-
-/*
- * Gitlab color scale
- */
-.react-calendar-heatmap .color-gitlab-0 {
-  fill: #ededed; }
-
-.react-calendar-heatmap .color-gitlab-1 {
-  fill: #acd5f2; }
-
-.react-calendar-heatmap .color-gitlab-2 {
-  fill: #7fa8d1; }
-
-.react-calendar-heatmap .color-gitlab-3 {
-  fill: #49729b; }
-
-.react-calendar-heatmap .color-gitlab-4 {
-  fill: #254e77; }
-
-/*
- *  Custom style
- */
-.react-calendar-heatmap__container {
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  max-width: 350px; }
-
 body {
   margin: 0;
   padding: 0;
@@ -179,7 +111,7 @@ input::placeholder {
     left: 0;
     right: -8px;
     border-radius: 2px;
-    box-shadow: 0px 0px 5px 0px rgba(1, 1, 1, 0.1);
+    box-shadow: 0px 0px 5px 0px rgba(1, 1, 1, 0.2);
     box-sizing: border-box;
     cursor: default;
     display: block;
@@ -257,6 +189,9 @@ input::placeholder {
         position: absolute;
         bottom: 0;
         left: 0; }
+    .DayPicker-Day--sunday {
+      /* color: blue !important;*/
+      /* background: white;*/ }
     .DayPicker-Day--selected:not(:empty) {
       color: #1781E0 !important;
       background-color: rgba(23, 129, 224, 0.1) !important;
@@ -271,45 +206,30 @@ input::placeholder {
         left: -1px;
         top: -1px;
         border: solid 1px #1781E0; }
+    .DayPicker-Day--absent:not(:empty):not(.DayPicker-Day--sunday) {
+      color: silver;
+      font-weight: bold;
+      background: #E1E8ED; }
     .DayPicker-Day--late:not(:empty):not(.DayPicker-Day--sunday) {
-      color: #feba4d;
-      background: rgba(254, 186, 77, 0.1);
+      color: #fb607f;
+      background: rgba(251, 96, 127, 0.2);
       font-weight: bold;
       position: relative; }
-      .DayPicker-Day--late:not(:empty):not(.DayPicker-Day--sunday):after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: -1px;
-        top: -1px;
-        border: solid 1px #feba4d; }
-    .DayPicker-Day--leave:not(:empty):not(.DayPicker-Day--sunday) {
+    .DayPicker-Day--event:not(:empty):not(.DayPicker-Day--sunday) {
       color: yellowgreen;
       background: rgba(154, 205, 50, 0.1);
       font-weight: bold;
       position: relative; }
-      .DayPicker-Day--leave:not(:empty):not(.DayPicker-Day--sunday):after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: -1px;
-        top: -1px;
-        border: solid 1px yellowgreen; }
-    .DayPicker-Day--absent:not(:empty):not(.DayPicker-Day--sunday) {
-      color: #fb607f;
-      background: rgba(251, 96, 127, 0.1);
+    .DayPicker-Day--leave:not(:empty):not(.DayPicker-Day--sunday) {
+      color: #feba4d;
+      background: rgba(254, 186, 77, 0.1);
       font-weight: bold;
       position: relative; }
-      .DayPicker-Day--absent:not(:empty):not(.DayPicker-Day--sunday):after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: -1px;
-        top: -1px;
-        border: solid 1px #fb607f; }
+    .DayPicker-Day--holiday:not(:empty):not(.DayPicker-Day--sunday) {
+      color: lightgray;
+      background: #f7f8f8;
+      font-weight: bold;
+      position: relative; }
 
 @media screen and (max-width: 600px) {
   .content-head__title {

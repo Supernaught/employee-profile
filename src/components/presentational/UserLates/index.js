@@ -41,6 +41,7 @@ export default class UserLates extends Component {
         selectedDays={ this.state.selectedDay }
         onDayClick={ this.handleDayClick.bind(this) }
       />
+      <h3 className="tab__header">Lates</h3>
       </div>
       )
   }
