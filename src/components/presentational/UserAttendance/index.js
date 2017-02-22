@@ -16,11 +16,11 @@ export default class UserAttendance extends Component {
 
 	componentWillMount() {
 		const queryDate = browserHistory.getCurrentLocation().query['date'];
-		console.log("Init date ", queryDate);
-		// if()
-		this.setState({
-			'selectedDay': (queryDate !== null || queryDate !== undefined) ? new Date(moment(queryDate, 'YYYY-M-D')) : new Date()
-		});
+		if(queryDate) {
+			this.setState({
+				'selectedDay':new Date(moment(queryDate, 'YYYY-M-D'))
+			});
+		}
 	}
 
 	handleDayClick(day, { disabled, selected }) {
@@ -79,7 +79,7 @@ export default class UserAttendance extends Component {
 				{dayDetail}
 				<hr className="tab__divider"/>
 				<h3 className="tab__header">Timeline Activity</h3>
-				{browserHistory.getCurrentLocation().query['date']}
+				{moment(this.state.selectedDay).format('YYYY-M-D')}
 			</div>
 			)
 	}
