@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 import DayPicker from 'react-day-picker';
 import moment from 'moment';
 
@@ -13,12 +14,24 @@ export default class UserAttendance extends Component {
 		};
 	}
 
+	componentWillMount() {
+		const queryDate = browserHistory.getCurrentLocation().query['date'];
+		console.log("Init date ", queryDate);
+		// if()
+		this.setState({
+			'selectedDay': (queryDate !== null || queryDate !== undefined) ? new Date(moment(queryDate, 'YYYY-M-D')) : new Date()
+		});
+	}
+
 	handleDayClick(day, { disabled, selected }) {
 	    if (disabled) {
 	      return;
 	    }
-	    this.setState({ selectedDay: selected ? null : day });
-	    console.log("DATE ",day);
+	    this.setState({ selectedDay: day });
+	    const newDate = moment(day).format('YYYY-M-D');
+	    let targetLocation = Object.assign(browserHistory.getCurrentLocation(), {date: newDate});
+	    targetLocation.query['date'] = newDate;
+	    browserHistory.push(targetLocation);
 	}
 	
 	render() {
@@ -33,7 +46,10 @@ export default class UserAttendance extends Component {
 				    <DayPicker
 				        numberOfMonths={2}
 				        modifiers={{
-					        late: new Date(Date.UTC(2017, 2, 1)),
+					        late: [
+					        	new Date(Date.UTC(2017, 2, 1)),
+					        	new Date(Date.UTC(2017, 1, 9))
+					        ],
 					        leave: { 
 					        	from: new Date(Date.UTC(2017, 2, 4)), 
 					            to: new Date(Date.UTC(2017, 2, 8)) 
@@ -50,15 +66,20 @@ export default class UserAttendance extends Component {
 					            new Date(Date.UTC(2017, 2, 23)),
 					        	new Date(Date.UTC(2017, 2, 24))
 					        ],
+					        past: { before: new Date() },
+					        future: { after: new Date() },
+					        saturday: day => day.getDay() === 6, 
 					        sunday: day => day.getDay() === 0, 
 					        firstOfMonth: day => day.getDate() === 1,
 				    	}}
 				    	selectedDays={ this.state.selectedDay }
+				    	initialMonth={ this.state.selectedDay }
 				    	onDayClick={ this.handleDayClick.bind(this) }
 					/>
 				{dayDetail}
 				<hr className="tab__divider"/>
 				<h3 className="tab__header">Timeline Activity</h3>
+				{browserHistory.getCurrentLocation().query['date']}
 			</div>
 			)
 	}

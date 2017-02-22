@@ -45,6 +45,7 @@
   height: 18px;
   fill: inherit; }
 .profile-page__content {
+  margin-bottom: 15px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

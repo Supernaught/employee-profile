@@ -252,24 +252,40 @@ input::placeholder{
 			border: none;
 		}
 
+		&--past{
+			color: silver;
+			font-weight: normal;
+		}
+
+		&--future{
+			color: #222;
+			/* font-weight: bold;*/
+		}
+
 		&--today{
-			color: $theme-color;
-			position: relative;
+			 color: $theme-color;
+			 position: relative;
 			
-			&:before{
-				content: '';
-				width: 100%;
-				height: 3px;
-				background-color: $theme-color;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-			}
+			 &:before{
+			 	content: '';
+			 	width: 100%;
+			 	height: 3px;
+			 	background-color: $theme-color;
+			 	position: absolute;
+			 	bottom: 0;
+			 	left: 0;
+			 }
 		}
 
 		&--sunday{
 			/* color: blue !important;*/
 			/* background: white;*/
+		}
+
+		&--saturday:not(:empty):not(.DayPicker-Day--sunday){
+			color: lightgray;
+			background: #f7f8f8;
+			position: relative;
 		}
 
 		&--selected:not(:empty){
@@ -303,7 +319,7 @@ input::placeholder{
 			position: relative;
 		}
 
-		&--event:not(:empty):not(.DayPicker-Day--sunday){
+		&--event:not(:empty):not(.DayPicker-Day--sunday):not(.DayPicker-Day--late){
 			color: rgba(154, 205, 50, 1);
 			background: rgba(154, 205, 50, .1);
 			font-weight: bold;

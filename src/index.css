@@ -178,6 +178,12 @@ input::placeholder {
     .DayPicker-Day:empty {
       background: none;
       border: none; }
+    .DayPicker-Day--past {
+      color: silver;
+      font-weight: normal; }
+    .DayPicker-Day--future {
+      color: #222;
+      /* font-weight: bold;*/ }
     .DayPicker-Day--today {
       color: #1781E0;
       position: relative; }
@@ -192,6 +198,10 @@ input::placeholder {
     .DayPicker-Day--sunday {
       /* color: blue !important;*/
       /* background: white;*/ }
+    .DayPicker-Day--saturday:not(:empty):not(.DayPicker-Day--sunday) {
+      color: lightgray;
+      background: #f7f8f8;
+      position: relative; }
     .DayPicker-Day--selected:not(:empty) {
       color: #1781E0 !important;
       background-color: rgba(23, 129, 224, 0.1) !important;
@@ -215,7 +225,7 @@ input::placeholder {
       background: rgba(251, 96, 127, 0.2);
       font-weight: bold;
       position: relative; }
-    .DayPicker-Day--event:not(:empty):not(.DayPicker-Day--sunday) {
+    .DayPicker-Day--event:not(:empty):not(.DayPicker-Day--sunday):not(.DayPicker-Day--late) {
       color: yellowgreen;
       background: rgba(154, 205, 50, 0.1);
       font-weight: bold;
