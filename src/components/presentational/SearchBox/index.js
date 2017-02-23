@@ -8,7 +8,7 @@ import LoadingIcon from '../LoadingIcon';
 
 import './index.css';
 
-let unlisten = null;
+let searchBoxQueryListener = null;
 
 export default class SearchBox extends Component {
 
@@ -23,14 +23,14 @@ export default class SearchBox extends Component {
 
   componentWillMount() {
     document.addEventListener('click', this.handleClick, false);
-    unlisten = browserHistory.listen( location =>  {
+    searchBoxQueryListener = browserHistory.listen( location =>  {
       this.handleToggleDropdown(false);
     });
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.handleClick, false);
-    unlisten();
+    searchBoxQueryListener();
   }
 
   handleToggleDropdown(bool) {

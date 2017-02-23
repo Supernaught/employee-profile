@@ -149,6 +149,7 @@ $theme-color: #1781E0;
 .tab{
 	width: 100%;
 	position: relative;
+	z-index: 0;
 
 	&__header{
 		font-weight: 200;
@@ -218,6 +219,15 @@ $theme-color: #1781E0;
 
 	&:not(:first-of-type){
 		margin-top: 10px;
+	}
+}
+
+.info-card{
+
+	&--alert{
+		/* color: rgba(251, 96, 127, 1);*/
+		background: rgba(251, 96, 127, .2);
+		border-color: rgba(251, 96, 127, 1);
 	}
 }
 
