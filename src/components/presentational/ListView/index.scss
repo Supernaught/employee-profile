@@ -194,6 +194,10 @@
 		justify-content: space-between;			
 
 		&__item{
+			&:active{
+				background: #e1e8ed;
+			}
+
 			&--space-top{
 				-webkit-box-pack: justify;
 				-webkit-justify-content: space-between;

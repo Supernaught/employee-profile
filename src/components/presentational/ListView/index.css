@@ -140,6 +140,8 @@
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
+    .list-container__item:active {
+      background: #e1e8ed; }
     .list-container__item--space-top {
       -webkit-box-pack: justify;
       -webkit-justify-content: space-between;
