@@ -15,7 +15,6 @@
   .timeline__sticky-container + .timeline__item-container {
     border-top: none; }
   .timeline__sticky-header {
-    /* background-color: white;*/
     z-index: 1; }
   .timeline__header {
     padding: 10px;
@@ -69,12 +68,12 @@
     top: -webkit-calc(50% - (15px / 2));
     top: calc(50% - (15px / 2)); }
   .event--late {
-    color: tomato; }
+    color: #222; }
     .event--late:before {
-      background-color: currentColor; }
+      background-color: tomato; }
   .event--absent {
-    color: tomato; }
+    color: #222; }
     .event--absent:before {
-      background-color: currentColor; }
+      background-color: tomato; }
 
 /*# sourceMappingURL=index.css.map */

@@ -105,28 +105,6 @@ export default class UserAttendance extends Component {
 				<hr className="tab__divider"/>
 				<h3 className="tab__header">Timeline Activity</h3>
 				<Timeline {...this.props} handleShowMonth={this.handleShowMonth.bind(this)} />
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<h3 id="overview" className="tab__header">END</h3>
 			</div>
 			)
 	}

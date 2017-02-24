@@ -24,7 +24,6 @@ $theme-color: #1781E0;
 	}
 
 	&__sticky-header{
-		/* background-color: white;*/
 		z-index: 1;
 	}
 
@@ -95,16 +94,16 @@ $theme-color: #1781E0;
 	}
 	
 	&--late{
-		color: tomato;
+		color: #222;
 		&:before{
-			background-color: currentColor;
+			background-color: tomato;
 		}
 	}
 
 	&--absent{
-		color: tomato;
+		color: #222;
 		&:before{
-			background-color: currentColor;
+			background-color: tomato;
 		}
 	}
 }
