@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
 import { Sticky, StickyContainer } from 'react-sticky';
 
 import ProfileAvatar from '../../presentational/ProfileAvatar';
@@ -51,8 +52,10 @@ export default class ProfileCardInfo extends Component {
       </li>;
 
     return (
-    	<StickyContainer className="user-card">
-    		<Sticky className="user-card__sticky-container">
+    	<StickyContainer className={classnames('user-card', this.props.className)}>
+    		<Sticky 
+          className="user-card__sticky-container"
+          isActive={this.props.isActive}>
 	    		<ProfileAvatar className="user-card__user-avatar" src="http://i.imgur.com/BgC2FVK.png" />
 		        <h2>
 			        <div className="user-card__name">{this.props.params.id}</div>

@@ -69,31 +69,62 @@
 		margin-right: 5px;
 		fill: silver;
 	}
-
-	&--mobile{
-		bottom: 0px;
-
-		& .user-card__user-avatar{
-			margin-bottom: -100px;
-			-webkit-transform: translateY(-100px);
-			-ms-transform: translateY(-100px);
-			transform: translateY(-100px);
-		}
-	}
 }
 
-@media screen and (max-width: 800px) {
-	.user-card{
-		display: none;
+/*
+ *  USER CARD MOBILE VIEW
+ */
+.user-card--mobile{
+	padding: 0;
+	margin-bottom: 0;
+	width: 100%;
+	background: white;
+	border-bottom: solid .5px #e1e8ed;
+	bottom: 0;
+	
+	& .user-card__sticky-container{
+		padding-top: 0;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
 
-		& .user-card{
-			width: 100%;
+	& .user-card__user-avatar{
+		margin-bottom: -100px;
+		width: 150px;
+		height: 150px;
+		border-width: 5px;
+		-webkit-transform: translateY(-100px);
+		-ms-transform: translateY(-100px);
+		transform: translateY(-100px);
+	}
+	
+	& .user-card__name, & .user-card__role{
+		text-align: center;
+	}
 
-			&__user-avatar{
-				width: 150px;
-				height: 150px;
-				border-width: 5px;
-			}
-		}
+	& .user-card__info-list{
+		padding-top: 0px;
+		border: none;
+		display: inline-block;
+	}
+
+	& .user-card__info-icon{
+		width: 18px;
+		height: 18px;
+	}
+
+	& .user-card__info-elem{
+		font-size: 15px;
 	}
 }

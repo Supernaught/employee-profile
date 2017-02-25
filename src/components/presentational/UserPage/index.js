@@ -3,7 +3,6 @@ import { Link, IndexLink } from 'react-router';
 
 import Header from '../../containers/HeaderContainer';
 import ProfileCardInfo from '../../presentational/ProfileCardInfo';
-import ProfileAvatar from '../../presentational/ProfileAvatar';
 import Widget from '../../presentational/Widget';
 
 import './index.css';
@@ -45,15 +44,14 @@ export default class UserPage extends Component {
 		};
 
 		const userCardMobile = (!this.state.isMobile) ? null : 
-				<div className="user-card content__wrapper content__view-mobile user-card--mobile">
-					<ProfileAvatar className="user-card__user-avatar" src="http://i.imgur.com/BgC2FVK.png" />
-					<h2>
-			        	<div className="user-card__name user-card__name--text-center user-card__name--mobile">{this.props.params.id}</div>
-			        	<div className="user-card__role user-card__role--text-center">developer</div>
-		        	</h2>
-				</div>;
+			<ProfileCardInfo 
+				className="user-card--mobile"
+				info={userInfo}
+				isActive={false} 
+				{...this.props} />;
 
-		const userCardDesktop = (this.state.isMobile) ? null : <ProfileCardInfo {...this.props} info={userInfo} />;
+		const userCardDesktop = (this.state.isMobile) ? null : 
+			<ProfileCardInfo {...this.props} info={userInfo} />;
 
 		return (
 			<div className="profile-page content page">
