@@ -26,7 +26,6 @@ export default class UserAttendance extends Component {
 	}
 
 	componentWillUnmount() {
-		document.removeEventListener('click', this.handleClick, false);
 		userAttendanceRouteListener();
 	}
 
@@ -70,6 +69,7 @@ export default class UserAttendance extends Component {
 				<DayPicker
 					ref={ el => this.daypicker = el }
 					numberOfMonths={2}
+					enableOutsideDays={false}
 					modifiers={{
 					late: [
 					new Date(Date.UTC(2017, 2, 1)),

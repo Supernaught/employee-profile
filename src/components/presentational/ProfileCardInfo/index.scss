@@ -114,9 +114,10 @@
 	}
 
 	& .user-card__info-list{
-		padding-top: 0px;
-		border: none;
+		padding: 20px;
+		border-bottom: none;
 		display: inline-block;
+		box-sizing: border-box;
 	}
 
 	& .user-card__info-icon{

@@ -12,16 +12,17 @@ export default class UserPage extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {'isMobile':false};
+		this.handleResize = this.handleResize.bind(this);
 	}
 
 	componentDidMount() {
 		window.scrollTo(0, 0);
 		this.handleResize();
-		window.addEventListener("resize", this.handleResize.bind(this));
+		window.addEventListener("resize", this.handleResize);
 	}
 
 	componentWillUnmount() {
-		window.removeEventListener("resize", this.handleResize.bind(this));
+		window.removeEventListener("resize", this.handleResize);
 	}
 
 	handleResize() {

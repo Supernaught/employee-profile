@@ -259,10 +259,9 @@ input::placeholder{
 
 		&--future{
 			color: #222;
-			/* font-weight: bold;*/
 		}
 
-		&--today{
+		&--today:not(.DayPicker-Day--outside){
 			 color: $theme-color;
 			 position: relative;
 			

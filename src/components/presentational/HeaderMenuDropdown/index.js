@@ -18,7 +18,7 @@ export default class HeaderMenuDropdown extends Component {
     document.addEventListener('touchstart', this.handleClick, false);
   }
 
-  componentWillUnmount() {
+  componentWillUnmount() {  
     // remove event listener
     document.removeEventListener('click', this.handleClick, false);
     document.removeEventListener('touchstart', this.handleClick, false);

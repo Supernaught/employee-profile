@@ -182,12 +182,11 @@ input::placeholder {
       color: silver;
       font-weight: normal; }
     .DayPicker-Day--future {
-      color: #222;
-      /* font-weight: bold;*/ }
-    .DayPicker-Day--today {
+      color: #222; }
+    .DayPicker-Day--today:not(.DayPicker-Day--outside) {
       color: #1781E0;
       position: relative; }
-      .DayPicker-Day--today:before {
+      .DayPicker-Day--today:not(.DayPicker-Day--outside):before {
         content: '';
         width: 100%;
         height: 3px;
