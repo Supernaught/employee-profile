@@ -195,8 +195,9 @@ input::placeholder {
         bottom: 0;
         left: 0; }
     .DayPicker-Day--sunday {
-      /* color: blue !important;*/
-      /* background: white;*/ }
+      /*
+       * Sunday tag on Daypicker
+       */ }
     .DayPicker-Day--saturday:not(:empty):not(.DayPicker-Day--sunday) {
       color: lightgray;
       background: #f7f8f8;

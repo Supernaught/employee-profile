@@ -277,8 +277,9 @@ input::placeholder{
 		}
 
 		&--sunday{
-			/* color: blue !important;*/
-			/* background: white;*/
+			/*
+			 * Sunday tag on Daypicker
+			 */
 		}
 
 		&--saturday:not(:empty):not(.DayPicker-Day--sunday){
