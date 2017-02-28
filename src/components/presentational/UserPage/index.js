@@ -123,14 +123,28 @@ export default class UserPage extends Component {
 							{this.props.children}
 						</div>
 						<Widget>
-							<div className="widget__card">
+							<div className="widget__card card">
 								<h1 className="widget__title">REMINDERS</h1>
 								<hr/>
 								<ul className="widget__list">
 									
 								</ul>
 							</div>
-							<div className="widget__card">
+							<div className="widget__card card">
+								<h1 className="widget__title">UPCOMING EVENTS</h1>
+								<hr/>
+								<ul className="widget__list">
+									1
+								</ul>
+							</div>
+							<div className="widget__card card">
+								<h1 className="widget__title">UPCOMING EVENTS</h1>
+								<hr/>
+								<ul className="widget__list">
+									1
+								</ul>
+							</div>
+							<div className="widget__card card">
 								<h1 className="widget__title">UPCOMING EVENTS</h1>
 								<hr/>
 								<ul className="widget__list">
