@@ -274,10 +274,8 @@ $theme-color: #1781E0;
 
 /* Card Mobile view */
 @media screen and (max-width: 591px) {
-	.tab{
+	.tab-bar{
+		margin-bottom: 0;
 		border: none;
-		border-top: solid 1px #e1e8ed;
-		border-bottom: solid 1px #e1e8ed;
-		border-radius: 0;
 	}
 }

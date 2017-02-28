@@ -65,46 +65,50 @@ export default class UserAttendance extends Component {
 
 		return (
 			<div>
-				<h3 id="overview" className="tab__header">Overview</h3>
-				<DayPicker
-					ref={ el => this.daypicker = el }
-					numberOfMonths={2}
-					enableOutsideDays={false}
-					modifiers={{
-					late: [
-					new Date(Date.UTC(2017, 2, 1)),
-					new Date(Date.UTC(2017, 1, 9))
-					],
-					leave: { 
-						from: new Date(Date.UTC(2017, 2, 4)), 
-						to: new Date(Date.UTC(2017, 2, 8)) 
-					},
-					absent: [
-					new Date(Date.UTC(2017, 1, 2)),
-					new Date(Date.UTC(2017, 1, 15))
-					],
-					event: [
-					new Date(Date.UTC(2017, 1, 7)),
-					new Date(Date.UTC(2017, 1, 24))
-					],					
-					holiday: [
-					new Date(Date.UTC(2017, 2, 23)),
-					new Date(Date.UTC(2017, 2, 24))
-					],
-					past: { before: new Date() },
-					future: { after: new Date() },
-					saturday: day => day.getDay() === 6, 
-					sunday: day => day.getDay() === 0, 
-					firstOfMonth: day => day.getDate() === 1,
-					}}
-					selectedDays={ this.state.selectedDay }
-					initialMonth={ this.state.selectedDay }
-					onDayClick={ this.handleDayClick.bind(this) }
-				/>
-				{dayDetail}
-				<hr className="tab__divider"/>
-				<h3 className="tab__header">Timeline Activity</h3>
-				<Timeline {...this.props} handleShowMonth={this.handleShowMonth.bind(this)} />
+				<div className="card">
+					<h3 id="overview" className="tab__header">Overview</h3>
+					<DayPicker
+						ref={ el => this.daypicker = el }
+						numberOfMonths={2}
+						enableOutsideDays={false}
+						modifiers={{
+						late: [
+						new Date(Date.UTC(2017, 2, 1)),
+						new Date(Date.UTC(2017, 1, 9))
+						],
+						leave: { 
+							from: new Date(Date.UTC(2017, 2, 4)), 
+							to: new Date(Date.UTC(2017, 2, 8)) 
+						},
+						absent: [
+						new Date(Date.UTC(2017, 1, 2)),
+						new Date(Date.UTC(2017, 1, 15))
+						],
+						event: [
+						new Date(Date.UTC(2017, 1, 7)),
+						new Date(Date.UTC(2017, 1, 24))
+						],					
+						holiday: [
+						new Date(Date.UTC(2017, 2, 23)),
+						new Date(Date.UTC(2017, 2, 24))
+						],
+						past: { before: new Date() },
+						future: { after: new Date() },
+						saturday: day => day.getDay() === 6, 
+						sunday: day => day.getDay() === 0, 
+						firstOfMonth: day => day.getDate() === 1,
+						}}
+						selectedDays={ this.state.selectedDay }
+						initialMonth={ this.state.selectedDay }
+						onDayClick={ this.handleDayClick.bind(this) }
+					/>
+					<hr className="tab__divider"/>
+					{dayDetail}
+				</div>
+				<div className="card">
+					<h3 className="tab__header">Timeline Activity</h3>
+					<Timeline {...this.props} handleShowMonth={this.handleShowMonth.bind(this)} />
+				</div>
 			</div>
 			)
 	}

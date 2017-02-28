@@ -201,10 +201,8 @@
     flex-direction: column; } }
 /* Card Mobile view */
 @media screen and (max-width: 591px) {
-  .tab {
-    border: none;
-    border-top: solid 1px #e1e8ed;
-    border-bottom: solid 1px #e1e8ed;
-    border-radius: 0; } }
+  .tab-bar {
+    margin-bottom: 0;
+    border: none; } }
 
 /*# sourceMappingURL=index.css.map */

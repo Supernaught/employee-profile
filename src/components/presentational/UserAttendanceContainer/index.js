@@ -19,7 +19,7 @@ export default class UserAttendanceContainer extends Component {
 
 	render() {
 		return (
-			<div className="tab card">
+			<div className="tab">
 				<div className="tab-bar">
 					<Link 
 						className="tab-bar__nav-elem tab-bar__index-nav" 
