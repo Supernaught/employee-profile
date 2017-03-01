@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { Sticky, StickyContainer } from 'react-sticky';
 
 import './index.css';
 
@@ -8,124 +7,59 @@ export default class Timeline extends Component {
 	
 	render() {
 		return (
-			<StickyContainer>
+			<div>
 				<ul className="timeline">
-					<div className="timeline__sticky-container">
-						<Sticky className="timeline__sticky-header">
-							<h3 className="timeline__header">
-								<Link 
-									className="timeline__month-header"
-									to="/employees/davy?date=2017-2-1"
-									onClick={this.props.handleShowMonth.bind(this, '2017-2-1')}>
-									February
-									<span className="timeline__year-header">2018</span>
-								</Link>
-							</h3>
-						</Sticky>
+					<div className="timeline__label">
+						<span className="timeline__label-text timeline__label-text--emphasize">February</span>
+						<span className="timeline__label-text">2017</span>
 					</div>
-					<li className="timeline__item-container">
-						<div className="event event--late">
-							Late
+					<div className="timeline-event">
+						<div className="timeline-event__section timeline-date">
+							<h4 className="timeline-date__date timeline-date__date--bold">10</h4>
+							<div className="timeline-date__date timeline-date__date--s">FEB</div>
+							<div className="timeline-date__date timeline-date__date--sub-text">sun</div>
 						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--absent">
-							Absent
-						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--leave">
-							Leave
-						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--holiday">
-							Holiday
-						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--event">
-							Event
-						</div>
-					</li>
-					<div className="timeline__sticky-container">
-						<Sticky className="timeline__sticky-header">
-							<h3 className="timeline__header">
-								<Link 
-									className="timeline__month-header"
-									to="/employees/davy?date=2017-1-1"
-									onClick={this.props.handleShowMonth.bind(this, '2017-1-1')}>
-									January
-									<span className="timeline__year-header">2018</span>
-								</Link>
-							</h3>
-						</Sticky>
+						<div className="timeline-event__section timeline-event__content">adsfsda</div>
 					</div>
-					<li className="timeline__item-container">
-						<div className="event event--late">
-							Late
+					<div className="timeline-event">
+						<div className="timeline-event__section timeline-date">
+							<h4 className="timeline-date__date timeline-date__date--bold">09</h4>
+							<div className="timeline-date__date timeline-date__date--s">FEB</div>
+							<div className="timeline-date__date timeline-date__date--sub-text">sat</div>
 						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--absent">
-							Absent
-						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--leave">
-							Leave
-						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--holiday">
-							Holiday
-						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--event">
-							Event
-						</div>
-					</li>
-					<div className="timeline__sticky-container">
-						<Sticky className="timeline__sticky-header">
-							<h3 className="timeline__header">
-								<Link 
-									className="timeline__month-header"
-									to="/employees/davy?date=2016-12-1"
-									onClick={this.props.handleShowMonth.bind(this, '2016-12-1')}>
-									December
-									<span className="timeline__year-header">2017</span>
-								</Link>
-							</h3>
-						</Sticky>
+						<div className="timeline-event__section timeline-event__content">adsfsda</div>
 					</div>
-					<li className="timeline__item-container">
-						<div className="event event--late">
-							Late
+					<div className="timeline-event">
+						<div className="timeline-event__section timeline-date">
+							<h4 className="timeline-date__date timeline-date__date--bold">08</h4>
+							<div className="timeline-date__date timeline-date__date--s">FEB</div>
+							<div className="timeline-date__date timeline-date__date--sub-text">fri</div>
 						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--absent">
-							Absent
+						<div className="timeline-event__section timeline-event__content">adsfsda</div>
+					</div>
+					<div className="timeline__label">
+						<span className="timeline__label-text timeline__label-text--emphasize">January</span>
+						<span className="timeline__label-text">2017</span>
+					</div>
+					<div className="timeline-event timeline-event--late">
+						<div className="timeline-event__section timeline-date">
+							<h4 className="timeline-date__date timeline-date__date--bold">09</h4>
+							<div className="timeline-date__date timeline-date__date--s">JAN</div>
+							<div className="timeline-date__date timeline-date__date--sub-text">sat</div>
 						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--leave">
-							Leave
+						<div className="timeline-event__section timeline-event__content">adsfsda</div>
+					</div>
+					<div className="timeline-event">
+						<div className="timeline-event__section timeline-date">
+							<h4 className="timeline-date__date timeline-date__date--bold">08</h4>
+							<div className="timeline-date__date timeline-date__date--s">Jan</div>
+							<div className="timeline-date__date timeline-date__date--sub-text">fri</div>
 						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--holiday">
-							Holiday
-						</div>
-					</li>
-					<li className="timeline__item-container">
-						<div className="event event--event">
-							Event
-						</div>
-					</li>
+						<div className="timeline-event__section timeline-event__content">adsfsda</div>
+					</div>
 				</ul>
-			</StickyContainer>
+				<button className="timeline-button">Load More</button>
+			</div>
 		)
 	}
 }

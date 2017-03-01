@@ -161,7 +161,6 @@ $theme-color: #1781E0;
 }
 
 .tab-bar{
-	margin-bottom: 10px;
 	position: relative;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -171,7 +170,6 @@ $theme-color: #1781E0;
 	-webkit-align-items: center;
 	-ms-flex-align: center;
 	align-items: center;
-	border-bottom: solid 1px #e1e8ed;
 
 	&__nav-elem{
 		padding: 10px;
@@ -274,11 +272,6 @@ $theme-color: #1781E0;
 
 /* Card Mobile view */
 @media screen and (max-width: 591px) {
-	.tab-bar{
-		margin-bottom: 0;
-		border: none;
-	}
-
 	.card{
 		border-radius: 0;
 	}
