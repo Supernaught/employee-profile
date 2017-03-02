@@ -65,7 +65,7 @@ export default class UserAttendance extends Component {
 
 		return (
 			<div>
-				<div className="card">
+				<div className="card card--space-bottom">
 					<h3 id="overview" className="tab__header">Overview</h3>
 					<DayPicker
 						ref={ el => this.daypicker = el }
@@ -105,7 +105,7 @@ export default class UserAttendance extends Component {
 					<hr className="tab__divider"/>
 					{dayDetail}
 				</div>
-				<div className="card">
+				<div className="card card--space-bottom">
 					<h3 className="tab__header">Timeline Activity</h3>
 					<Timeline {...this.props} handleShowMonth={this.handleShowMonth.bind(this)} />
 				</div>

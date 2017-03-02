@@ -165,6 +165,8 @@
   box-sizing: border-box; }
   .card:not(:first-of-type) {
     margin-top: 10px; }
+  .card--space-bottom {
+    padding-bottom: 30px; }
 
 .info-card--alert {
   /* color: rgba(251, 96, 127, 1);*/

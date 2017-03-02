@@ -16,7 +16,7 @@ const Routes = (props) => (
 	<Router {...props}>
 	    <Route path="/" component={App}>
 	    	<IndexRoute component={Home} />
-		    <Route path="/employees" component={UsersContainer}>
+		    <Route path="employees" component={UsersContainer}>
 		    	<IndexRoute component={SearchPage} />
 		    	<Route path=":id" component={UserPage}>
 		    		<IndexRoute component={UserAttendanceContainer} />
@@ -24,10 +24,12 @@ const Routes = (props) => (
 		    		<Route path="leaves" component={UserLeaves} />
 		    	</Route>
 		    </Route>
-		    <Route path="/about" component={About} />
+		    <Route path="about" component={About} />
 		    <Route path="*" component={NotFound} />
 		</Route>
 	</Router>
 );
 
 export default Routes;
+
+

@@ -218,6 +218,10 @@ $theme-color: #1781E0;
 	&:not(:first-of-type){
 		margin-top: 10px;
 	}
+
+	&--space-bottom{
+		padding-bottom: 30px;
+	}
 }
 
 .info-card{

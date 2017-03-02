@@ -51,7 +51,8 @@ $theme-color: #1781E0;
 	width: 100%;
 	color: silver;
 	background: white;
-	font-size: 15px;
+	font-size: 13px;
+	font-weight: bold;
 	text-align: center;
 	border-radius: 2px;
 	border: solid 1px currentColor;
@@ -82,7 +83,7 @@ $theme-color: #1781E0;
 	&--late{
 
 		& .timeline-date{
-			color: tomato;
+			color: #fb607f;
 
 			&:before{
 				border-color: currentColor;
@@ -94,21 +95,21 @@ $theme-color: #1781E0;
 .timeline-date{
 	padding-left: 5px;
 	width: 65px;
-	border-right: solid #e1e8ed 1px;
+	border-right: solid #e1e8ed 2px;
 	box-sizing: border-box;
 	position: relative;
 
 	&:before{
 		content: '';
-		width: 15px;
-		height: 15px;
+		width: 13px;
+		height: 13px;
 		background: white;
 		position: absolute;
-		top: 22px;
+		top: 20px;
 		right: -7.5px;
 		border-radius: 50%;
 		box-sizing: border-box;
-		border: solid $theme-color 3px;
+		border: solid $theme-color 2px;
 	}
 
 	&__date{
