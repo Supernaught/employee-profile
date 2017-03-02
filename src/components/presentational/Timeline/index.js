@@ -57,7 +57,7 @@ export default class Timeline extends Component {
 						<div className="timeline-event__section timeline-event__content">adsfsda</div>
 					</div>
 				</ul>
-				<button className="timeline-button">Load More</button>
+				<button className="button button--grow-width">Load More</button>
 			</div>
 		)
 	}

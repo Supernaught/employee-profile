@@ -27,6 +27,13 @@
     font-weight: 300; }
     .user-card__role--text-center {
       text-align: center; }
+  .user-card__button {
+    width: 200px;
+    margin-bottom: 20px;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0; }
   .user-card__info-list {
     margin: 0;
     padding: 20px 0px 20px 0px;

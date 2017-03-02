@@ -28,6 +28,23 @@ input::placeholder {
 .page {
   margin-top: 1px; }
 
+.button {
+  padding: 10px;
+  color: silver;
+  background: white;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 2px;
+  border: solid 1px currentColor;
+  outline: none;
+  cursor: pointer;
+  background: transparent; }
+  .button:active {
+    color: #1781E0; }
+  .button--grow-width {
+    width: 100%; }
+
 .content {
   width: 100%;
   box-sizing: border-box; }

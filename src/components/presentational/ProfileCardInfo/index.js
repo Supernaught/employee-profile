@@ -61,6 +61,7 @@ export default class ProfileCardInfo extends Component {
 			        <div className="user-card__name">{this.props.params.id}</div>
 			        <div className="user-card__role">developer</div>
 		        </h2>
+            <button className="user-card__button button">Clock-in</button>
 		        <ul className="user-card__info-list">
           			{emailElement}
           			{mobileElement}
