@@ -7,6 +7,6 @@ export default class UsersContainer extends Component {
 			<div>
 				{this.props.children}
 			</div>
-			)
+		)
 	}
 }

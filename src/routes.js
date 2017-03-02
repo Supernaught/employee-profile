@@ -6,8 +6,8 @@ import Home from './components/presentational/Home';
 import About from './components/presentational/About';
 import UsersContainer from './components/presentational/UsersContainer';
 import SearchPage from './components/containers/SearchPageContainer';
-import UserPage from './components/presentational/UserPage';
-import UserAttendanceContainer from './components/presentational/UserAttendanceContainer';
+import UserPage from './components/containers/UserPageContainer';
+import UserProfileTabs from './components/presentational/UserProfileTabs';
 import UserLeaves from './components/presentational/UserLeaves';
 import UserInfo from './components/presentational/UserInfo';
 import NotFound from './components/presentational/NotFound';
@@ -19,7 +19,7 @@ const Routes = (props) => (
 		    <Route path="employees" component={UsersContainer}>
 		    	<IndexRoute component={SearchPage} />
 		    	<Route path=":id" component={UserPage}>
-		    		<IndexRoute component={UserAttendanceContainer} />
+		    		<IndexRoute component={UserProfileTabs} />
 		    		<Route path="info" component={UserInfo} />
 		    		<Route path="leaves" component={UserLeaves} />
 		    	</Route>

@@ -19,6 +19,7 @@ export default class UserAttendance extends Component {
 	}
 
 	componentWillMount() {
+		// console.log("LOL ", this.props.user.name);
 		this.handleQueryRoute();
 		userAttendanceRouteListener = browserHistory.listen( location =>  {
 			this.handleQueryRoute();

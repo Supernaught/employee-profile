@@ -5,15 +5,20 @@ import UserAttendance from '../../presentational/UserAttendance';
 import UserLates from '../../presentational/UserLates';
 import UserAbsences from '../../presentational/UserAbsences';
 
-export default class UserAttendanceContainer extends Component {
+export default class UserProfileTabs extends Component {
+
+	componentDidMount() {
+		console.log("USER PROFILE TABS ",this.props.user);
+	}
+
 	handleSelectTab() {
 		switch(this.props.location.query.tab){
 			case 'lates':
-				return <UserLates />;
+				return <UserLates {...this.props} />;
 			case 'absences':
-				return <UserAbsences />;
+				return <UserAbsences {...this.props} />;
 			default:
-				return <UserAttendance />;
+				return <UserAttendance {...this.props} />;
 		}
 	}
 

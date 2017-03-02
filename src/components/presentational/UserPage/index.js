@@ -16,6 +16,7 @@ export default class UserPage extends Component {
 	}
 
 	componentDidMount() {
+		console.log("USER PAGE ",this.props.user);
 		window.scrollTo(0, 0);
 		this.handleResize();
 		window.addEventListener("resize", this.handleResize);
@@ -35,21 +36,23 @@ export default class UserPage extends Component {
 	}
 
 	render() {
-		// const userId = this.props.params.id;
 		const userInfo = {
-			"email":"davy@g-angle.co.jp",
-			"mobile":"09177700058",
-			"birthday":"October 21, 1992",
-			"startwork":"June 1, 2015",
-			"location":"Cebu City",
+			"profilepicture" : this.props.user.profilePicture,
+			"name" : this.props.user.name,
+			"role" : this.props.user.role,
+			"email" : this.props.user.email,
+			"contact" : this.props.user.contact,
+			"birthday" : this.props.user.birthday,
+			"startwork" : this.props.user.startWork,
+			"location" : this.props.user.location,
 		};
 
 		const userCardMobile = (!this.state.isMobile) ? null : 
 			<ProfileCardInfo 
+				{...this.props}
 				className="user-card--mobile"
 				info={userInfo}
-				isActive={false} 
-				{...this.props} />;
+				isActive={false} />;
 
 		const userCardDesktop = (this.state.isMobile) ? null : 
 			<ProfileCardInfo {...this.props} info={userInfo} />;
