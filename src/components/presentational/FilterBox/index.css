@@ -6,6 +6,8 @@
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0; }
+  .filter-box::-webkit-scrollbar {
+    display: none; }
   .filter-box--left {
     margin-right: 10px; }
   .filter-box__sticky {

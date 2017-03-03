@@ -9,6 +9,10 @@ $theme-color: #1781E0;
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
 
+	&::-webkit-scrollbar{
+		display: none;
+	}
+
 	&--left{
 		margin-right: 10px;
 	}
