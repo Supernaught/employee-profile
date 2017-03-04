@@ -61,7 +61,8 @@ export default class UserAttendance extends Component {
 	render() {
 		let dayDetail = (this.state.selectedDay === null) ? null: 
 		<div className="card info-card">					
-		<h3>{moment(this.state.selectedDay).format('MMMM D YYYY')}</h3>
+			<h3>{moment(this.state.selectedDay).format('MMMM D YYYY')}</h3>
+			<span>Day details, events, and reminders</span>
 		</div>;
 
 		return (
@@ -114,5 +115,4 @@ export default class UserAttendance extends Component {
 			)
 	}
 }
-
 // {moment(this.state.selectedDay).format('YYYY-M-D')}
