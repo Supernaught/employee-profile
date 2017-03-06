@@ -1,13 +1,3 @@
-export function fetchUser() {
-	return {
-		type: "FETCH_USER_FULFILLED",
-		payload: {
-			name: "Will", 
-			age: 35
-		}
-	};
-}
-
 export function setFilter(name) {
 	return {
 		type: "SET_DROPDOWN_FILTER",
@@ -18,6 +8,8 @@ export function setFilter(name) {
 export function fetchFilterResult(list) {
 	return {
 		type: "FETCH_FILTER_RESULT",
-		payload: list
+		payload: new Promise((resolve, reject) => {
+			resolve(list);
+		})
 	}
 }

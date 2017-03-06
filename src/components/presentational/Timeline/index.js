@@ -18,7 +18,7 @@ export default class Timeline extends Component {
 							<div className="timeline-date__date timeline-date__date--s">FEB</div>
 							<div className="timeline-date__date timeline-date__date--sub-text">sun</div>
 						</div>
-						<div className="timeline-event__section timeline-event__content">adsfsda</div>
+						<div className="timeline-event__section timeline-event__content">9 hours ago</div>
 					</div>
 					<div className="timeline-event">
 						<div className="timeline-event__section timeline-date">

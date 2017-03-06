@@ -6,7 +6,6 @@ import axios from 'axios';
 * Search users
 */ 
 export function searchUser(name) {
-	console.log("YO NIGGER ", name);
 	return axios.get('/api/users', {
 		params: {
 			s: name

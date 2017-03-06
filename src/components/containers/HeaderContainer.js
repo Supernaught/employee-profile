@@ -15,7 +15,8 @@ function mapStateToProps(state, props) {
   return { 
     user: state.user,
     filter: state.dropdownsearch.dropdownFilter,
-    filterResult: state.dropdownsearch.dropdownResult
+    filterResult: state.dropdownsearch.dropdownResult,
+    fetchStatus: state.dropdownsearch.fetching
   };
 }
 

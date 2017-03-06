@@ -20,7 +20,8 @@ export default class Header extends Component {
     const searchboxComponent = (this.props.noSearch) ? null :
             <SearchBox 
               resultList={this.props.filterResult} 
-              onUserInput={this.handleSearchFilter.bind(this)} />;
+              onUserInput={this.handleSearchFilter.bind(this)}
+              fetchStatus={this.props.fetchStatus} />;
 
     return (
       <Sticky className="header content">

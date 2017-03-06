@@ -16,8 +16,7 @@ export default class SearchBox extends Component {
     super(props);
 
     this.state = {
-      activeDropDown: false,
-      isLoading: false
+      activeDropDown: false
     };
   }
 
@@ -57,7 +56,7 @@ export default class SearchBox extends Component {
   }
 
   render() {
-    const loadingIcon = (!this.state.isLoading) ? null : 
+    const loadingIcon = (!this.props.fetchStatus) ? null : 
     <LoadingIcon 
     className={
       classnames('searchbox__loading-icon')
@@ -69,7 +68,7 @@ export default class SearchBox extends Component {
         classnames(
           "searchbox__input",
           {'searchbox__input--active' : this.state.activeDropDown,
-          'searchbox__input--loading' : this.state.isLoading}
+          'searchbox__input--loading' : this.props.fetchStatus}
           )}
         type="text"
         name="search-employee"
