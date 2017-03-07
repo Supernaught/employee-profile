@@ -16,30 +16,30 @@ export default class SearchPage extends Component {
 
 	componentDidMount() {
 		window.scrollTo(0, 0);
-		this.props.actions.setSearch(this.props.location.query.search);
-		this.handleQueryRoute();
+		this.handleFetchResult();
 		searchPageRouteListener = browserHistory.listen( location => {
-			this.handleQueryRoute();
+			this.handleFetchResult();
 		} );
 	}
 
 	componentWillUnmount() {
 		searchPageRouteListener();
 	}
-	
-	componentDidUpdate() {
-		this.props.actions.setSearch(this.props.location.query.search);
-	}
 
-	handleQueryRoute() {
+/*
+ *	handleFetchResult sets the new value for result based 
+ 	on the parameters passed in the query route
+ */
+	handleFetchResult() {
 		this.props.actions.setSearchResult(getUsers(browserHistory.getCurrentLocation().query.search));
 	}
 
 	render() {
-		const searchDisplay = (this.props.search === undefined || this.props.search.trim().length <= 0) 
+		const searchQuery = this.props.location.query.search;
+		const searchDisplay = (searchQuery === undefined || searchQuery.trim().length <= 0) 
 							? "Employees" 
 							: <span className="content-head__display-input">
-								{this.props.search}
+								{searchQuery}
 							  </span>
 		return (
 			<div className="content page">

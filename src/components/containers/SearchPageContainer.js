@@ -12,8 +12,7 @@ export const SearchPageContainer = (props) => {
 }
 
 function mapStateToProps(state, props) {
-  return { 
-    search: state.search.search,
+  return {
     departments: state.search.searchDepartment,
     userStatus: state.search.userStatus,
     result: state.search.searchResult

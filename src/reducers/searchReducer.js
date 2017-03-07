@@ -1,5 +1,4 @@
 export default function reducer(state={
-  search: '',
   searchDepartment: [
       {
         "name": "developer",
@@ -45,9 +44,6 @@ export default function reducer(state={
   }, action) {
 
   switch (action.type) {
-    case "SET_SEARCH": {
-      return {...state, search: action.payload}
-    }
     case "SET_SEARCH_DEPARTMENT": {
       return {...state, searchDepartment: action.payload}
     }
