@@ -3,8 +3,8 @@ import axios from 'axios';
 // import { getUsersSucess } from '../actions/userActions';
 
 /**
-* Search users
-*/ 
+ * Search users
+ */ 
 export function searchUser(name) {
 	return axios.get('/api/users', {
 		params: {

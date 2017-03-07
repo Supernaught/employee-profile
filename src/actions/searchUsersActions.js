@@ -13,9 +13,15 @@ export function setFilter(filters) {
 }
 
 export function setSearchResult(result) {
+	// return {
+	// 	type: "SET_SEARCH_RESULT",
+	// 	payload: result
+	// }
 	return {
 		type: "SET_SEARCH_RESULT",
-		payload: result
+		payload: new Promise((resolve, reject) => {
+			resolve(result);
+		})
 	}
 }
 

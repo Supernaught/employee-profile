@@ -4,21 +4,35 @@ import { browserHistory } from 'react-router';
 import FilterBox from '../FilterBox';
 import UserList from '../UserList';
 import Header from '../../containers/HeaderContainer';
+import { getUsers } from '../../../api/user-api';
 
 import './index.css';
 
 import { StickyContainer } from 'react-sticky';
+
+let searchPageRouteListener = null;
 
 export default class SearchPage extends Component {
 
 	componentDidMount() {
 		window.scrollTo(0, 0);
 		this.props.actions.setSearch(this.props.location.query.search);
+		this.handleQueryRoute();
+		searchPageRouteListener = browserHistory.listen( location => {
+			this.handleQueryRoute();
+		} );
 	}
 
+	componentWillUnmount() {
+		searchPageRouteListener();
+	}
+	
 	componentDidUpdate() {
 		this.props.actions.setSearch(this.props.location.query.search);
-		console.log("THIS IS THE QUERY ",browserHistory.getCurrentLocation().query);
+	}
+
+	handleQueryRoute() {
+		this.props.actions.setSearchResult(getUsers(browserHistory.getCurrentLocation().query.search));
 	}
 
 	render() {
