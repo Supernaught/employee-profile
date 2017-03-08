@@ -76,9 +76,10 @@ export default class SearchBox extends Component {
         placeholder="Search Employee"
         onChange={this.handleUserInput.bind(this)}
         onFocus={this.handleToggleDropdown.bind(this)}
-        onKeyPress={this.handleEnterSearch.bind(this)} />
+        onKeyPress={this.handleEnterSearch.bind(this)}
+        defaultValue={this.props.filter} />
         
-        <SearchResult activeDropDown={this.state.activeDropDown} data={this.props.resultList} />
+        <SearchResult filter={this.props.filter} activeDropDown={this.state.activeDropDown} data={this.props.resultList} />
         {loadingIcon}
         </div>
         )

@@ -39,9 +39,11 @@ export default class UserList extends Component {
 		let resultCountMessage = null;
 		const count  = this.props.result.length;
 
-		if(count === 1) {
+		if(count <= 0) {
+			resultCountMessage = 'No Result Found';
+		} else if(count === 1) {
 			resultCountMessage = 'Found 1 Result';
-		} else if (count >= 1) {
+		} else if(count >= 1) {
 			resultCountMessage = 'Found '+ count +' Results';
 		}
 

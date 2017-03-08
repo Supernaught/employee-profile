@@ -54,6 +54,12 @@
 
 	&__item-name{
 		font-size: 14px;
+
+		&--mark{
+			color: darkgray;
+			// font-weight: normal;
+			background: none;
+		}
 	}
 
 	&__item-label{

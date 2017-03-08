@@ -43,6 +43,9 @@
     align-items: left; }
   .search-dropdown__item-name {
     font-size: 14px; }
+    .search-dropdown__item-name--mark {
+      color: darkgray;
+      background: none; }
   .search-dropdown__item-label {
     color: gray;
     font-size: 12px; }

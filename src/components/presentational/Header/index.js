@@ -19,6 +19,7 @@ export default class Header extends Component {
   render() {
     const searchboxComponent = (this.props.noSearch) ? null :
             <SearchBox 
+              filter={this.props.filter}
               resultList={this.props.filterResult} 
               onUserInput={this.handleSearchFilter.bind(this)}
               fetchStatus={this.props.fetchStatus} />;
