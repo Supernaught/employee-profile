@@ -31,7 +31,8 @@ export default class FilterBox extends Component {
                     type="text" 
                     ref={(input) => this.searchEmployeeInput = input}
                     placeholder="Search Employee"
-                    onKeyPress={this.handleEnterSearch.bind(this)}/>
+                    onKeyPress={this.handleEnterSearch.bind(this)}
+                    defaultValue={browserHistory.getCurrentLocation().query.search} />
             </div>
             <hr className="filter-box__divider"/>
             <Sticky 

@@ -68,7 +68,8 @@ $theme-color: #1781E0;
 			color: #fb607f;
 
 			&:before{
-				border-color: currentColor;
+				background: #fb607f;
+				// border-color: currentColor;
 			}
 		}
 	}
@@ -83,15 +84,15 @@ $theme-color: #1781E0;
 
 	&:before{
 		content: '';
-		width: 13px;
-		height: 13px;
-		background: white;
+		width: 10px;
+		height: 10px;
+		background: #e1e8ed;
 		position: absolute;
 		top: 20px;
-		right: -7.5px;
+		right: -6px;
 		border-radius: 50%;
 		box-sizing: border-box;
-		border: solid #e1e8ed 2px;
+		// border: solid #e1e8ed 2px;
 	}
 
 	&__date{
