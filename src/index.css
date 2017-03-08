@@ -287,7 +287,7 @@ input::placeholder {
     top: 100%;
     left: 0;
     position: fixed;
-    box-shadow: 0px 5px 5px 0px rgba(1, 1, 1, 0.1); }
+    box-shadow: 0px 5px 5px 0px rgba(1, 1, 1, 0.2); }
     .dropdown__menu:before, .dropdown__menu:after {
       display: none; }
   .dropdown__menu-item {
