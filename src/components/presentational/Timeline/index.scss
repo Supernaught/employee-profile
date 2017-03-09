@@ -116,3 +116,14 @@ $theme-color: #1781E0;
 		}
 	}
 }
+
+.timeline-card{
+	&__link{
+		color: gray;
+		font-size: 13px;
+		&:hover{
+			color: $theme-color;
+			text-decoration: underline;
+		}
+	}
+}

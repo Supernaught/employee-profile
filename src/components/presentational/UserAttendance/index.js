@@ -59,6 +59,7 @@ export default class UserAttendance extends Component {
 	}
 	
 	render() {
+		const userId = this.props.params.id;
 		let dayDetail = (this.state.selectedDay === null) ? null: 
 		<div className="card info-card">					
 			<h3>{moment(this.state.selectedDay).format('MMMM D YYYY')}</h3>

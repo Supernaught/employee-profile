@@ -16,7 +16,6 @@ export default class UserPage extends Component {
 	}
 
 	componentDidMount() {
-		console.log("USER PAGE ",this.props.user);
 		window.scrollTo(0, 0);
 		this.handleResize();
 		window.addEventListener("resize", this.handleResize);
@@ -36,6 +35,7 @@ export default class UserPage extends Component {
 	}
 
 	render() {
+		const userId = this.props.params.id;
 		const userInfo = {
 			"profilepicture" : this.props.user.profilePicture,
 			"name" : this.props.user.name,
@@ -88,7 +88,7 @@ export default class UserPage extends Component {
 						<nav className="profile-page__nav-bar">
 							<IndexLink 
 								className="profile-page__nav-button" 
-								to="/employees/davy" 
+								to={`/employees/${userId}`} 
 								activeClassName="profile-page__nav-button--active"
 								onlyActiveOnIndex={true}>
 								<svg className="profile-page__nav-icon" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ export default class UserPage extends Component {
 							</IndexLink>
 							<Link 
 								className="profile-page__nav-button" 
-								to="/employees/davy/leaves" 
+								to={`/employees/${userId}/leaves`} 
 								activeClassName="profile-page__nav-button--active"
 								onlyActiveOnIndex={true}>
 								<svg className="profile-page__nav-icon" viewBox="0 0 24 24">
@@ -108,7 +108,7 @@ export default class UserPage extends Component {
 							</Link>
 							<Link 
 								className="profile-page__nav-button" 
-								to="/employees/davy/info" 
+								to={`/employees/${userId}/info`} 
 								activeClassName="profile-page__nav-button--active"
 								onlyActiveOnIndex={true}>
 								<svg className="profile-page__nav-icon" viewBox="0 0 24 24">

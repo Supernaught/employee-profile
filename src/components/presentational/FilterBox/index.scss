@@ -69,8 +69,33 @@ $theme-color: #1781E0;
 		}
 	}
 
+	&__section{
+		display: flex;
+
+		&--row{
+			display: inline-flex;
+		}
+
+		&--space-between{
+			justify-content: space-between;
+		}
+	}
+
 	&__input-name{
 		margin-left: 10px;
+	}
+
+	&__counter{
+		padding: 2px 5px;
+		min-width: 25px;
+		color: white;
+		background: lightgray;
+		font-size: 12px;
+		font-weight: normal;
+		text-align: center;
+		border-radius: 50px;
+		box-sizing: border-box;
+		display: inline-block;
 	}
 
 	&__input-field{

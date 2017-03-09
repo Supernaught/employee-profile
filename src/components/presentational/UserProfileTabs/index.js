@@ -23,19 +23,21 @@ export default class UserProfileTabs extends Component {
 	}
 
 	render() {
+		const userId = this.props.params.id;
+		
 		return (
 			<div className="tab">
 				<div className="tab-bar">
 					<Link 
 						className="tab-bar__nav-elem tab-bar__index-nav" 
-						to="/employees/davy">Overview</Link>
+						to={`/employees/${userId}`}>Overview</Link>
 					<Link 
 						className="tab-bar__nav-elem" 
-						to="/employees/davy?tab=lates"
+						to={`/employees/${userId}?tab=lates`}
 						activeClassName="tab-bar__nav-elem--active">Lates</Link>
 					<Link 
 						className="tab-bar__nav-elem" 
-						to="/employees/davy?tab=absences"
+						to={`/employees/${userId}?tab=absences`}
 						activeClassName="tab-bar__nav-elem--active">Absences</Link>
 				</div>
 				{this.handleSelectTab()}

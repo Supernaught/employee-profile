@@ -75,4 +75,11 @@
     .timeline-date__date--sub-text {
       color: silver; }
 
+.timeline-card__link {
+  color: gray;
+  font-size: 13px; }
+  .timeline-card__link:hover {
+    color: #1781E0;
+    text-decoration: underline; }
+
 /*# sourceMappingURL=index.css.map */

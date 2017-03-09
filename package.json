@@ -13,6 +13,7 @@
     "classnames": "^2.2.5",
     "cors": "^2.8.1",
     "express": "^4.14.0",
+    "lodash": "^4.17.4",
     "mern-cli": "^3.0.1",
     "moment": "^2.17.1",
     "mongoose": "^4.7.6",

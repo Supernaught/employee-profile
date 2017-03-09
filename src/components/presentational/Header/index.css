@@ -37,7 +37,7 @@
   .header__nav {
     margin-left: 15px;
     padding: 5px;
-    color: #737373;
+    color: #222;
     font-size: 13px;
     font-weight: bold;
     text-decoration: none;
@@ -50,8 +50,6 @@
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex; }
-    .header__nav--active {
-      color: #222; }
     .header__nav--container {
       padding: 0px;
       margin: 0;

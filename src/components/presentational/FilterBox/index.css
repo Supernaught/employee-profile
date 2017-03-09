@@ -49,8 +49,25 @@
     .filter-box__input-container--hover:hover {
       color: #222;
       background: #e1e8ed; }
+  .filter-box__section {
+    display: flex; }
+    .filter-box__section--row {
+      display: inline-flex; }
+    .filter-box__section--space-between {
+      justify-content: space-between; }
   .filter-box__input-name {
     margin-left: 10px; }
+  .filter-box__counter {
+    padding: 2px 5px;
+    min-width: 25px;
+    color: white;
+    background: lightgray;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    display: inline-block; }
   .filter-box__input-field {
     padding-left: 30px;
     padding-right: 10px;

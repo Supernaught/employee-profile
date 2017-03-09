@@ -11,6 +11,7 @@
 import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
 import shortid from 'shortid';
+import _ from 'lodash';
 
 export default class FilterBox extends Component {
 
@@ -42,15 +43,21 @@ export default class FilterBox extends Component {
 
             newLocation.query['exclude'] = excludeDepartmentArr.join(' ').trim();
 
+            // 'counter', gets how many data are under a department
+            const counter = _.filter(this.props.result, {'position': department.name}).length;
+
             return <Link 
                         key={shortid.generate()}
-                        className="filter-box__input-container filter-box__input-container--hover"
+                        className="filter-box__input-container filter-box__input-container--hover  filter-box__section--space-between"
                         to={newLocation}>
-                        <input 
-                            className="filter-box__checkbox" 
-                            type="checkbox" 
-                            defaultChecked={isIncluded} />
-                        <div className="filter-box__input-name">{department.display_name}</div>
+                        <div className="filter-box__section--row">
+                            <input 
+                                className="filter-box__checkbox" 
+                                type="checkbox" 
+                                defaultChecked={isIncluded} />
+                            <div className="filter-box__input-name">{department.display_name}</div>
+                        </div>
+                        <div className="filter-box__counter">{counter}</div>
                     </Link>
         });
 
@@ -61,3 +68,4 @@ export default class FilterBox extends Component {
     )
   }
 }
+// console.log(department.name," ==== ",this.props.result);

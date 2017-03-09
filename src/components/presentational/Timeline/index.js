@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
+import moment from 'moment';
 
 import './index.css';
 
 export default class Timeline extends Component {
 	
 	render() {
+		console.log("HEHEHEHEH ",this.props);
 		return (
 			<div>
 				<ul className="timeline">
@@ -18,7 +21,15 @@ export default class Timeline extends Component {
 							<div className="timeline-date__date timeline-date__date--s">FEB</div>
 							<div className="timeline-date__date timeline-date__date--sub-text">sun</div>
 						</div>
-						<div className="timeline-event__section timeline-event__content">9 hours ago</div>
+						<div className="timeline-card timeline-event__section timeline-event__content">
+							<div>9 hours ago</div>
+							<Link
+								className="timeline-card__link"
+								to={"/employees/davy?date=2017-2-10"}
+								onClick={this.props.handleShowMonth.bind(this, '2017-2-10')}>
+									View Day
+							</Link>
+						</div>
 					</div>
 					<div className="timeline-event">
 						<div className="timeline-event__section timeline-date">

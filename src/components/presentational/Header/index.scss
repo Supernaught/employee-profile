@@ -51,7 +51,7 @@ $theme-color: #1781E0;
 	&__nav{
 		margin-left: 15px;
 		padding: 5px;
-		color: #737373;
+		color: #222;
 		font-size: 13px;
 		font-weight: bold;
 		text-decoration: none;
@@ -66,11 +66,7 @@ $theme-color: #1781E0;
 			display: -ms-flexbox;
 			display: flex;
 		}
-
-		&--active{
-			color: #222;
-		}
-
+		
 		&--container{
 			padding: 0px;
 			margin: 0;
