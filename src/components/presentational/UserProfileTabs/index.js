@@ -7,10 +7,6 @@ import UserAbsences from '../../presentational/UserAbsences';
 
 export default class UserProfileTabs extends Component {
 
-	componentDidMount() {
-		console.log("USER PROFILE TABS ",this.props.user);
-	}
-
 	handleSelectTab() {
 		switch(this.props.location.query.tab){
 			case 'lates':
@@ -24,7 +20,7 @@ export default class UserProfileTabs extends Component {
 
 	render() {
 		const userId = this.props.params.id;
-		
+
 		return (
 			<div className="tab">
 				<div className="tab-bar">
