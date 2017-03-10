@@ -1,4 +1,4 @@
-$theme-color: #1781E0;
+$theme-color: #7289DA;
 
 .filter-box {
 	width: 230px;
@@ -43,7 +43,7 @@ $theme-color: #1781E0;
 	&__group-name{
 		padding: 10px 0px;
 		color: gray;
-		font-size: 12px;
+		font-size: 13px;
 		font-weight: bold;
 	}
 
@@ -83,14 +83,15 @@ $theme-color: #1781E0;
 
 	&__input-name{
 		margin-left: 10px;
+		font-size: 15px;
 	}
 
 	&__counter{
 		padding: 2px 5px;
 		min-width: 25px;
 		color: white;
-		background: lightgray;
-		font-size: 12px;
+		background: #C3CDEF;
+		font-size: 13px;
 		font-weight: normal;
 		text-align: center;
 		border-radius: 50px;

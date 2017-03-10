@@ -17,7 +17,7 @@
 .profile-page__nav-button {
   color: gray;
   margin: 0px 30px 0px 0px;
-  font-size: 13px;
+  font-size: 14px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,11 +34,11 @@
   font-weight: bold;
   fill: gray; }
   .profile-page__nav-button:hover:not(.profile-page__nav-button--active) {
-    color: #1781E0;
-    fill: #1781E0; }
+    color: #23272A;
+    fill: #23272A; }
   .profile-page__nav-button--active {
-    color: #222;
-    fill: #222; }
+    color: #7289DA;
+    fill: #7289DA; }
 .profile-page__nav-icon {
   margin-right: 3px;
   width: 18px;
@@ -135,23 +135,23 @@
   .tab-bar__nav-elem {
     padding: 10px;
     padding-bottom: 20px;
-    font-size: 13px;
+    font-size: 14px;
     color: gray;
     border-bottom: solid 2px transparent;
     -webkit-transform: translateY(1.5px);
     -ms-transform: translateY(1.5px);
     transform: translateY(1.5px); }
     .tab-bar__nav-elem:hover {
-      color: #1781E0;
+      color: #7289DA;
       text-decoration: underline; }
     .tab-bar__nav-elem:not(:first-of-type) {
       margin-left: 10px; }
     .tab-bar__nav-elem--active {
-      color: #1781E0;
+      color: #7289DA;
       position: relative;
-      border-bottom-color: #1781E0; }
+      border-bottom-color: #7289DA; }
   .tab-bar__index-nav {
-    color: #1781E0;
+    color: #7289DA;
     font-weight: bold; }
     .tab-bar__index-nav:hover {
       color: #222; }
@@ -201,6 +201,10 @@
 /* Card Mobile view */
 @media screen and (max-width: 591px) {
   .card {
-    border-radius: 0; } }
+    border-radius: 0; }
+
+  .tab-bar__nav-elem:hover {
+    color: #7289DA;
+    text-decoration: none; } }
 
 /*# sourceMappingURL=index.css.map */

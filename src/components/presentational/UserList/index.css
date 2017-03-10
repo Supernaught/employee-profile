@@ -45,8 +45,8 @@
     .user-list__icon-container:not(:first-of-type) {
       margin-left: 5px; }
     .user-list__icon-container:hover {
-      color: #1781E0;
-      fill: #1781E0; }
+      color: #7289DA;
+      fill: #7289DA; }
     .user-list__icon-container--active {
       color: #5D6477;
       fill: #5D6477; }

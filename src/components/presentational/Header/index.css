@@ -31,14 +31,14 @@
   .header__logo {
     width: 35px;
     height: 35px;
-    fill: #187ad9;
+    fill: #7289DA;
     -webkit-transition: fill .2s ease-in;
     transition: fill .2s ease-in; }
   .header__nav {
     margin-left: 15px;
     padding: 5px;
     color: #222;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     text-decoration: none;
     display: -webkit-box;
@@ -62,7 +62,7 @@
       -ms-flex-align: center;
       align-items: center; }
     .header__nav:hover:not(.header__nav--active) {
-      color: #1781E0; }
+      color: #7289DA; }
   .header__nav-icon {
     width: 25px;
     height: 25px;

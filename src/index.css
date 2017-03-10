@@ -7,7 +7,8 @@ body {
   padding: 0;
   min-width: 300px;
   font-family: SourceSansPro;
-  background: #F5F8FA; }
+  background: #F5F8FA;
+  color: #2C2F33; }
 
 a {
   text-decoration: none; }
@@ -48,7 +49,7 @@ input::placeholder {
   cursor: pointer;
   background: transparent; }
   .button:active {
-    color: #1781E0; }
+    color: #7289DA; }
   .button--grow-width {
     width: 100%; }
 
@@ -61,7 +62,7 @@ input::placeholder {
     max-width: 1090px;
     box-sizing: border-box; }
     .content__wrapper--title {
-      padding: 35px 15px; }
+      padding: 60px 15px; }
   .content__view-mobile {
     padding: 10px;
     background: white;
@@ -82,20 +83,23 @@ input::placeholder {
   margin-bottom: 20px;
   border: 0;
   border-bottom: solid 1px #e1e8ed; }
-  .content-head--dark {
-    background-color: #343436; }
+  .content-head--theme-color {
+    background-color: #7289DA;
+    border-bottom: none; }
   .content-head__title {
     margin: 0px;
     color: #484848;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: normal; }
     .content-head__title--light-text {
       color: white; }
     .content-head__title--center-text {
       text-align: center; }
   .content-head__display-input {
-    color: #1781E0;
+    color: #7289DA;
     font-weight: bold; }
+    .content-head__display-input--light-text {
+      color: #C3CDEF; }
     .content-head__display-input:before, .content-head__display-input:after {
       content: '"'; }
 
@@ -108,9 +112,9 @@ input::placeholder {
   position: relative;
   cursor: pointer; }
   .dropdown:hover .dropdown__toggle-icon {
-    fill: #1781E0; }
+    fill: #7289DA; }
   .dropdown--active .dropdown__toggle-icon {
-    fill: #1781E0; }
+    fill: #7289DA; }
   .dropdown--active .dropdown__menu {
     opacity: 1;
     pointer-events: all;
@@ -184,9 +188,9 @@ input::placeholder {
     border-bottom: solid 1px transparent; }
     .dropdown__menu-item:hover {
       color: white;
-      background: #1781E0;
-      border-top-color: #1574c9;
-      border-bottom-color: #1574c9; }
+      background: #7289DA;
+      border-top-color: #5e78d5;
+      border-bottom-color: #5e78d5; }
 
 /* Custom styles for react-day-picker*/
 .DayPicker {
@@ -208,13 +212,13 @@ input::placeholder {
     .DayPicker-Day--future {
       color: #222; }
     .DayPicker-Day--today:not(.DayPicker-Day--outside) {
-      color: #1781E0;
+      color: #7289DA;
       position: relative; }
       .DayPicker-Day--today:not(.DayPicker-Day--outside):before {
         content: '';
         width: 100%;
         height: 3px;
-        background-color: #1781E0;
+        background-color: #7289DA;
         position: absolute;
         bottom: 0;
         left: 0; }
@@ -227,7 +231,7 @@ input::placeholder {
       background: #f7f8f8;
       position: relative; }
     .DayPicker-Day--selected:not(:empty) {
-      color: #1781E0 !important;
+      color: #7289DA !important;
       background-color: rgba(23, 129, 224, 0.1) !important;
       font-weight: bold;
       position: relative;
@@ -239,7 +243,7 @@ input::placeholder {
         position: absolute;
         left: -1px;
         top: -1px;
-        border: solid 1px #1781E0; }
+        border: solid 1px #7289DA; }
     .DayPicker-Day--absent:not(:empty):not(.DayPicker-Day--sunday) {
       color: silver;
       font-weight: bold;

@@ -1,5 +1,5 @@
 $content-width: 1090px;
-$theme-color: #1781E0;
+$theme-color: #7289DA;
 
 .header{
 	background: white;
@@ -43,7 +43,7 @@ $theme-color: #1781E0;
 	&__logo{
 		width: 35px;
 		height: 35px;
-		fill: rgb(24, 122, 217);
+		fill: #7289DA;
 		-webkit-transition: fill .2s ease-in;
 		transition: fill .2s ease-in;
 	}	
@@ -52,7 +52,7 @@ $theme-color: #1781E0;
 		margin-left: 15px;
 		padding: 5px;
 		color: #222;
-		font-size: 13px;
+		font-size: 15px;
 		font-weight: bold;
 		text-decoration: none;
 		display: -webkit-box;

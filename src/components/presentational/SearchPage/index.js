@@ -38,15 +38,15 @@ export default class SearchPage extends Component {
 		const searchQuery = this.props.location.query.search;
 		const searchDisplay = (searchQuery === undefined || searchQuery.trim().length <= 0) 
 							? "Employees" 
-							: <span className="content-head__display-input">
+							: <span className="content-head__display-input content-head__display-input--light-text">
 								{searchQuery}
 							  </span>
 		return (
 			<div className="content page">
 				<Header noSearch={true} />
-				<div className="content-head">
+				<div className="content-head content-head--theme-color">
 					<div className="content__wrapper content__wrapper--title">
-						<h1 className="content-head__title">
+						<h1 className="content-head__title content-head__title--light-text">
 							Find {searchDisplay}
 						</h1>
 					</div>

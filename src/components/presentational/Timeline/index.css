@@ -26,7 +26,7 @@
     .timeline__label-text:not(:first-of-type) {
       padding-left: 3px; }
     .timeline__label-text--emphasize {
-      color: #1781E0;
+      color: #7289DA;
       font-weight: bold; }
 
 .timeline-event {
@@ -79,7 +79,7 @@
   color: gray;
   font-size: 13px; }
   .timeline-card__link:hover {
-    color: #1781E0;
+    color: #7289DA;
     text-decoration: underline; }
 
 /*# sourceMappingURL=index.css.map */

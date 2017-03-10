@@ -32,7 +32,7 @@
   .filter-box__group-name {
     padding: 10px 0px;
     color: gray;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold; }
   .filter-box__input-container {
     padding: 10px 5px;
@@ -56,13 +56,14 @@
     .filter-box__section--space-between {
       justify-content: space-between; }
   .filter-box__input-name {
-    margin-left: 10px; }
+    margin-left: 10px;
+    font-size: 15px; }
   .filter-box__counter {
     padding: 2px 5px;
     min-width: 25px;
     color: white;
-    background: lightgray;
-    font-size: 12px;
+    background: #C3CDEF;
+    font-size: 13px;
     font-weight: normal;
     text-align: center;
     border-radius: 50px;
