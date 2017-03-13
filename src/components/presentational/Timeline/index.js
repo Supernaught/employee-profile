@@ -38,7 +38,7 @@ export default class Timeline extends Component {
 							<div className="timeline-date__date timeline-date__date--sub-text">sat</div>
 						</div>
 						<div className="timeline-card timeline-event__section timeline-event__content">
-							<div>39 hours ago</div>
+							<div>40 hours ago</div>
 							<Link
 								className="timeline-card__link"
 								to={"/employees/davy?date=2017-2-10"}
